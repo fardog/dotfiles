@@ -1,0 +1,25 @@
+[user]
+	name = fardog 
+	email = nate@milkandtang.com
+[core]
+	excludesfile = /Users/nwittstock/.gitignore_global
+	filemode = false
+	editor = /usr/local/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope
+[github]
+	user = fardog
+	token = 2565743c6ebf744b84251caadcfe936a02a8c751
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
