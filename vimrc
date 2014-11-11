@@ -7,11 +7,11 @@ filetype plugin indent on
 
 " make temporary files sensible
 set backup
-set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp 
+set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set backupskip=~/tmp/*
 set swapfile
-set directory=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp 
-set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp 
+set directory=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
+set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 
 " enable spell checking
 set spell
@@ -27,20 +27,20 @@ set showbreak=>>>
 set colorcolumn=80
 
 " set up taglist, bind to F8
-nnoremap <silent> <F8> :TlistToggle<CR> 
-let Tlist_Auto_Open = 0 
-let Tlist_Exit_OnlyWindow = 1 " exit if taglist is last window open 
-let Tlist_Show_One_File = 1 " Only show tags for current buffer 
-let Tlist_Use_Right_Window = 0 " Open on right side 
-let Tlist_Enable_Fold_Column = 0 " no fold column (only showing one file) 
-let tlist_sql_settings = 'sql;P:package;t:table' 
-let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target' 
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Auto_Open = 0
+let Tlist_Exit_OnlyWindow = 1 " exit if taglist is last window open
+let Tlist_Show_One_File = 1 " Only show tags for current buffer
+let Tlist_Use_Right_Window = 0 " Open on right side
+let Tlist_Enable_Fold_Column = 0 " no fold column (only showing one file)
+let tlist_sql_settings = 'sql;P:package;t:table'
+let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
 let g:vim_markdown_folding_disabled=1
 
-if has("gui_win32") 
+if has("gui_win32")
     let Tlist_Ctags_Cmd = 'C:/Users/nwittstock/Dropbox/Setups/vim/ctags58/ctags.exe'
-endif 
+endif
 
 let Tlist_Inc_Winwidth=0 " for konsole
 
@@ -66,6 +66,12 @@ endif
 let python_highlight_all = 1
 set autoindent
 
+
+" filetype aliases
+autocmd BufNewFile,BufRead *.ract set filetype=html
+
+
+" filetype tab settings
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
@@ -81,13 +87,19 @@ autocmd Filetype php setlocal ts=2 sw=2 noexpandtab
 autocmd Filetype xml setlocal ts=4 sw=4 expandtab
 autocmd Filetype java setlocal ts=4 sw=4 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
-autocmd Filetype haxe setlocal ts=4 sw=4 noexpandtab 
+autocmd Filetype haxe setlocal ts=4 sw=4 noexpandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 autocmd Filetype vim setlocal ts=4 sw=4 expandtab
 
 " autoclose omnicompletion scratch window
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+
+" autoclose fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+" use open for Gbrowse in fugitive
+command! -bar -nargs=1 Browse silent! exe '!open' shellescape(<q-args>, 1)
 
 
 " bind commands for FuzzyFinder
@@ -162,7 +174,7 @@ set statusline+=%#identifier#
 set statusline+=%m
 set statusline+=%*
 
-" set statusline+=%{fugitive#statusline()}
+set statusline+=%{fugitive#statusline()}
 
 "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
