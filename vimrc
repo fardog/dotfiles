@@ -138,6 +138,10 @@ nnoremap <silent> sr     :FufRenewCache<CR>
 
 " configure syntastic
 let g:syntastic_javascript_checkers=['eslint']
+" if ua-style exists, load those rules
+if filereadable("~/Projects/UA/ua-style/config.json")
+    let g:syntastic_javascript_eslint_args='--config ~/Projects/UA/ua-style/config.json --rulesdir ~/Projects/UA/ua-style/lib/rules'
+endif
 
 
 " statusline funnery (from https://github.com/scrooloose/vimfiles/blob/master/vimrc#L78)
