@@ -34,3 +34,6 @@
 [submodule "vim/bundle/neocomplete.vim"]
 	path = vim/bundle/neocomplete.vim
 	url = git@github.com:Shougo/neocomplete.vim.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git@github.com:scrooloose/syntastic.git
