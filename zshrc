@@ -50,10 +50,15 @@ plugins=(git tmux npm)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-export PATH="~/.dotfiles/bin:./node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export CHEV_PATH="~/Projects/UA/chef_configs"
-export AIRSHIP_PATH="~/Projects/UA/airship"
+UNAME=$(/usr/bin/env uname)
+export PATH="~/.dotfiles/bin:./node_modules/.bin"
+if [ $UNAME = "Darwin" ]; then
+	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+	export CHEV_PATH="~/Projects/UA/chef_configs"
+	export AIRSHIP_PATH="~/Projects/UA/airship"
+else # Everyone else (Linux)
+	export PATH="$PATH:$HOME/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
