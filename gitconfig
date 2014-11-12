@@ -8,6 +8,13 @@
 [github]
 	user = fardog
 	token = !cat ~/.github_token 2>&1 >/dev/null
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+[diff]
+	tool = mvimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = diffconflicts
+[mergetool "diffconflicts"]
+	cmd = diffconflicts mvim $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+	keepBackup = false
