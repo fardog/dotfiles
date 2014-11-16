@@ -26,7 +26,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -51,11 +51,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 UNAME=$(/usr/bin/env uname)
-export PATH="~/.dotfiles/bin:./node_modules/.bin"
+export PATH="$HOME/.dotfiles/bin:./node_modules/.bin"
 if [ $UNAME = "Darwin" ]; then
 	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
-	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
 else # Everyone else (Linux)
 	export PATH="$PATH:$HOME/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 fi
@@ -64,12 +62,16 @@ fi
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+# Preferred editor
+if [[ -n $SSH_CONNECTION ]]; then
+	export EDITOR='vim'
+elif [ $UNAME = "Darwin" ]; then
+	export EDITOR='mvim'
+elif [ $UNAME = "Linux" ]; then
+	export EDITOR='gvim'
+else
+	export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,6 +88,13 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias npm=envpm
-alias airat="cd ~/Projects/UA/airatlassian;. bin/activate; cd -;"
-alias aircss="cd ~/Projects/UA/airship/airship/static;sass --watch sass:css"
-alias pasttle="curl -F \"upload=<-\" http://paste.prod.urbanairship.com/post && echo"
+
+# Host specific configuration
+HOST_NAME=$(/usr/bin/env hostname)
+if [ $HOST_NAME = "belka.local" ]; then
+	alias airat="cd ~/Projects/UA/airatlassian;. bin/activate; cd -;"
+	alias aircss="cd ~/Projects/UA/airship/airship/static;sass --watch sass:css"
+	alias pasttle="curl -F \"upload=<-\" http://paste.prod.urbanairship.com/post && echo"
+	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
+	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
+fi

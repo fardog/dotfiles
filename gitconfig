@@ -4,19 +4,19 @@
 [core]
 	excludesfile = ~/.dotfiles/gitignore_global
 	filemode = false
-	editor = vim 
+	editor = !echo $EDITOR
 [github]
 	user = fardog
 	token = !cat ~/.github_token 2>&1 >/dev/null
 [diff]
-	tool = mvimdiff
+	tool = forcefailure
 [difftool]
 	prompt = false
 [merge]
 	tool = diffconflicts
 [mergetool "diffconflicts"]
-	cmd = diffconflicts mvim $BASE $LOCAL $REMOTE $MERGED
+	cmd = diffconflicts $EDITOR $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = true
 	keepBackup = false
 [alias]
-	edit = !mvim $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
+	edit = !$(echo $EDITOR) $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
