@@ -147,6 +147,9 @@ nnoremap <silent> sh     :FufHelp<CR>
 nnoremap <silent> se     :FufEditDataFile<CR>
 nnoremap <silent> sr     :FufRenewCache<CR>
 
+" other bindings
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
 
 " configure syntastic
 let g:syntastic_javascript_checkers=['eslint']

@@ -18,3 +18,5 @@
 	cmd = diffconflicts mvim $BASE $LOCAL $REMOTE $MERGED
 	trustExitCode = true
 	keepBackup = false
+[alias]
+	edit = !mvim $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
