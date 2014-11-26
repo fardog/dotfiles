@@ -73,6 +73,7 @@ autocmd BufNewFile,BufRead *.ract set filetype=html
 
 " filetype tab settings
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype htmldjango setlocal ts=4 sw=4 expandtab
 autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=4 sw=4 expandtab
@@ -154,7 +155,8 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 " configure syntastic
 let g:syntastic_javascript_checkers=['eslint']
 " if ua-style exists, load those rules
-if filereadable("~/Projects/UA/ua-style/config.json")
+let file = expand("~/Projects/UA/ua-style/config.json")
+if filereadable(file)
     let g:syntastic_javascript_eslint_args='--config ~/Projects/UA/ua-style/config.json --rulesdir ~/Projects/UA/ua-style/lib/rules'
 endif
 

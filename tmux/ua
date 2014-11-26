@@ -1,0 +1,16 @@
+selectp -t 0         # select the first (0) pane
+splitw -h -p 50      # split it into two halves
+ 
+selectp -t 1         # select the new, second (1) pane
+splitw -v -p 50      # split it into two halves
+
+# go back to the first pane, ssh to airship
+send-keys -t 0 C-z 'cd ~/Projects/UA/vagrant-configs/airship/;TERM=xterm ssh nwittstock@vm' Enter
+
+# go to the second pane, run aircss
+send-keys -t 1 C-z 'aircss' Enter
+
+# go to the third pane, run airship-js
+send-keys -t 2 C-z 'cd ~/Projects/UA/airship-js/;npm start' Enter
+
+
