@@ -20,3 +20,5 @@
 	keepBackup = false
 [alias]
 	edit = !$(echo $EDITOR) $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
+[format]
+	pretty = oneline
