@@ -51,7 +51,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 UNAME=$(/usr/bin/env uname)
-export PATH="$HOME/.dotfiles/bin:./node_modules/.bin"
+export PATH="$HOME/.dotfiles/bin:./node_modules/.bin:$HOME/.bin"
 if [ $UNAME = "Darwin" ]; then
 	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 else # Everyone else (Linux)
@@ -88,6 +88,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias npm=envpm
+
+set -o vi
 
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
