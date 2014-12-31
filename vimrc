@@ -13,6 +13,10 @@ set swapfile
 set directory=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 
+" make search better
+set ignorecase
+set smartcase
+
 " enable spell checking
 set spell
 
