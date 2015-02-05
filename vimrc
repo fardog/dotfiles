@@ -5,6 +5,11 @@ syntax on
 filetype plugin on
 filetype plugin indent on
 
+" make drawing betterer
+set lazyredraw
+set ttyfast
+set background=dark
+
 " make temporary files sensible
 set backup
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
@@ -17,8 +22,8 @@ set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set ignorecase
 set smartcase
 
-" enable spell checking
-set spell
+" don't check caps for spelling
+set spellcapcheck=
 
 " enable omni completion
 set ofu=syntaxcomplete#Complete
@@ -68,7 +73,16 @@ endif
 
 " set correct tabs for python (PEP8)
 let python_highlight_all = 1
+
+" indent
 set autoindent
+set smartindent
+
+" turn on spelling where sensible
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.markdown setlocal spell
+autocmd BufRead,BufNewFile *.rst setlocal spell
+autocmd BufRead,BufNewFile *.txt setlocal spell
 
 
 " filetype aliases
@@ -76,7 +90,7 @@ autocmd BufNewFile,BufRead *.ract set filetype=html
 
 
 " filetype tab settings
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype html setlocal ts=4 sw=4 expandtab
 autocmd Filetype htmldjango setlocal ts=4 sw=4 expandtab
 autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
