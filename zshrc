@@ -77,7 +77,7 @@ else
 fi
 
 # on linux, set 256color terminal
-if [ $COLORTERM = "xfce4-terminal" ]; then
+if [[ $COLORTERM == "xfce4-terminal" ]]; then
 	export TERM=xterm-256color
 fi
 
