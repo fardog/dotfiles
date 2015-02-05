@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true
+  },
+  // 0 - turn rule off
+  // 1 - rule generates warnings
+  // 2 - rule generates errors
+  "rules": {
+    "camelcase": 2,
+    "quotes": [2, "single", "avoid-escape"],
+    "comma-style": [2, "first"],
+    "semi": [2, "never"],
+    "brace-style": [2, "stroustrup", { "allowSingleLine": false }],
+    "no-unused-vars": 2,
+    "no-use-before-define": [2, "nofunc"],
+    "global-strict": [2, "never"],
+    "strict": 0
+  }
+}
