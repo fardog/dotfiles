@@ -52,3 +52,6 @@
 [submodule "vim/bundle/gist-vim"]
 	path = vim/bundle/gist-vim
 	url = git@github.com:mattn/gist-vim.git
+[submodule "vim/bundle/vim-wombat256i"]
+	path = vim/bundle/vim-wombat256i
+	url = git@github.com:dsolstad/vim-wombat256i.git

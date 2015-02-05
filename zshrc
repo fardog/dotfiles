@@ -76,6 +76,11 @@ else
 	export EDITOR='vim'
 fi
 
+# on linux, set 256color terminal
+if [ $COLORTERM = "xfce4-terminal" ]; then
+	export TERM=xterm-256color
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

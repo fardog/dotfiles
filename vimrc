@@ -59,7 +59,8 @@ set vb
 
 set shell=/bin/sh
 
-colorscheme desert
+" colorscheme desert
+colorscheme wombat256i
 
 if has("gui_win32")
     set gfn=DejaVu\ Sans\ Mono:h10
