@@ -10,6 +10,9 @@ set lazyredraw
 set ttyfast
 set background=dark
 
+" reload files changed outside vim
+set autoread
+
 " make temporary files sensible
 set backup
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
