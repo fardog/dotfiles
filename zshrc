@@ -108,3 +108,6 @@ if [ $HOST_NAME = "belka.local" ]; then
 	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
 	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
 fi
+
+export NVM_DIR="/home/nwittstock/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
