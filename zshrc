@@ -68,10 +68,10 @@ fi
 # Preferred editor
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
-elif [ $UNAME = "Darwin" ]; then
-	export EDITOR='mvim'
-elif [ $UNAME = "Linux" ]; then
-	export EDITOR='gvim'
+# elif [ $UNAME = "Darwin" ]; then
+# 	export EDITOR='mvim'
+# elif [ $UNAME = "Linux" ]; then
+# 	export EDITOR='gvim'
 else
 	export EDITOR='vim'
 fi
@@ -102,7 +102,7 @@ set -o vi
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
 if [ $HOST_NAME = "belka.local" ]; then
-	alias airat="cd ~/Projects/UA/airatlassian;. bin/activate; cd -;"
+	alias airat="cd ~/Projects/UA/airatlassian;. env/bin/activate; cd -;"
 	alias aircss="cd ~/Projects/UA/airship/airship/static;sass --watch sass:css"
 	alias pasttle="curl -F \"upload=<-\" http://paste.prod.urbanairship.com/post && echo"
 	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
