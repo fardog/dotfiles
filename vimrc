@@ -105,13 +105,13 @@ autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
 autocmd Filetype mkd setlocal ts=2 sw=2 expandtab
 autocmd Filetype rst setlocal ts=2 sw=2 expandtab
-autocmd Filetype less setlocal ts=2 sw=2 noexpandtab
-autocmd Filetype scss setlocal ts=2 sw=2 noexpandtab
+autocmd Filetype less setlocal ts=2 sw=2 expandtab
+autocmd Filetype scss setlocal ts=4 sw=4 expandtab
 autocmd Filetype php setlocal ts=2 sw=2 noexpandtab
 autocmd Filetype xml setlocal ts=4 sw=4 expandtab
 autocmd Filetype java setlocal ts=4 sw=4 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
-autocmd Filetype haxe setlocal ts=4 sw=4 noexpandtab
+autocmd Filetype haxe setlocal ts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 expandtab
 autocmd Filetype vim setlocal ts=4 sw=4 expandtab
 
@@ -217,6 +217,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+"display if buffer is dirty
+set statusline+=%#error#
+set statusline+=%{&modified?'[dirty]':''}
+set statusline+=%*
+
 "display a warning if &paste is set
 set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
@@ -227,6 +232,7 @@ set statusline+=%{StatuslineCurrentHighlight()}\ \ "current highlight
 set statusline+=%c,     "cursor column
 set statusline+=%l/%L   "cursor line/total lines
 set statusline+=\ %P    "percent through file
+set statusline+=\ [%f]
 set laststatus=2
 
 "recalculate the trailing whitespace warning when idle, and after saving
