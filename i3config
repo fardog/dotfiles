@@ -49,6 +49,9 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# move workspace to a new output
+bindsym $mod+slash move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+Shift+quotedbl split h
 
