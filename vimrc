@@ -37,6 +37,8 @@ set linebreak
 set showbreak=>>>
 " highlight column 80
 set colorcolumn=80
+" highlight the current line
+set cursorline
 
 " set up taglist, bind to F8
 nnoremap <silent> <F8> :TlistToggle<CR>
@@ -58,7 +60,8 @@ let Tlist_Inc_Winwidth=0 " for konsole
 
 
 " turn on the "visual bell" - which is much quieter than the "audio blink"
-set vb
+set visualbell
+set noerrorbells
 
 set shell=/bin/sh
 
