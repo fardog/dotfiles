@@ -53,8 +53,7 @@ bindsym $mod+Shift+l move right
 bindsym $mod+slash move workspace to output right
 
 # split in horizontal orientation
-bindsym $mod+Shift+quotedbl split h
-
+bindsym $mod+backslash split h
 # split in vertical orientation
 bindsym $mod+quotedbl split v
 
