@@ -1,0 +1,7 @@
+#!/bin/bash
+
+grep -q closed /proc/acpi/button/lid/*/state
+if [ $? = 0 ]; then
+   sudo -u nwittstock xscreensaver-command -display :0.0 -lock && sleep 1
+   pm-suspend
+fi
