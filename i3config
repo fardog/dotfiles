@@ -155,9 +155,8 @@ bindsym $mod+End mode "$mode_system"
 # finds out, if available)
 bar {
 	status_command i3status
-# supported in 4.8 only. need to upgrade
-#	wheel_up_cmd nop
-#	wheel_down_cmd nop
+	wheel_up_cmd nop
+	wheel_down_cmd nop
 }
 
 # Run some commands at startup
