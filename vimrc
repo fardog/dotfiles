@@ -129,6 +129,15 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 command! -bar -nargs=1 Browse silent! exe '!open' shellescape(<q-args>, 1)
 
 
+" set mark before search
+nnoremap / ml/
+nnoremap ? ml?
+
+" leader commands
+noremap <leader>t :!npm test %<cr>
+noremap <leader>T :!npm test<cr>
+
+
 " bind commands for FuzzyFinder
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 400
