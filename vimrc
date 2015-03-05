@@ -137,6 +137,15 @@ nnoremap ? ml?
 noremap <leader>t :!npm test %<cr>
 noremap <leader>T :!npm test<cr>
 
+if has("clipboard")
+    vmap <leader>y "+y
+    nmap <leader>p "+p
+else
+    " yank to buffer 'm' and put in the clipboard, for vims without +clipboard
+    vmap <silent> <leader>y "my:call system('xclip', @m)<cr>
+    " TODO add a similar paste once i figure it out
+endif
+
 
 " bind commands for FuzzyFinder
 let g:fuf_modesDisable = []
