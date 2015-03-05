@@ -141,9 +141,9 @@ if has("clipboard")
     vmap <leader>y "+y
     nmap <leader>p "+p
 else
-    " yank to buffer 'm' and put in the clipboard, for vims without +clipboard
+    "for vims without +clipboard, emulate with xclip and the @m register
     vmap <silent> <leader>y "my:call system('xclip', @m)<cr>
-    " TODO add a similar paste once i figure it out
+    nmap <silent> <leader>p :let @m = system('xclip -o')<cr>"mp
 endif
 
 
