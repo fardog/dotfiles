@@ -59,6 +59,7 @@ if [ $UNAME = "Darwin" ]; then
 	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 else # Everyone else (Linux)
 	export PATH="$PATH:$HOME/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+	export TERM=xterm-256color
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -68,17 +69,8 @@ fi
 # Preferred editor
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
-# elif [ $UNAME = "Darwin" ]; then
-# 	export EDITOR='mvim'
-# elif [ $UNAME = "Linux" ]; then
-# 	export EDITOR='gvim'
 else
 	export EDITOR='vim'
-fi
-
-# on linux, set 256color terminal
-if [[ $COLORTERM == "gnome-terminal" ]]; then
-	export TERM=xterm-256color
 fi
 
 # Compilation flags
@@ -102,12 +94,9 @@ set -o vi
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
 if [ $HOST_NAME = "belka.local" ]; then
-	alias airat="cd ~/Projects/UA/airatlassian;. env/bin/activate; cd -;"
-	alias aircss="cd ~/Projects/UA/airship/airship/static;sass --watch sass:css"
-	alias pasttle="curl -F \"upload=<-\" http://paste.prod.urbanairship.com/post && echo"
 	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
 	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 0.10 > /dev/null 2>&1 # This loads nvm

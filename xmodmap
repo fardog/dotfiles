@@ -3,3 +3,4 @@ keysym Escape = Caps_Lock
 keysym Caps_Lock = Escape
 add Lock = Caps_Lock
 add Mod4 = Super_L
+pointer = 3 2 1 4 5 6
