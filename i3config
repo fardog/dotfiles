@@ -165,9 +165,8 @@ bar {
 }
 
 # Run some commands at startup
-exec_always xmodmap ~/.dotfiles/xmodmap
-exec compton -b
-exec xscreensaver
-exec gnome-settings-daemon
-exec dropbox start
-exec nm-applet
+exec_always --no-startup-id xmodmap ~/.dotfiles/xmodmap
+exec --no-startup-id compton -b
+exec --no-startup-id xscreensaver
+exec --no-startup-id dropbox start
+exec --no-startup-id nm-applet
