@@ -93,7 +93,7 @@ autocmd BufRead,BufNewFile *.txt setlocal spell
 
 
 " filetype aliases
-autocmd BufNewFile,BufRead *.ract set filetype=html
+autocmd BufNewFile,BufRead *.ract set filetype=mustache
 
 
 " filetype tab settings

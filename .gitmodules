@@ -55,3 +55,6 @@
 [submodule "vim/bundle/vim-wombat256i"]
 	path = vim/bundle/vim-wombat256i
 	url = git@github.com:dsolstad/vim-wombat256i.git
+[submodule "vim/bundle/vim-mustache-handlebars"]
+	path = vim/bundle/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
