@@ -99,6 +99,7 @@ autocmd BufNewFile,BufRead *.ract set filetype=mustache
 " filetype tab settings
 autocmd Filetype html setlocal ts=4 sw=4 expandtab
 autocmd Filetype htmldjango setlocal ts=4 sw=4 expandtab
+autocmd Filetype mustache setlocal ts=4 sw=4 expandtab
 autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=4 sw=4 expandtab
