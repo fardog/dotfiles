@@ -34,7 +34,6 @@ gcc-libs
 gettext
 git
 glibc
-gnome-terminal
 gnome-themes-standard
 grep
 groff
@@ -66,6 +65,7 @@ man-db
 man-pages
 mdadm
 mediainfo
+mirage
 mlocate
 nano
 netctl
