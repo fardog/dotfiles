@@ -78,6 +78,10 @@ else # Everyone else (Linux)
 	alias pacown="pacman -Qo"		# Show package(s) owning the specified file(s)
 	alias pacexpl="pacman -D --asexp"	# Mark one or more installed packages as explicitly installed 
 	alias pacimpl="pacman -D --asdep"	# Mark one or more installed packages as non explicitly installed
+	# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
+	alias pacro="/usr/bin/pacman -Qtdq > /dev/null && sudo /usr/bin/pacman -Rns \$(/usr/bin/pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+	alias pacbac="pacman -Qqen"		# List all explicity installed packages
+	alias pacback="pacman -Qqem"		# List explicitly installed non-repo packages
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
