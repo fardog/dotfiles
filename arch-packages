@@ -79,6 +79,7 @@ patch
 pciutils
 pcmciautils
 perl
+perl-file-mimeinfo
 pkg-config
 procps-ng
 psmisc
