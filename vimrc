@@ -134,6 +134,10 @@ command! -bar -nargs=1 Browse silent! exe '!open' shellescape(<q-args>, 1)
 nnoremap / ml/
 nnoremap ? ml?
 
+" set mark before jumping to top
+nnoremap gg mkgg
+nnoremap G mkG
+
 " leader commands
 noremap <leader>t :!npm test %<cr>
 noremap <leader>T :!npm test<cr>
