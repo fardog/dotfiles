@@ -84,6 +84,7 @@ pkg-config
 procps-ng
 psmisc
 pulseaudio
+qt5-webkit
 ranger
 reiserfsprogs
 rxvt-unicode
