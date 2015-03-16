@@ -80,6 +80,7 @@ pcmciautils
 perl
 perl-file-mimeinfo
 pkg-config
+powertop
 procps-ng
 psmisc
 pulseaudio
