@@ -81,6 +81,8 @@ pcmciautils
 perl
 perl-file-mimeinfo
 pkg-config
+pm-utils
+polkit-gnome
 powertop
 procps-ng
 psmisc

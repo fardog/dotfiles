@@ -147,8 +147,8 @@ if has("clipboard")
     nmap <leader>p "+p
 else
     "for vims without +clipboard, emulate with xclip and the @m register
-    vmap <silent> <leader>y "my:call system('xclip', @m)<cr>
-    nmap <silent> <leader>p :let @m = system('xclip -o')<cr>"mp
+    vmap <silent> <leader>y "my:call system('xclip -sel clip', @m)<cr>
+    nmap <silent> <leader>p :let @m = system('xclip -o -sel clip')<cr>"mp
 endif
 
 

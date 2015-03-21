@@ -1,0 +1,2 @@
+autocutsel -fork &
+anamnesis --start
