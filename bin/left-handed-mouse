@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
