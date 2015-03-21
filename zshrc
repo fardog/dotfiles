@@ -115,9 +115,10 @@ set -o vi
 
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
-if [ $HOST_NAME = "belka.local" ]; then
+if [ $HOST_NAME = "belka" ]; then
 	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
 	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
+	export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
 fi
 
 export NVM_DIR="$HOME/.nvm"

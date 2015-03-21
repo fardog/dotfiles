@@ -154,6 +154,8 @@ bindsym $mod+End mode "$mode_system"
 # bind volume keys
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86AudioMute exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -167,6 +169,7 @@ bar {
 # Run some commands at startup
 exec --no-startup-id xcape -e 'Super_L=Escape'
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
+exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 exec --no-startup-id compton -b
 exec --no-startup-id xscreensaver
 exec --no-startup-id dropbox start
