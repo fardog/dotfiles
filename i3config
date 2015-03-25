@@ -171,7 +171,12 @@ bar {
 # Run some commands at startup
 exec --no-startup-id xcape -e 'Super_L=Escape'
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
+# Autoconfigure attached monitors
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
+# Disable the trackpad while typing
+exec --no-startup-id syndaemon -i 0.1 -d -k
+# Hide the mouse cursor after 1 second of no movement
+exec --no-startup-id unclutter -idle 1 -grab  
 exec --no-startup-id compton -b
 exec --no-startup-id xscreensaver
 exec --no-startup-id dropbox start
