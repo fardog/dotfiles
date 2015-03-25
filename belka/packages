@@ -11,6 +11,7 @@ binutils
 bison
 bluez
 bluez-libs
+bluez-utils
 bzip2
 chromium
 coreutils
@@ -47,7 +48,6 @@ imlib2
 inetutils
 iproute2
 iputils
-irssi
 iw
 jfsutils
 less
@@ -106,6 +106,7 @@ tmux
 ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
+unclutter
 unzip
 usbutils
 util-linux
@@ -115,6 +116,7 @@ vim
 virtualbox
 virtualbox-guest-iso
 w3m
+weechat
 wget
 which
 wpa_supplicant
