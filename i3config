@@ -37,6 +37,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# take screenshots
+bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -177,8 +180,6 @@ exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 # Disable the trackpad while typing
 exec --no-startup-id syndaemon -i 0.1 -d -k
-# Hide the mouse cursor after 1 second of no movement
-exec --no-startup-id unclutter -idle 1
 exec --no-startup-id compton -b
 exec --no-startup-id xscreensaver
 exec --no-startup-id dropbox start
