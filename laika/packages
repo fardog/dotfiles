@@ -41,6 +41,7 @@ groff
 gummiboot
 gzip
 highlight
+htop
 i3-wm
 i3lock
 i3status
@@ -57,6 +58,7 @@ lightdm
 lightdm-gtk-greeter
 linux
 logrotate
+lsof
 lvm2
 m4
 make
@@ -92,9 +94,11 @@ ranger
 reiserfsprogs
 rxvt-unicode
 s-nail
+scrot
 sed
 shadow
 smbclient
+steam
 sudo
 sysfsutils
 systemd-sysvcompat
@@ -106,7 +110,6 @@ ttf-dejavu
 ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
-unclutter
 unzip
 usbutils
 util-linux
