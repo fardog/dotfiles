@@ -69,6 +69,7 @@ mediainfo
 mercurial
 mirage
 mlocate
+mupdf
 nano
 netctl
 network-manager-applet
@@ -77,7 +78,9 @@ networkmanager-openvpn
 openssh
 p7zip
 pacman
+paprefs
 patch
+pavucontrol
 pciutils
 pcmciautils
 perl
@@ -85,10 +88,12 @@ perl-file-mimeinfo
 pkg-config
 pm-utils
 polkit-gnome
+ponymix
 powertop
 procps-ng
 psmisc
 pulseaudio
+pulseaudio-alsa
 qt5-webkit
 ranger
 reiserfsprogs
@@ -111,6 +116,7 @@ ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
 unzip
+upower
 usbutils
 util-linux
 vi

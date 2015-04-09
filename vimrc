@@ -85,6 +85,9 @@ let python_highlight_all = 1
 set autoindent
 set smartindent
 
+" defaults not terrible
+set ts=4 sw=4 noexpandtab
+
 " turn on spelling where sensible
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufRead,BufNewFile *.markdown setlocal spell
@@ -104,6 +107,7 @@ autocmd Filetype ejs setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=4 sw=4 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
+autocmd Filetype json setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
