@@ -70,6 +70,7 @@ mdadm
 mediainfo
 mirage
 mlocate
+mupdf
 nano
 netctl
 network-manager-applet
@@ -78,16 +79,20 @@ networkmanager-openvpn
 openssh
 p7zip
 pacman
+paprefs
 patch
+pavucontrol
 pciutils
 pcmciautils
 perl
 perl-file-mimeinfo
 pkg-config
 pm-utils
+ponymix
 procps-ng
 psmisc
 pulseaudio
+pulseaudio-alsa
 python-pip
 python2-pip
 python2-virtualenv
@@ -111,6 +116,7 @@ ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
 unzip
+upower
 usbutils
 util-linux
 vagrant
