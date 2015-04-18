@@ -157,11 +157,11 @@ bindsym $mod+End mode "$mode_system"
 bindsym $mod+Delete exec --no-startup-id $Locker
 
 # bind volume keys
-bindsym XF86AudioLowerVolume exec amixer -q set Master 5-
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 5+
+bindsym XF86AudioLowerVolume exec ponymix decrease 5
+bindsym XF86AudioRaiseVolume exec ponymix increase 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86AudioMute exec $(amixer get Master | grep off > /dev/null && amixer -q set Master unmute) || amixer -q set Master mute
+bindsym XF86AudioMute exec $(ponymix | grep Muted > /dev/null && ponymix unmute > /dev/null) || ponymix mute > /dev/null
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -184,3 +184,5 @@ exec --no-startup-id compton -b
 exec --no-startup-id xscreensaver
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
+# Kill system beep
+exec --no-startup-id xset -b
