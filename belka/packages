@@ -42,6 +42,7 @@ groff
 gummiboot
 gzip
 highlight
+htop
 i3-wm
 i3lock
 i3status
@@ -57,7 +58,9 @@ licenses
 lightdm
 lightdm-gtk-greeter
 linux
+linux-lts
 logrotate
+lsof
 lvm2
 m4
 make
@@ -107,7 +110,6 @@ tmux
 ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
-unclutter
 unzip
 usbutils
 util-linux
@@ -116,6 +118,8 @@ vi
 vim
 virtualbox
 virtualbox-guest-iso
+virtualbox-host-modules
+virtualbox-host-modules-lts
 w3m
 weechat
 wget
