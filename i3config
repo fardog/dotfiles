@@ -30,6 +30,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
+# set default layout to stacking
+workspace_layout stacking
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -190,3 +193,5 @@ exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 # Kill system beep
 exec --no-startup-id xset -b
+# Allow ctrl+alt+bksp
+# exec --no-startup-id setxkbmap -option terminate:ctrl_alt_bksp
