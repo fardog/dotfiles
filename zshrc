@@ -111,6 +111,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias npm=envpm
 alias c='xclip -sel clip'
+alias vssh='TERM=xterm vagrant ssh'
 
 set -o vi
 
