@@ -180,6 +180,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
+let g:agprg="ag --nogroup --nocolor --ignore '*.min.*' --column"
+
 
 " statusline funnery (from https://github.com/scrooloose/vimfiles/blob/master/vimrc#L78)
 set statusline+=%#warningmsg#
