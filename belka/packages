@@ -16,11 +16,13 @@ bzip2
 chromium
 coreutils
 cryptsetup
+cups
 device-mapper
 dhcpcd
 dialog
 diffutils
 dmenu
+dnsutils
 e2fsprogs
 enchant
 fakeroot
@@ -33,13 +35,16 @@ gawk
 gcc
 gcc-libs
 gettext
+ghostscript
 git
 glibc
 gnome-keyring
 gnome-themes-standard
 grep
 groff
+gsfonts
 gummiboot
+gutenprint
 gzip
 highlight
 htop
@@ -53,6 +58,7 @@ iputils
 iw
 jfsutils
 less
+libnfs
 libtool
 licenses
 lightdm
@@ -76,6 +82,7 @@ netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
+nfs-utils
 openssh
 p7zip
 pacman
@@ -86,6 +93,7 @@ pciutils
 pcmciautils
 perl
 perl-file-mimeinfo
+phantomjs
 pkg-config
 pm-utils
 ponymix
@@ -111,6 +119,7 @@ sysfsutils
 systemd-sysvcompat
 tar
 texinfo
+the_silver_searcher
 tmux
 ttf-droid
 ttf-symbola
