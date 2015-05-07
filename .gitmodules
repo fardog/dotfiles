@@ -61,3 +61,9 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "vim/bundle/vim-textobj-user"]
+	path = vim/bundle/vim-textobj-user
+	url = git@github.com:kana/vim-textobj-user.git
+[submodule "vim/bundle/vim-textobj-quotes"]
+	path = vim/bundle/vim-textobj-quotes
+	url = git@github.com:beloglazov/vim-textobj-quotes.git
