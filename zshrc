@@ -110,6 +110,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias npm=envpm
+alias c='xclip -sel clip'
 
 set -o vi
 
