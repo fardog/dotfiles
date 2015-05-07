@@ -42,6 +42,7 @@ groff
 gummiboot
 gzip
 highlight
+htop
 i3-wm
 i3lock
 i3status
@@ -57,7 +58,9 @@ licenses
 lightdm
 lightdm-gtk-greeter
 linux
+linux-lts
 logrotate
+lsof
 lvm2
 m4
 make
@@ -67,6 +70,7 @@ mdadm
 mediainfo
 mirage
 mlocate
+mupdf
 nano
 netctl
 network-manager-applet
@@ -75,16 +79,20 @@ networkmanager-openvpn
 openssh
 p7zip
 pacman
+paprefs
 patch
+pavucontrol
 pciutils
 pcmciautils
 perl
 perl-file-mimeinfo
 pkg-config
 pm-utils
+ponymix
 procps-ng
 psmisc
 pulseaudio
+pulseaudio-alsa
 python-pip
 python2-pip
 python2-virtualenv
@@ -107,8 +115,8 @@ tmux
 ttf-droid
 ttf-symbola
 ttf-ubuntu-font-family
-unclutter
 unzip
+upower
 usbutils
 util-linux
 vagrant
@@ -116,6 +124,8 @@ vi
 vim
 virtualbox
 virtualbox-guest-iso
+virtualbox-host-modules
+virtualbox-host-modules-lts
 w3m
 weechat
 wget
