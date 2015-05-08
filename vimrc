@@ -155,6 +155,10 @@ else
     nmap <silent> <leader>p :let @m = system('xclip -o -sel clip')<cr>"mp
 endif
 
+" commonly used fuzzyfinder commands, to CtrlP
+nnoremap <silent> sj     :CtrlPBuffer<CR>
+nnoremap <silent> sk     :CtrlP<CR>
+
 " other bindings
 nnoremap <silent> <F9> :TagbarToggle<CR>
 
