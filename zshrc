@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux npm)
+plugins=(git tmux npm vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,8 +112,6 @@ fi
 alias npm=envpm
 alias c='xclip -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
-
-set -o vi
 
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
