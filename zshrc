@@ -127,3 +127,5 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use iojs > /dev/null 2>&1 # This loads nvm
+
+source $HOME/.boxrc
