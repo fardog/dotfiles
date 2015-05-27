@@ -2,6 +2,7 @@ accountsservice
 acpid
 alsa-utils
 aspell-en
+at
 atool
 autoconf
 autocutsel
@@ -23,6 +24,7 @@ dialog
 diffutils
 dmenu
 dnsutils
+dunst
 e2fsprogs
 enchant
 fakeroot
@@ -43,6 +45,7 @@ gnome-themes-standard
 grep
 groff
 gsfonts
+gtk-recordmydesktop
 gummiboot
 gutenprint
 gzip
@@ -97,6 +100,7 @@ phantomjs
 pkg-config
 pm-utils
 ponymix
+powertop
 procps-ng
 psmisc
 pulseaudio
@@ -126,6 +130,7 @@ ttf-symbola
 ttf-ubuntu-font-family
 unzip
 upower
+urxvt-perls
 usbutils
 util-linux
 vagrant
@@ -135,6 +140,7 @@ virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules
 virtualbox-host-modules-lts
+vlc
 w3m
 weechat
 wget
