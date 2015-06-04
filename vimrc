@@ -145,6 +145,8 @@ nnoremap G mkG
 " leader commands
 noremap <leader>t :!npm test %<cr>
 noremap <leader>T :!npm test<cr>
+noremap <leader>r :!npm run test-phantom %<cr>
+noremap <leader>R :!npm run test-phantom<cr>
 
 if has("clipboard")
     vmap <leader>y "+y
