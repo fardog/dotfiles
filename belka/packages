@@ -27,6 +27,7 @@ dnsutils
 dunst
 e2fsprogs
 enchant
+ethtool
 fakeroot
 file
 filesystem
@@ -54,6 +55,7 @@ htop
 i3-wm
 i3lock
 i3status
+imagemagick
 imlib2
 inetutils
 iproute2
