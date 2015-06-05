@@ -21,7 +21,7 @@ xrandr_params_for() {
     eval $(find_mode ${1})  #sets ${WIDTH} and ${HEIGHT}
     MODE="${WIDTH}x${HEIGHT}"
     CMD="${CMD} --output ${1} --mode ${MODE} --pos ${POS[X]}x${POS[Y]}"
-    POS[X]=$((${POS[X]}+${WIDTH}))
+    POS[X]=$((${POS[X]}-${WIDTH}))
     return 0
   else
     CMD="${CMD} --output ${1} --off"
