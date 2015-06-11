@@ -4,3 +4,4 @@
 *.swo
 .tern-project
 .npmrc
+node_modules
