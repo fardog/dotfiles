@@ -84,3 +84,5 @@ URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.clipboard.autocopy: true
 URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+#include "/home/nwittstock/.Xresources.box"
