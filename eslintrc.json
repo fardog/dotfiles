@@ -1,10 +1,8 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
   },
-  // 0 - turn rule off
-  // 1 - rule generates warnings
-  // 2 - rule generates errors
   "rules": {
     "camelcase": 2,
     "quotes": [2, "single", "avoid-escape"],

@@ -25,6 +25,7 @@ dmenu
 dunst
 e2fsprogs
 enchant
+ethtool
 fakeroot
 file
 filesystem
@@ -100,6 +101,8 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+python-pip
+python2-pip
 qt5-webkit
 ranger
 reiserfsprogs
@@ -122,8 +125,10 @@ tmux
 truecrypt
 ttf-dejavu
 ttf-droid
+ttf-inconsolata
 ttf-symbola
 ttf-ubuntu-font-family
+units
 unzip
 upower
 urxvt-perls

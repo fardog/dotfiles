@@ -110,6 +110,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias npm=envpm
+alias open=xdg-open
 alias c='xclip -sel clip'
 alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
