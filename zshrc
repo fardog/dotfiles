@@ -92,7 +92,7 @@ fi
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 else
-	export EDITOR='vim'
+	export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -114,6 +114,7 @@ alias open=xdg-open
 alias c='xclip -sel clip'
 alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
+alias vim=nvim
 
 # raise ulimit
 ulimit -n 5000
