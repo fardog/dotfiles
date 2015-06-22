@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux npm vi-mode autojump)
+plugins=(git tmux npm vi-mode autojump history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -92,7 +92,7 @@ fi
 if [[ -n $SSH_CONNECTION ]]; then
 	export EDITOR='vim'
 else
-	export EDITOR='vim'
+	export EDITOR='nvim'
 fi
 
 # Compilation flags
@@ -114,6 +114,7 @@ alias open=xdg-open
 alias c='xclip -sel clip'
 alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
+alias vim=nvim
 
 # raise ulimit
 ulimit -n 10000
