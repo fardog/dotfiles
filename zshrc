@@ -116,7 +116,7 @@ alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
 
 # raise ulimit
-ulimit -n 5000
+ulimit -n 10000
 
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
