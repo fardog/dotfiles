@@ -31,6 +31,13 @@ set spellcapcheck=
 " enable omni completion
 set ofu=syntaxcomplete#Complete
 
+" enable omnicompletion for some filetypes
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 set wrap
 set linebreak
 " make our linebreak wrapping more meaningful
@@ -39,6 +46,12 @@ set showbreak=>>>
 set colorcolumn=80
 " highlight the current line
 set cursorline
+
+" search highlighting
+set hlsearch
+
+set wildmenu
+set wildmode=longest:full,full
 
 " set up taglist, bind to F8
 nnoremap <silent> <F8> :TlistToggle<CR>
@@ -163,16 +176,10 @@ nnoremap <silent> sk     :CtrlP<CR>
 
 " other bindings
 nnoremap <silent> <F9> :TagbarToggle<CR>
-
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " configure syntastic
 let g:syntastic_javascript_checkers=['eslint']
-" if ua-style exists, load those rules
-let file = expand("~/Projects/UA/ua-style/config.json")
-if filereadable(file)
-    let g:syntastic_javascript_eslint_args='--config ~/Projects/UA/ua-style/config.json --rulesdir ~/Projects/UA/ua-style/lib/rules'
-endif
-
 
 " The Silver Searcher
 if executable('ag')
