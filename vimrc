@@ -17,7 +17,7 @@ set autoread
 set backup
 set backupdir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set backupskip=~/tmp/*
-set swapfile
+set noswapfile
 set directory=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 
@@ -160,6 +160,7 @@ noremap <leader>t :!npm test %<cr>
 noremap <leader>T :!npm test<cr>
 noremap <leader>r :!npm run test-phantom %<cr>
 noremap <leader>R :!npm run test-phantom<cr>
+noremap <leader>w :.w !zsh<cr>
 
 if has("clipboard")
     vmap <leader>y "+y
