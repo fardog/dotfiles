@@ -161,6 +161,10 @@ noremap <leader>T :!npm test<cr>
 noremap <leader>r :!npm run test-phantom %<cr>
 noremap <leader>R :!npm run test-phantom<cr>
 noremap <leader>w :.w !zsh<cr>
+noremap <leader>z :e term://zsh<cr>
+
+" terminal leader commands
+tnoremap <leader>\ <C-\><C-n>
 
 if has("clipboard")
     vmap <leader>y "+y
