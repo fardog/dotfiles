@@ -4,7 +4,7 @@
 [core]
 	excludesfile = ~/.dotfiles/gitignore_global
 	filemode = false
-	editor = vim
+	editor = nvim
 [github]
 	user = fardog
 	token = !cat ~/.github_token 2>&1 >/dev/null
