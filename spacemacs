@@ -12,23 +12,35 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     emacs-lisp
+     python
+     javascript
+     markdown
+     ;;
+     auto-completion
+     syntax-checking
+     ;;
+     version-control
+     git
+     ;;
+     (shell :variables
+            shell-default-shell 'ansi-term)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     ;; auto-completion
      ;; better-defaults
-     emacs-lisp
-     git
-     markdown
+     ;; emacs-lisp
+     ;; git
+     ;; markdown
      ;; org
-     shell
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     syntax-checking
-     version-control
+     ;; syntax-checking
+     ;; version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -60,7 +72,7 @@ before layers configuration."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed.
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)
@@ -149,31 +161,47 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
-)
+  )
 
 (defun dotspacemacs/config ()
-  (add-hook 'js-mode-hook 'fci-mode)
-  (add-hook 'js-mode-hook 'company-mode)
+  ;; use web-mode for ractive
+  (add-to-list 'auto-mode-alist '("\\.ract$" . web-mode))
+
+  ;; js-mode hooks
   (add-hook 'js-mode-hook 'flycheck-mode)
+  (add-hook 'js-mode-hook 'fci-mode)
+  (add-hook 'js-mode-hook 'line-number-mode)
+  (add-hook 'js-mode-hook (lambda () (linum-mode 1)))
+
+  ;; make javascript not terrible
+  (setq js2-basic-offset 2)
+  (setq js2-include-node-externs t)
+  (setq js2-include-browser-externs t)
+  (setq js2-include-harmony-externs t)
+  (setq js2-bounce-indent-p t)
+  (setq js2-auto-indent-p nil)
+
+  (setq-default js2-show-parse-errors nil)
+  (setq-default js2-strict-missing-semi-warning nil)
+  (setq-default js2-strict-inconsistent-return-warning nil)
+  (setq-default js2-strict-trailing-comma-warning nil)
+
+  ;; use only eslint with flycheck
+  (require 'flycheck)
+
+  ;; disable jshint since we prefer eslint checking
+  (setq-default flycheck-disabled-checkers
+                (append flycheck-disabled-checkers
+                        '(javascript-jshint)))
+
+  ;; use eslint with web-mode for jsx files
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+
+  ;; disable json-jsonlist checking for json files
+  (setq-default flycheck-disabled-checkers
+                (append flycheck-disabled-checkers
+                        '(json-jsonlist)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ahs-case-fold-search nil)
- '(ahs-default-range (quote ahs-range-whole-buffer))
- '(ahs-idle-interval 0.25)
- '(ahs-idle-timer 0 t)
- '(ahs-inhibit-face-list nil)
- '(js-indent-level 2)
- '(ring-bell-function (quote ignore) t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
