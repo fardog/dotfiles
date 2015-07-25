@@ -1,5 +1,6 @@
 accountsservice
 acpid
+adobe-source-code-pro-fonts
 alsa-utils
 aspell-en
 at
@@ -15,6 +16,7 @@ bluez
 bluez-libs
 bluez-utils
 bzip2
+calc
 chromium
 coreutils
 cryptsetup
@@ -25,6 +27,7 @@ diffutils
 dmenu
 dunst
 e2fsprogs
+emacs
 enchant
 ethtool
 fakeroot
@@ -40,6 +43,7 @@ gettext
 git
 glibc
 gnome-keyring
+gnome-terminal
 gnome-themes-standard
 grep
 groff
@@ -65,6 +69,7 @@ lightdm-gtk-greeter
 linux
 logrotate
 lsof
+lua51-messagepack
 lvm2
 m4
 make
@@ -78,6 +83,7 @@ mlocate
 monodevelop
 mupdf
 nano
+net-tools
 netctl
 network-manager-applet
 networkmanager
@@ -129,6 +135,7 @@ ttf-droid
 ttf-inconsolata
 ttf-symbola
 ttf-ubuntu-font-family
+unibilium
 units
 unzip
 upower
