@@ -47,6 +47,9 @@ set colorcolumn=80
 " highlight the current line
 set cursorline
 
+" Minimal number of screen lines to keep above and below the cursor
+set scrolloff=10
+
 " search highlighting
 set hlsearch
 
@@ -65,31 +68,25 @@ let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
 let g:vim_markdown_folding_disabled=1
 
-if has("gui_win32")
-    let Tlist_Ctags_Cmd = 'C:/Users/nwittstock/Dropbox/Setups/vim/ctags58/ctags.exe'
-endif
-
 let Tlist_Inc_Winwidth=0 " for konsole
-
 
 " turn on the "visual bell" - which is much quieter than the "audio blink"
 set visualbell
 set noerrorbells
 
+" correctly opening splits
+set splitright
+set splitbelow
+
 set shell=/bin/sh
 
-" colorscheme desert
+" 256bit terminal
+set t_Co=256
+
 colorscheme wombat256i
 
-if has("gui_win32")
-    set gfn=DejaVu\ Sans\ Mono:h10
-elseif has("gui_gtk")
-    set gfn=DejaVu\ Sans\ Mono\ 10
-    au GUIEnter * set lines=46 columns=178
-else
-    set gfn=DejaVu\ Sans\ Mono:h12
-    au GUIEnter * set lines=65 columns=198
-endif
+set gfn=DejaVu\ Sans\ Mono:h12
+au GUIEnter * set lines=65 columns=198
 
 " set correct tabs for python (PEP8)
 let python_highlight_all = 1
@@ -155,6 +152,19 @@ nnoremap ? ml?
 nnoremap gg mkgg
 nnoremap G mkG
 
+" U: Redos since 'u' undos
+nnoremap U :redo<cr>
+
+" _ : Quick horizontal splits
+nnoremap _ :sp<cr>
+
+" | : Quick vertical splits
+nnoremap <bar> :vsp<cr>
+
+" remap leader to spc
+let mapleader=" "
+let g:mapleader=" "
+
 " leader commands
 noremap <leader>t :!npm test %<cr>
 noremap <leader>T :!npm test<cr>
@@ -175,10 +185,9 @@ else
     nmap <silent> <leader>p :let @m = system('xclip -o -sel clip')<cr>"mp
 endif
 
-" commonly used fuzzyfinder commands, to CtrlP
-nnoremap <silent> sj     :CtrlPBuffer<CR>
-nnoremap <silent> sk     :CtrlP<CR>
-
+nnoremap <leader>ff :CtrlP<cr>
+nnoremap <leader>fb :CtrlPBuffer<cr>
+nnoremap <leader>/ :Ag 
 " other bindings
 nnoremap <silent> <F9> :TagbarToggle<CR>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
