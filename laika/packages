@@ -152,6 +152,7 @@ wget
 which
 wpa_actiond
 wpa_supplicant
+xautolock
 xclip
 xf86-input-synaptics
 xf86-video-intel
@@ -161,6 +162,5 @@ xorg-xev
 xorg-xinput
 xorg-xmodmap
 xorg-xrdb
-xscreensaver
 zip
 zsh
