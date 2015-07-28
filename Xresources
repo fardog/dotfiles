@@ -39,9 +39,6 @@ URxvt*boldFont: xft:DejaVuSansMono-Bold:size=10
 URxvt*italicFont: xft:DejaVuSansMono-Oblique:size=10
 URxvt*boldItalicFont: xft:DejaVuSansMono-BoldOblique:size=10
 
-! Narrower character spacing
-URxvt.letterSpace: -1
-
 ! Intensity something I guess. Looks better it seems?
 URxvt*intensityStyles: false
 
