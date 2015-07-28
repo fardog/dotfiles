@@ -24,10 +24,10 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec urxvt -geometry 130x38 -name floating
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec termite --geometry=1080x600 --name=floating --class=termite
 
-for_window [class="URxvt" instance="floating"] floating enable
+for_window [class="termite" instance="floating"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill

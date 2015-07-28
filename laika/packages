@@ -125,6 +125,7 @@ sysfsutils
 systemd-sysvcompat
 tar
 task
+termite
 texinfo
 the_silver_searcher
 tmux
@@ -138,7 +139,6 @@ unibilium
 units
 unzip
 upower
-urxvt-perls
 usbutils
 util-linux
 vi
