@@ -80,13 +80,9 @@ set splitbelow
 
 set shell=/bin/sh
 
-" 256bit terminal
+" 256bit terminal and colors
 set t_Co=256
-
 colorscheme wombat256i
-
-set gfn=DejaVu\ Sans\ Mono:h12
-au GUIEnter * set lines=65 columns=198
 
 " set correct tabs for python (PEP8)
 let python_highlight_all = 1
