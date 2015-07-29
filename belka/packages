@@ -121,7 +121,6 @@ qt4
 ranger
 reiserfsprogs
 rsync
-rxvt-unicode
 s-nail
 scrot
 sed
@@ -131,6 +130,7 @@ sudo
 sysfsutils
 systemd-sysvcompat
 tar
+termite
 texinfo
 the_silver_searcher
 tmux
@@ -140,7 +140,6 @@ ttf-ubuntu-font-family
 unibilium
 unzip
 upower
-urxvt-perls
 usbutils
 util-linux
 vagrant
@@ -166,5 +165,6 @@ xorg-xev
 xorg-xinput
 xorg-xmodmap
 xorg-xrdb
+xsel
 zip
 zsh
