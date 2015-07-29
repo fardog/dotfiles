@@ -81,7 +81,6 @@ set splitbelow
 set shell=/bin/sh
 
 " 256bit terminal and colors
-set t_Co=256
 colorscheme wombat256i
 
 " set correct tabs for python (PEP8)
