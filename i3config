@@ -25,7 +25,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite --geometry=1080x600 --name=floating --class=termite
+bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --class=termite
 
 for_window [class="termite" instance="floating"] floating enable
 
