@@ -52,9 +52,11 @@
 [submodule "vim/bundle/vim-textobj-user"]
 	path = vim/bundle/vim-textobj-user
 	url = git@github.com:kana/vim-textobj-user.git
+	ignore = dirty
 [submodule "vim/bundle/vim-textobj-quotes"]
 	path = vim/bundle/vim-textobj-quotes
 	url = git@github.com:beloglazov/vim-textobj-quotes.git
+	ignore = dirty
 [submodule "vim/bundle/ag.vim"]
 	path = vim/bundle/ag.vim
 	url = git@github.com:rking/ag.vim.git
