@@ -68,6 +68,8 @@ let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
 let g:vim_markdown_folding_disabled=1
 
+let g:rainbow_active = 1
+
 let Tlist_Inc_Winwidth=0 " for konsole
 
 " turn on the "visual bell" - which is much quieter than the "audio blink"
