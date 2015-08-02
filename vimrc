@@ -135,6 +135,10 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 
+" turn on neomake for everything
+autocmd! BufWritePost,BufEnter * Neomake
+
+
 " autoclose fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
 " use open for Gbrowse in fugitive
@@ -189,8 +193,9 @@ nnoremap <leader>/ :Ag
 nnoremap <silent> <F9> :TagbarToggle<CR>
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
-" configure syntastic
-let g:syntastic_javascript_checkers=['eslint']
+" configure neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_python_enabled_makers = ['flake8']
 
 " The Silver Searcher
 if executable('ag')
@@ -236,9 +241,9 @@ set statusline+=%{StatuslineTrailingSpaceWarning()}
 
 set statusline+=%{StatuslineLongLineWarning()}
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
 "display if buffer is dirty
 set statusline+=%#error#
