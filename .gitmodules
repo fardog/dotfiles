@@ -72,3 +72,6 @@
 [submodule "vim/bundle/neomake"]
 	path = vim/bundle/neomake
 	url = git@github.com:benekastah/neomake.git
+[submodule "vim/bundle/lightline.vim"]
+	path = vim/bundle/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
