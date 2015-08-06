@@ -54,7 +54,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 UNAME=$(/usr/bin/env uname)
-export PATH="$HOME/.dotfiles/bin:./node_modules/.bin:$HOME/.bin"
+export PATH="$HOME/.dotfiles/bin:$HOME/.bin"
 if [ $UNAME = "Darwin" ]; then
 	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 else # Everyone else (Linux)
@@ -131,5 +131,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use iojs > /dev/null 2>&1 # This loads nvm
 
 bindkey '^r' history-incremental-search-backward
+
+# update path to put node_modules first, this must be done *after* nvm
+export PATH="./node_modules/.bin:$PATH"
 
 source $HOME/.boxrc

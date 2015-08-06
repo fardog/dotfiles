@@ -173,6 +173,7 @@ noremap <leader>r :!npm run test-phantom %<cr>
 noremap <leader>R :!npm run test-phantom<cr>
 noremap <leader>w :.w !zsh<cr>
 noremap <leader>z :e term://zsh<cr>
+noremap <leader>N :TernRename<cr>
 
 " terminal leader commands
 tnoremap <leader>\ <C-\><C-n>
