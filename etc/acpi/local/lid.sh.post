@@ -2,5 +2,5 @@
 
 grep -q closed /proc/acpi/button/lid/*/state
 if [ $? = 0 ]; then
-   DISPLAY=:0 sudo -u nwittstock i3lock -c 000000 && sleep 2 && pm-suspend
+   DISPLAY=:0 sudo -u nwittstock xautolock -locknow && sleep 2 && pm-suspend
 fi
