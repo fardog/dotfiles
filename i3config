@@ -52,11 +52,27 @@ bindsym $mod+d exec dmenu_run
 # take screenshots
 bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
 
+# set window marks
+bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
+bindsym $mod+Shift+m exec i3-input -F '[con_mark=%s] focus' -P 'Go to mark: '
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
+bindsym $mod+u focus parent
+bindsym $mod+i focus parent
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus urgent
+bindsym $mod+x [urgent=latest] focus
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -79,21 +95,6 @@ bindsym $mod+f fullscreen
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# focus urgent
-bindsym $mod+x [urgent=latest] focus
 
 # switch to workspace
 bindsym $mod+1 workspace 1
