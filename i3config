@@ -181,6 +181,7 @@ bindsym XF86AudioRaiseVolume exec ponymix increase 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86AudioMute exec $(ponymix | grep Muted > /dev/null && ponymix unmute > /dev/null) || ponymix mute > /dev/null
+bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 
 # bind mouse swappers
 bindsym $mod+comma exec --no-startup-id ~/.dotfiles/bin/left-handed-mouse
