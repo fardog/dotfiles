@@ -78,3 +78,6 @@
 [submodule "vim/bundle/tern_for_vim"]
 	path = vim/bundle/tern_for_vim
 	url = git@github.com:marijnh/tern_for_vim.git
+[submodule "vim/bundle/quick-scope"]
+	path = vim/bundle/quick-scope
+	url = git@github.com:unblevable/quick-scope.git
