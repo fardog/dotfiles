@@ -187,6 +187,9 @@ bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 bindsym $mod+comma exec --no-startup-id ~/.dotfiles/bin/left-handed-mouse
 bindsym $mod+period exec --no-startup-id ~/.dotfiles/bin/right-handed-mouse
 
+# bind restarting xcape since it fails all the time
+bindsym $mod+Shift+x exec --no-startup-id ~/.dotfiles/bin/restart-xcape
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
