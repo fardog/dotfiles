@@ -167,12 +167,10 @@ let mapleader=" "
 let g:mapleader=" "
 
 " leader commands
-noremap <leader>t :!npm test %<cr>
-noremap <leader>T :!npm test<cr>
-noremap <leader>r :!npm run test-phantom %<cr>
-noremap <leader>R :!npm run test-phantom<cr>
+noremap <leader>t :belowright split<cr>:resize 20<cr>:terminal $SHELL -c "npm test %"<cr>
+noremap <leader>T :belowright split<cr>:resize 20<cr>:terminal $SHELL -c "npm test"<cr>
 noremap <leader>w :.w !zsh<cr>
-noremap <leader>z :e term://zsh<cr>
+noremap <leader>z :terminal $SHELL<cr>
 noremap <leader>N :TernRename<cr>
 
 " terminal leader commands
