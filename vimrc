@@ -162,6 +162,16 @@ nnoremap _ :sp<cr>
 " | : Quick vertical splits
 nnoremap <bar> :vsp<cr>
 
+" left and right arrows navigate buffers
+nnoremap <left> :bp<cr>
+nnoremap <right> :bn<cr>
+" up and down navigate jump list
+nnoremap <up> <c-o>
+nnoremap <down> <c-i>
+" allow c-p and c-n to do command filtering
+cnoremap <c-p> <up>
+cnoremap <c-n> <down>
+
 " remap leader to spc
 let mapleader=" "
 let g:mapleader=" "
@@ -189,8 +199,9 @@ nnoremap <leader>ff :CtrlP<cr>
 nnoremap <leader>fb :CtrlPBuffer<cr>
 nnoremap <leader>/ :Ag
 " other bindings
-nnoremap <silent> <F9> :TagbarToggle<CR>
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <F9> :TagbarToggle<cr>
+nnoremap <silent> <C-l> :nohl<cr><C-l>
+nnoremap <silent> <C-y> :let @+=getreg()<cr>
 
 " configure neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
