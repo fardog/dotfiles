@@ -187,6 +187,10 @@ bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 bindsym $mod+comma exec --no-startup-id ~/.dotfiles/bin/left-handed-mouse
 bindsym $mod+period exec --no-startup-id ~/.dotfiles/bin/right-handed-mouse
 
+# bind monitor swappers
+bindsym $mod+bracketright exec --no-startup-id ~/.dotfiles/bin/xrandr-display-right
+bindsym $mod+bracketleft exec --no-startup-id ~/.dotfiles/bin/xrandr-display-left
+
 # bind restarting xcape since it fails all the time
 bindsym $mod+Shift+x exec --no-startup-id ~/.dotfiles/bin/restart-xcape
 
