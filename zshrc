@@ -128,7 +128,7 @@ if [ $HOST_NAME = "belka" ]; then
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use iojs > /dev/null 2>&1 # This loads nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 4 > /dev/null 2>&1 # This loads nvm
 
 bindkey '^r' history-incremental-search-backward
 
