@@ -1,12 +1,15 @@
 anamnesis
-compton-git
+clojurescript-git
 cower
 dropbox
+gummiboot
 libtermkey-bzr
 libvterm-bzr
 monogame
 neovim-git
 opentk
 srandrd-alt
-ttf-ms-fonts
+ttf-carlito
+ttf-chromeos-fonts
+ttf-hack
 xcape-git
