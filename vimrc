@@ -33,7 +33,7 @@ set ofu=syntaxcomplete#Complete
 
 " enable omnicompletion for some filetypes
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType html,markdown,mkd.markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
@@ -118,7 +118,7 @@ autocmd Filetype json setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
-autocmd Filetype mkd setlocal ts=2 sw=2 textwidth=80 expandtab
+autocmd Filetype mkd,mkd.markdown setlocal ts=2 sw=2 textwidth=80 expandtab
 autocmd Filetype rst setlocal ts=2 sw=2 expandtab
 autocmd Filetype less setlocal ts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=4 sw=4 expandtab
