@@ -217,7 +217,7 @@ bar {
 # Run some commands at startup
 
 # Make Super_L (caps on my keyboard) act as escape on short press
-exec --no-startup-id xcape -e 'Super_L=Escape'
+exec --no-startup-id xcape -e '#66=Escape'
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
 # Autoconfigure attached monitors
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display

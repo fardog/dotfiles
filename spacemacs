@@ -13,6 +13,7 @@
    dotspacemacs-configuration-layers
    '(
      emacs-lisp
+     clojure
      python
      javascript
      markdown
@@ -22,6 +23,7 @@
      ;;
      version-control
      git
+     github
      ;;
      (shell :variables
             shell-default-shell 'ansi-term)
@@ -72,7 +74,7 @@ before layers configuration."
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed.
-   dotspacemacs-startup-banner nil
+   ;; dotspacemacs-startup-banner nil
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'."
    dotspacemacs-startup-lists '(recents projects)

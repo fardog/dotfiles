@@ -1,4 +1,4 @@
 #!/bin/bash
 
 killall xcape
-xcape -e "Super_L=Escape"
+xcape -e "#66=Escape"
