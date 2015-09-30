@@ -204,7 +204,7 @@ nnoremap <silent> <C-l> :nohl<cr><C-l>
 nnoremap <silent> <C-y> :let @+=getreg()<cr>
 
 " configure neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['standard']
 let g:neomake_python_enabled_makers = ['flake8']
 
 " The Silver Searcher
