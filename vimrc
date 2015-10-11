@@ -37,6 +37,10 @@ autocmd FileType html,markdown,mkd.markdown setlocal omnifunc=htmlcomplete#Compl
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup rainbow_lisp
+  autocmd!
+  autocmd FileType lisp,clojure,scheme RainbowParentheses
+augroup END
 
 set wrap
 set linebreak
@@ -46,6 +50,7 @@ set showbreak=>>>
 set colorcolumn=80
 " highlight the current line
 set cursorline
+set showmatch
 
 " Minimal number of screen lines to keep above and below the cursor
 set scrolloff=10
@@ -67,8 +72,6 @@ let tlist_sql_settings = 'sql;P:package;t:table'
 let tlist_ant_settings = 'ant;p:Project;r:Property;t:Target'
 
 let g:vim_markdown_folding_disabled=1
-
-let g:rainbow_active = 1
 
 let Tlist_Inc_Winwidth=0 " for konsole
 

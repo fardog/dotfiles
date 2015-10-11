@@ -19,6 +19,7 @@ bumblebee
 bzip2
 calc
 chromium
+clojure
 coreutils
 cryptsetup
 device-mapper
@@ -26,6 +27,7 @@ dhcpcd
 dialog
 diffutils
 dmenu
+docker
 dunst
 e2fsprogs
 emacs
@@ -60,8 +62,10 @@ inetutils
 iproute2
 iputils
 iw
+jdk7-openjdk
 jfsutils
 less
+lib32-ncurses
 lib32-nvidia-utils
 libtool
 licenses
@@ -117,6 +121,7 @@ python2-pip
 qt5-webkit
 ranger
 reiserfsprogs
+rlwrap
 s-nail
 scrot
 sed
