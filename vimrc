@@ -147,6 +147,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " use open for Gbrowse in fugitive
 command! -bar -nargs=1 Browse silent! exe '!open' shellescape(<q-args>, 1)
 
+" jk for escape
+inoremap jk <esc>
 
 " set mark before search
 nnoremap / ml/
