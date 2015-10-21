@@ -178,6 +178,7 @@ cnoremap <c-p> <up>
 cnoremap <c-n> <down>
 
 " remap leader to spc
+nnoremap <SPACE> <Nop>
 let mapleader=" "
 let g:mapleader=" "
 
