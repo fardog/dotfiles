@@ -28,6 +28,9 @@ set smartcase
 " don't check caps for spelling
 set spellcapcheck=
 
+" enable deoplete, mappings
+let g:deoplete#enable_at_startup = 1
+
 " enable omni completion
 set ofu=syntaxcomplete#Complete
 
