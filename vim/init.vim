@@ -228,7 +228,7 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-let g:agprg="ag --nogroup --nocolor --ignore '*.min.*' --column"
+let g:ag_prg="ag --nogroup --nocolor --ignore '*.min.*' --column"
 
 
 " lightline
