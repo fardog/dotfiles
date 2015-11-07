@@ -1,10 +1,11 @@
+aws-cli
 clojurescript-git
 cower
 dropbox
 leiningen
-libtermkey-bzr
-libvterm-bzr
-neovim-git
+python-bcdoc
+python-botocore
+python-guzzle-sphinx-theme
 srandrd-alt
 ttf-carlito
 ttf-chromeos-fonts

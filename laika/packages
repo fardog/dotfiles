@@ -86,9 +86,9 @@ mercurial
 mesa-demos
 mirage
 mlocate
-monodevelop
 mupdf
 nano
+neovim
 net-tools
 netctl
 network-manager-applet
@@ -116,7 +116,11 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+python-neovim
 python-pip
+python2-colorama
+python2-jmespath
+python2-neovim
 python2-pip
 qt5-webkit
 ranger
