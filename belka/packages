@@ -46,6 +46,7 @@ ghostscript
 git
 glibc
 gnome-keyring
+gnome-terminal
 gnome-themes-standard
 grep
 groff
@@ -88,6 +89,7 @@ mirage
 mlocate
 mupdf
 nano
+neovim
 net-tools
 netctl
 network-manager-applet
@@ -97,6 +99,7 @@ nfs-utils
 openssh
 p7zip
 pacman
+pandoc
 paprefs
 patch
 pavucontrol
@@ -113,7 +116,9 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+python-neovim
 python-pip
+python2-neovim
 python2-pip
 python2-virtualenv
 qt4
