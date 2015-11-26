@@ -2,7 +2,7 @@ source ~/.config/nvim/init.vim
 
 " npm test commands
 :map <leader>t :action QuickList.NpmTestOne<CR>
-:map <leader>T :action QuickList.NpmTestAll<CR>
+:map <leader>T :action QuickList.NpmTest<CR>
 
 :map <leader>z :action ActivateTerminalToolWindow<CR>
 :map <leader>g :action Vcs.QuickListPopupAction<CR>
