@@ -7,3 +7,4 @@
 .jspr
 node_modules
 .idea
+*.iml
