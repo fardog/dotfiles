@@ -8,5 +8,8 @@ source ~/.config/nvim/init.vim
 :map <leader>g :action Vcs.QuickListPopupAction<CR>
 :map <leader>/ :action MoveEditorToOppositeTabGroup<CR>
 
+:map <leader>p :action PasteMultiple<CR>
+:map <leader>s :action Switcher<CR>
+
 " reload .ideavimrc
 nnoremap <leader>vs :source ~/.ideavimrc<CR>
