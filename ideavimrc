@@ -1,15 +1,35 @@
 source ~/.config/nvim/init.vim
 
+" github
+noremap <leader>gu :action Github.Open.In.Browser<cr>
+noremap <leader>gg :action Github.Create.Gist<cr>
+
+" git commands
+noremap <leader>ga :action Vcs.QuickListPopupAction<cr>
+noremap <leader>gf :action Git.Fetch<cr>
+noremap <leader>gp :action Vcs.Push<cr>
+noremap <leader>gd :action Git.CompareWithBranch<cr>
+noremap <leader>gm :action Git.Merge<cr>
+noremap <leader>gs :action Git.Stash<cr>
+noremap <leader>gb :action Git.Branches<cr>
+noremap <leader>gc :action CheckinProject<cr>
+
+" files
+noremap <leader>fn :action NewFile<cr>
+
 " npm test commands
-:map <leader>t :action QuickList.NpmTestOne<CR>
-:map <leader>T :action QuickList.NpmTest<CR>
+noremap <leader>t :action QuickList.NpmTestOne<cr>
+noremap <leader>T :action QuickList.NpmTest<cr>
 
-:map <leader>z :action ActivateTerminalToolWindow<CR>
-:map <leader>g :action Vcs.QuickListPopupAction<CR>
-:map <leader>/ :action MoveEditorToOppositeTabGroup<CR>
+" window commands
+noremap <leader>s :action Switcher<cr>
+noremap <leader>z :action ActivateTerminalToolWindow<cr>
+noremap <leader><< :action MoveTabRight<cr>
+noremap <leader>>> :action MoveTabRight<cr>
+noremap <leader>/ :action MoveEditorToOppositeTabGroup<cr>
 
-:map <leader>p :action PasteMultiple<CR>
-:map <leader>s :action Switcher<CR>
+" clipboard
+noremap <leader>p :action PasteMultiple<cr>
 
 " reload .ideavimrc
-nnoremap <leader>vs :source ~/.ideavimrc<CR>
+nnoremap <leader>vs :source ~/.ideavimrc<cr>
