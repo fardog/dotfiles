@@ -11,6 +11,7 @@ noremap <leader>gp :action Vcs.Push<cr>
 noremap <leader>gd :action Git.CompareWithBranch<cr>
 noremap <leader>gm :action Git.Merge<cr>
 noremap <leader>gs :action Git.Stash<cr>
+noremap <leader>gl :action Git.Pull<cr>
 noremap <leader>gb :action Git.Branches<cr>
 noremap <leader>gc :action CheckinProject<cr>
 
