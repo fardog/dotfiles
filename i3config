@@ -42,6 +42,9 @@ bindsym $mod+Shift+q kill
 # set default layout to stacking
 workspace_layout stacking
 
+# disable focus follows mouse since it plays badly with intellij
+focus_follows_mouse no
+
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
