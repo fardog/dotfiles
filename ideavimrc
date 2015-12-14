@@ -18,6 +18,13 @@ noremap <leader>gc :action CheckinProject<cr>
 " files
 noremap <leader>fn :action NewFile<cr>
 
+" cursive
+noremap <leader>cbk :action :cursive.actions.paredit/barf-backwards<cr>
+noremap <leader>cbj :action :cursive.actions.paredit/barf-forwards<cr>
+noremap <leader>csj :action :cursive.actions.paredit/slurp-backwards<cr>
+noremap <leader>csk :action :cursive.actions.paredit/slurp-forwards<cr>
+noremap <leader>ck :action :cursive.actions.paredit/kill-sexp<cr>
+
 " npm test commands
 noremap <leader>t :action QuickList.NpmTestOne<cr>
 noremap <leader>T :action QuickList.NpmTest<cr>
