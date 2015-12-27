@@ -26,8 +26,7 @@ noremap <leader>csk :action :cursive.actions.paredit/slurp-forwards<cr>
 noremap <leader>ck :action :cursive.actions.paredit/kill-sexp<cr>
 
 " npm test commands
-noremap <leader>t :action QuickList.NpmTestOne<cr>
-noremap <leader>T :action QuickList.NpmTest<cr>
+noremap <leader>t :action QuickList.Tests<cr>
 
 " window commands
 noremap <leader>s :action Switcher<cr>
