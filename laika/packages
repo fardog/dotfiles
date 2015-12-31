@@ -59,6 +59,7 @@ i3lock
 i3status
 imlib2
 inetutils
+inotify-tools
 iproute2
 iputils
 iw
@@ -141,10 +142,12 @@ task
 termite
 texinfo
 the_silver_searcher
+tiled
 tmux
 truecrypt
 ttf-dejavu
 ttf-droid
+ttf-hack
 ttf-inconsolata
 ttf-symbola
 ttf-ubuntu-font-family
