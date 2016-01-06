@@ -2,6 +2,7 @@ accountsservice
 acpid
 adobe-source-code-pro-fonts
 alsa-utils
+arandr
 aspell-en
 at
 atool
@@ -27,6 +28,7 @@ dhcpcd
 dialog
 diffutils
 dmenu
+docker
 dunst
 e2fsprogs
 emacs
@@ -48,6 +50,7 @@ glibc
 gnome-keyring
 gnome-terminal
 gnome-themes-standard
+gnu-netcat
 grep
 groff
 gsfonts
@@ -65,8 +68,15 @@ inetutils
 iproute2
 iputils
 iw
+jdk7-openjdk
+jdk8-openjdk
 jfsutils
 less
+lib32-giflib
+lib32-libstdc++5
+lib32-libxmu
+lib32-libxtst
+lib32-libxv
 libfaketime
 libgnome-keyring
 libnfs
@@ -99,7 +109,6 @@ nfs-utils
 openssh
 p7zip
 pacman
-pandoc
 paprefs
 patch
 pavucontrol
@@ -111,6 +120,7 @@ phantomjs
 pkg-config
 pm-utils
 ponymix
+postgresql-libs
 powertop
 procps-ng
 psmisc
@@ -124,6 +134,7 @@ python2-virtualenv
 qt4
 ranger
 reiserfsprogs
+rlwrap
 rsync
 s-nail
 scrot
@@ -139,6 +150,7 @@ texinfo
 the_silver_searcher
 tmux
 ttf-droid
+ttf-hack
 ttf-symbola
 ttf-ubuntu-font-family
 unibilium
