@@ -241,3 +241,5 @@ exec --no-startup-id ~/.dotfiles/bin/_set-touchpoint-preferences
 exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 # Kill system beep
 exec --no-startup-id xset -b
+# Gnome Auth Agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
