@@ -2,6 +2,8 @@ compton-git
 cower
 dropbox
 leiningen
+perl-musicbrainz-discid
+perl-webservice-musicbrainz
 srandrd-alt
 ttf-carlito
 ttf-chromeos-fonts
