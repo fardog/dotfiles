@@ -226,14 +226,20 @@ exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 # Disable the trackpad while typing
 exec --no-startup-id syndaemon -i 0.1 -d -k
+# start whichever compositor is available
 exec --no-startup-id compton -b
+exec --no-startup-id unagi
+# unclutter to hide the mouse cursor when not in use
 exec --no-startup-id unclutter -b
+
 exec --no-startup-id xautolock -time 10 -detectsleep -locker /home/nwittstock/.dotfiles/bin/lock.sh
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 # Set touchpoint prefs and disable trackpad
-exec --no-startup-id ~/.dotfiles/bin/_set-touchpoint-preferences
+exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 # Kill system beep
 exec --no-startup-id xset -b
+# Gnome Auth Agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
