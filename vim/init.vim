@@ -25,6 +25,9 @@ set undodir=~/.vim-tmp,~/tmp,/var/tmp,$HOME/Local\ Settings/Temp
 set ignorecase
 set smartcase
 
+" relative line numbers for faster movement
+set rnu
+
 " don't check caps for spelling
 set spellcapcheck=
 
