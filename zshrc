@@ -134,5 +134,3 @@ bindkey '^r' history-incremental-search-backward
 
 # update path to put node_modules first, this must be done *after* nvm
 export PATH="./node_modules/.bin:$PATH"
-
-source $HOME/.boxrc

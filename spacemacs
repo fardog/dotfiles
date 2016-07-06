@@ -17,6 +17,7 @@
      python
      javascript
      markdown
+	 go
      ;;
      auto-completion
      syntax-checking
@@ -90,7 +91,7 @@ before layers configuration."
                                :size 13
                                :weight normal
                                :width normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.3)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
