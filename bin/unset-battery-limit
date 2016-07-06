@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+sudo tpacpi-bat -s SP 0 99
+sudo tpacpi-bat -s ST 0 99
