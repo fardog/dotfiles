@@ -16,10 +16,10 @@ bison
 bluez
 bluez-libs
 bluez-utils
-bumblebee
 bzip2
 calc
 chromium
+clamav
 clojure
 coreutils
 cryptsetup
@@ -44,11 +44,14 @@ gawk
 gcc
 gcc-libs
 gettext
+gimp
 git
 glibc
 gnome-keyring
 gnome-terminal
 gnome-themes-standard
+go
+go-tools
 grep
 groff
 gtk-sharp-3
@@ -65,6 +68,7 @@ id3
 imlib2
 inetutils
 inotify-tools
+intel-ucode
 iproute2
 iputils
 iw
@@ -73,7 +77,6 @@ jfsutils
 jhead
 less
 lib32-ncurses
-lib32-nvidia-utils
 libtool
 licenses
 lightdm
@@ -101,7 +104,10 @@ netctl
 network-manager-applet
 networkmanager
 networkmanager-openvpn
-nvidia
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+openal
 openssh
 p7zip
 pacman
@@ -119,7 +125,6 @@ pm-utils
 polkit-gnome
 ponymix
 powertop
-primus
 procps-ng
 psmisc
 pulseaudio
@@ -130,10 +135,12 @@ python2-colorama
 python2-jmespath
 python2-neovim
 python2-pip
+qemu
 qt5-webkit
 ranger
 reiserfsprogs
 rlwrap
+rofi
 rsync
 s-nail
 scrot
@@ -177,7 +184,7 @@ wpa_actiond
 wpa_supplicant
 xautolock
 xclip
-xf86-input-synaptics
+xf86-input-libinput
 xf86-video-intel
 xfsprogs
 xorg-server
