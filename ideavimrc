@@ -23,6 +23,10 @@ noremap <leader>cbk :action :cursive.actions.paredit/barf-backwards<cr>
 noremap <leader>cbj :action :cursive.actions.paredit/barf-forwards<cr>
 noremap <leader>csj :action :cursive.actions.paredit/slurp-backwards<cr>
 noremap <leader>csk :action :cursive.actions.paredit/slurp-forwards<cr>
+noremap <leader>cr :action :cursive.actions.paredit/raise<cr>
+noremap <leader>cj :action :cursive.actions.paredit/join<cr>
+noremap <leader>co :action :cursive.actions.paredit/split<cr>
+noremap <leader>cO :action :cursive.actions.paredit/splice<cr>
 noremap <leader>ck :action :cursive.actions.paredit/kill-sexp<cr>
 
 " npm test commands
