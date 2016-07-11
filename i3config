@@ -197,6 +197,9 @@ bindsym $mod+bracketleft exec --no-startup-id ~/.dotfiles/bin/xrandr-display-lef
 # bind restarting xcape since it fails all the time
 bindsym $mod+Shift+i exec --no-startup-id ~/.dotfiles/bin/restart-xcape
 
+# ua vpn
+bindsym $mod+Shift+v exec nmcli c up uuid 3b07666c-be36-4e7a-856e-88d2eee64d94
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
