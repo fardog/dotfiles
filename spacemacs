@@ -224,6 +224,9 @@ values."
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
    dotspacemacs-whitespace-cleanup "changed"
+
+   ;; hush warning about PATH
+   exec-path-from-shell-check-startup-files nil
    ))
 
 (defun dotspacemacs/user-init ()
@@ -236,16 +239,14 @@ before packages are loaded. If you are unsure, you should try in setting them in
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
+  ;; remap escape sequence from default of "fd"
   (setq-default evil-escape-key-sequence "jk")
 
   ;; use web-mode for ractive
   (add-to-list 'auto-mode-alist '("\\.ract$" . web-mode))
+  (add-hook 'prog-mode-hook 'fci-mode)
+  (add-hook 'prog-mode-hook 'line-number-mode)
+  (add-hook 'prog-mode-hook (lambda () (linum-mode 1)))
 
   ;; prog-mode hooks
   (add-hook 'prog-mode-hook 'fci-mode)
@@ -265,8 +266,9 @@ you should place your code here."
 
   (setq-default js2-show-parse-errors nil)
   (setq-default js2-strict-missing-semi-warning nil)
-  (setq-default js2-strict-inconsistent-return-warning nil)
-  (setq-default js2-strict-trailing-comma-warning nil)
+
+  ;; json
+  (setq-default js-indent-level 2)
 
   ;; use only eslint with flycheck
   (require 'flycheck)
