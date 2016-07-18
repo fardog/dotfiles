@@ -244,9 +244,6 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   ;; use web-mode for ractive
   (add-to-list 'auto-mode-alist '("\\.ract$" . web-mode))
-  (add-hook 'prog-mode-hook 'fci-mode)
-  (add-hook 'prog-mode-hook 'line-number-mode)
-  (add-hook 'prog-mode-hook (lambda () (linum-mode 1)))
 
   ;; prog-mode hooks
   (add-hook 'prog-mode-hook 'fci-mode)
