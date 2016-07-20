@@ -9,3 +9,6 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 
 # add home paths for dmenu
 export PATH=$HOME/.dotfiles/bin:$HOME/.bin:$PATH
+
+# pyvenv
+export WORKON_HOME=$HOME/workon
