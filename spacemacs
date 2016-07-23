@@ -18,6 +18,7 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     (version-control :variables version-control-diff-tool 'git-gutter version-control-global-margin t)
      emacs-lisp
      clojure
      python
@@ -25,8 +26,11 @@ values."
      markdown
      go
      ;;
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-return-key-behavior nil
+                      auto-completion-complete-with-key-sequence "fd")
      syntax-checking
+     spell-checking
      ;;
      version-control
      git
@@ -241,6 +245,9 @@ before packages are loaded. If you are unsure, you should try in setting them in
 (defun dotspacemacs/user-config ()
   ;; remap escape sequence from default of "fd"
   (setq-default evil-escape-key-sequence "jk")
+
+  ;; fix emacs defaulting to firefox
+  (setq browse-url-browser-function 'browse-url-chromium)
 
   ;; use web-mode for ractive
   (add-to-list 'auto-mode-alist '("\\.ract$" . web-mode))
