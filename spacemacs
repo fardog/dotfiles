@@ -25,6 +25,7 @@ values."
      javascript
      markdown
      go
+     html
      ;;
      (auto-completion :variables
                       auto-completion-return-key-behavior nil
@@ -250,7 +251,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq browse-url-browser-function 'browse-url-chromium)
 
   ;; use web-mode for ractive
-  (add-to-list 'auto-mode-alist '("\\.ract$" . web-mode))
+  (require 'web-mode)
+  (add-to-list 'auto-mode-alist '("\\.ract\\'" . web-mode))
 
   ;; prog-mode hooks
   (add-hook 'prog-mode-hook 'fci-mode)
