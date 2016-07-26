@@ -26,6 +26,7 @@ values."
      markdown
      go
      html
+     django
      ;;
      (auto-completion :variables
                       auto-completion-return-key-behavior nil
