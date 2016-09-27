@@ -194,6 +194,12 @@ bindsym $mod+period exec --no-startup-id ~/.dotfiles/bin/right-handed-mouse
 bindsym $mod+bracketright exec --no-startup-id ~/.dotfiles/bin/xrandr-display-right
 bindsym $mod+bracketleft exec --no-startup-id ~/.dotfiles/bin/xrandr-display-left
 
+# bind monitor layouts
+bindsym $mod+Mod1+h exec --no-startup-id ~/.dotfiles/screen_layouts/home-desk.sh
+bindsym $mod+Mod1+w exec --no-startup-id ~/.dotfiles/screen_layouts/work-desk.sh
+bindsym $mod+Mod1+l exec --no-startup-id ~/.dotfiles/screen_layouts/laptop.sh
+
+
 # bind restarting xcape since it fails all the time
 bindsym $mod+Shift+i exec --no-startup-id ~/.dotfiles/bin/restart-xcape
 
@@ -229,9 +235,6 @@ exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 # Disable the trackpad while typing
 exec --no-startup-id syndaemon -i 0.1 -d -k
-# start whichever compositor is available
-exec --no-startup-id compton -b
-exec --no-startup-id unagi
 # unclutter to hide the mouse cursor when not in use
 exec --no-startup-id unclutter -b
 
@@ -241,7 +244,6 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
-exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 # Kill system beep
 exec --no-startup-id xset -b
 # Gnome Auth Agent

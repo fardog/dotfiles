@@ -47,8 +47,8 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux npm vi-mode autojump history-substring-search)
+# Add wisely, as too many plugins slow down shell startup
+plugins=(git tmux npm vi-mode autojump history-substring-search aws kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
