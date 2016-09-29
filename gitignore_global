@@ -10,3 +10,4 @@ node_modules
 *.iml
 compiled-test
 pip-selfcheck.json
+.dir-locals.el
