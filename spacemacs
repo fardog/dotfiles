@@ -18,7 +18,6 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     (version-control :variables version-control-diff-tool 'git-gutter version-control-global-margin t)
      emacs-lisp
      clojure
      python
@@ -37,6 +36,7 @@ values."
      spell-checking
      ;;
      version-control
+     ;;(version-control :variables version-control-diff-tool 'git-gutter version-control-global-margin t)
      git
      github
      ;;
