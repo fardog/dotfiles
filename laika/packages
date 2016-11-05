@@ -11,6 +11,7 @@ autocutsel
 autojump
 automake
 bash
+bind-tools
 binutils
 bison
 bluez
@@ -112,6 +113,7 @@ openssh
 p7zip
 pacman
 paprefs
+parted
 patch
 pavucontrol
 pciutils
@@ -121,6 +123,7 @@ perl
 perl-file-mimeinfo
 phantomjs
 pkg-config
+pkgfile
 pm-utils
 polkit-gnome
 ponymix
@@ -174,7 +177,6 @@ usbutils
 util-linux
 vi
 vim
-virtualbox
 vlc
 w3m
 weechat

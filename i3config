@@ -52,6 +52,9 @@ bindsym $mod+d exec dmenu_run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# dmenu network manager
+bindsym $mod+o exec nmcli_dmenu
+
 # take screenshots
 bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
 
@@ -67,6 +70,7 @@ bindsym $mod+l focus right
 
 bindsym $mod+u focus parent
 bindsym $mod+i focus parent
+bindsym $mod+y focus floating
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -243,7 +247,6 @@ exec --no-startup-id unclutter -b
 
 exec --no-startup-id xautolock -time 10 -detectsleep -locker /home/nwittstock/.dotfiles/bin/lock.sh
 exec --no-startup-id dropbox start
-exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
