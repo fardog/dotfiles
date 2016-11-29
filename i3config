@@ -210,9 +210,6 @@ bindsym $mod+Mod1+l exec --no-startup-id ~/.dotfiles/screen_layouts/laptop.sh
 # bind restarting xcape since it fails all the time
 bindsym $mod+Shift+i exec --no-startup-id ~/.dotfiles/bin/restart-xcape
 
-# ua vpn
-bindsym $mod+Shift+v exec nmcli c up uuid 3b07666c-be36-4e7a-856e-88d2eee64d94
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -248,6 +245,7 @@ exec --no-startup-id unclutter -b
 exec --no-startup-id xautolock -time 10 -detectsleep -locker /home/nwittstock/.dotfiles/bin/lock.sh
 exec --no-startup-id dropbox start
 exec --no-startup-id dunst
+exec --no-startup-id nm-applet
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 # Kill system beep
