@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+if [ $# -eq 0 ]; then
+    emacsclient -nc -a ""
+else
+    emacsclient -n -a "" "$@"
+fi
