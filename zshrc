@@ -115,9 +115,6 @@ alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
 alias vim=nvim
 
-# raise ulimit
-ulimit -n 10000
-
 # Host specific configuration
 HOST_NAME=$(/usr/bin/env hostname)
 if [ $HOST_NAME = "belka" ]; then

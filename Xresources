@@ -34,10 +34,10 @@ URxvt*color15: white
 URxvt*fading: 15
 
 ! Fonts
-URxvt*font: xft:DejaVuSansMono:size=10
-URxvt*boldFont: xft:DejaVuSansMono-Bold:size=10
-URxvt*italicFont: xft:DejaVuSansMono-Oblique:size=10
-URxvt*boldItalicFont: xft:DejaVuSansMono-BoldOblique:size=10
+URxvt*font: xft:DejaVuSansMono:size=10:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVuSansMono-Bold:size=10:antialias=true:hinting=true
+URxvt*italicFont: xft:DejaVuSansMono-Oblique:size=10:antialias=true:hinting=true
+URxvt*boldItalicFont: xft:DejaVuSansMono-BoldOblique:size=10:antialias=true:hinting=true
 
 ! Intensity something I guess. Looks better it seems?
 URxvt*intensityStyles: false
@@ -82,4 +82,4 @@ URxvt.clipboard.autocopy: true
 URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
-#include "/home/nwittstock/.Xresources.box"
+! #include "/home/nwittstock/.Xresources.box"
