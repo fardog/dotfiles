@@ -31,10 +31,11 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --class=termite
+bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec urxvt -geometry 130x38 -name floating
 
-for_window [class="termite" instance="floating"] floating enable
+
+for_window [class="URxvt" instance="floating"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -68,7 +69,7 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-bindsym $mod+u focus parent
+bindsym $mod+u focus tiling
 bindsym $mod+i focus parent
 bindsym $mod+y focus floating
 
@@ -232,6 +233,9 @@ bar {
 # Make Super_L (caps on my keyboard) act as escape on short press
 exec --no-startup-id xcape -e '#66=Escape'
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
+exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/caps-as-mod4
+# blank out background
+exec --no-startup-id xsetroot -solid "#000000"
 # Autoconfigure attached monitors
 exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 # Disable the trackpad while typing
