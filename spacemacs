@@ -26,7 +26,7 @@ values."
      go
      html
      django
-     groovy
+     ;;groovy
      yaml
      ;;
      (auto-completion :variables

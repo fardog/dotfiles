@@ -31,11 +31,11 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec urxvt -geometry 130x38 -name floating
+bindsym $mod+Return exec termite
+bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --class=termite
 
 
-for_window [class="URxvt" instance="floating"] floating enable
+for_window [class="termite" instance="floating"] floating enable
 
 # kill focused window
 bindsym $mod+Shift+q kill
