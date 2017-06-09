@@ -1,6 +1,7 @@
 [user]
 	name = fardog 
 	email = nate@milkandtang.com
+	signingkey = 8863ABA4
 [core]
 	excludesfile = ~/.dotfiles/gitignore_global
 	filemode = false
@@ -23,3 +24,5 @@
 	edit = !$(echo $EDITOR) $(git status --short | awk '$1 ~ /^M|A|U/ {print $2}' )
 [format]
 	pretty = oneline
+[commit]
+	gpgsign = true

@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 13,
+    "editor.fontFamily": "'DejaVu Sans Mono'",
+    "editor.rulers": [
+        80, 120
+    ],
+    "editor.tabSize": 2,
+    "workbench.editor.showTabs": false,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    "files.insertFinalNewline": true,
+
+    "window.menuBarVisibility": "toggle",
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.enableNeovim": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.leader": "<space>",
+    "search.useIgnoreFilesByDefault": true,
+    "python.venvPath": "/home/nwittstock/workon",
+    "editor.minimap.enabled": false
+}

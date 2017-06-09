@@ -54,7 +54,7 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # dmenu network manager
-bindsym $mod+o exec nmcli_dmenu
+bindsym $mod+o exec networkmanager_dmenu 
 
 # take screenshots
 bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'

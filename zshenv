@@ -2,7 +2,6 @@
 export PATH=./node_modules/.bin:/home/nwittstock/.nvm/current/bin:$PATH
 export GOPATH=/home/nwittstock/gocode
 export PATH=$GOPATH/bin:$PATH
-alias npm=envpm
 
 # add home paths for dmenu
 export PATH=$HOME/.dotfiles/bin:$HOME/.bin:$PATH

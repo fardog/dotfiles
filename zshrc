@@ -108,7 +108,6 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias npm=envpm
 alias open=xdg-open
 alias c='xclip -sel clip'
 alias p='xclip -o -sel clip'
@@ -125,6 +124,7 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use stable > /dev/null 2>&1 # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 bindkey '^r' history-incremental-search-backward
 
