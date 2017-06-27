@@ -3,6 +3,7 @@ accountsservice
 acpid
 adobe-source-code-pro-fonts
 alsa-utils
+arandr
 aspell-en
 at
 atool
@@ -30,6 +31,7 @@ dialog
 diffutils
 dmenu
 docker
+docker-compose
 dunst
 e2fsprogs
 emacs
@@ -76,6 +78,7 @@ iw
 jdk7-openjdk
 jfsutils
 jhead
+keybase
 less
 lib32-ncurses
 libtool
@@ -124,7 +127,6 @@ perl-file-mimeinfo
 phantomjs
 pkg-config
 pkgfile
-pm-utils
 polkit-gnome
 ponymix
 powertop
@@ -145,6 +147,7 @@ reiserfsprogs
 rlwrap
 rofi
 rsync
+rxvt-unicode
 s-nail
 scrot
 sed
@@ -162,6 +165,7 @@ texinfo
 the_silver_searcher
 tiled
 tmux
+tpacpi-bat
 truecrypt
 ttf-dejavu
 ttf-droid
@@ -173,6 +177,7 @@ unibilium
 units
 unzip
 upower
+urxvt-perls
 usbutils
 util-linux
 vi
@@ -190,6 +195,7 @@ xf86-input-libinput
 xf86-video-intel
 xfsprogs
 xorg-server
+xorg-xbacklight
 xorg-xev
 xorg-xinput
 xorg-xmodmap
