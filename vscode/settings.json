@@ -5,7 +5,6 @@
     "editor.rulers": [
         80, 120
     ],
-    "editor.tabSize": 2,
     "workbench.editor.showTabs": false,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -20,10 +19,39 @@
             "after": ["<Esc>"]
         }
     ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "b", "p"],
+            "commands": [
+                {"command": "workbench.action.openPreviousEditorFromHistory"}
+            ]
+        },
+        {
+            "before": ["<leader>", "k", "b"],
+            "commands": [
+                {"command": "workbench.action.toggleSidebarVisibility"}
+            ]
+        },
+        {
+            "before": ["<leader>", "b", "s"],
+            "commands": [
+                {"command": "extension.openScratchpad"}
+            ]
+        },
+        {
+            "before": ["g", "q"],
+            "commands": [
+                {"command": "rewrap.rewrapComment"}
+            ]
+        }
+    ],
     "vim.enableNeovim": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.leader": "<space>",
     "search.useIgnoreFilesByDefault": true,
     "python.venvPath": "/home/nwittstock/workon",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "[javascript]": {
+        "editor.tabSize": 2
+    }
 }

@@ -1,0 +1,13 @@
+PeterJausovec.vscode-docker
+alefragnani.project-manager
+awesomektvn.scratchpad
+bibhasdn.django-html
+chenxsan.vscode-standardjs
+christian-kohler.npm-intellisense
+christian-kohler.path-intellisense
+donjayamanne.python
+lukehoban.Go
+secanis.jenkinsfile-support
+stkb.rewrap
+sysoev.vscode-open-in-github
+vscodevim.vim
