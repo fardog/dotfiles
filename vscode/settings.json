@@ -43,6 +43,24 @@
             "commands": [
                 {"command": "rewrap.rewrapComment"}
             ]
+        },
+        {
+            "before": ["<leader>", "e", "n"],
+            "commands": [
+                {"command": "editor.action.marker.next"}
+            ]
+        },
+        {
+            "before": ["<leader>", "e", "p"],
+            "commands": [
+                {"command": "editor.action.marker.prev"}
+            ]
+        },
+        {
+            "before": ["<leader>", "/"],
+            "commands": [
+                {"command": "workbench.action.splitEditor"}
+            ]
         }
     ],
     "vim.enableNeovim": true,
@@ -51,6 +69,7 @@
     "search.useIgnoreFilesByDefault": true,
     "python.venvPath": "/home/nwittstock/workon",
     "editor.minimap.enabled": false,
+    "gitlens.codeLens.enabled": false,
     "[javascript]": {
         "editor.tabSize": 2
     }

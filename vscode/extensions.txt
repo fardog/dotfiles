@@ -6,7 +6,9 @@ chenxsan.vscode-standardjs
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 donjayamanne.python
+kaiwood.center-editor-window
 lukehoban.Go
+ms-vscode.cpptools
 secanis.jenkinsfile-support
 stkb.rewrap
 sysoev.vscode-open-in-github
