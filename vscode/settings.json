@@ -33,6 +33,12 @@
             ]
         },
         {
+            "before": ["<leader>", "k", "r"],
+            "commands": [
+                {"command": "workbench.action.openRecent"}
+            ]
+        },
+        {
             "before": ["<leader>", "b", "s"],
             "commands": [
                 {"command": "extension.openScratchpad"}

@@ -1,7 +1,7 @@
 PeterJausovec.vscode-docker
-alefragnani.project-manager
 awesomektvn.scratchpad
 bibhasdn.django-html
+bungcip.better-toml
 chenxsan.vscode-standardjs
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
