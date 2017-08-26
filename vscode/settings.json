@@ -12,6 +12,7 @@
     "files.insertFinalNewline": true,
 
     "window.menuBarVisibility": "toggle",
+    "workbench.activityBar.visible": false,
 
     "vim.insertModeKeyBindings": [
         {
