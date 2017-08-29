@@ -56,6 +56,9 @@ bindsym $mod+d exec dmenu_run
 # dmenu network manager
 bindsym $mod+o exec networkmanager_dmenu 
 
+# dmenu snippet manager
+bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
+
 # take screenshots
 bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
 bindsym $mod+shift+p exec scrot -s -e 'mv $f ~/Screenshots/'
@@ -191,14 +194,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
 bindsym XF86AudioMute exec $(ponymix | grep Muted > /dev/null && ponymix unmute > /dev/null) || ponymix mute > /dev/null
 bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
-
-# bind mouse swappers
-bindsym $mod+comma exec --no-startup-id ~/.dotfiles/bin/left-handed-mouse
-bindsym $mod+period exec --no-startup-id ~/.dotfiles/bin/right-handed-mouse
-
-# bind monitor swappers
-bindsym $mod+bracketright exec --no-startup-id ~/.dotfiles/bin/xrandr-display-right
-bindsym $mod+bracketleft exec --no-startup-id ~/.dotfiles/bin/xrandr-display-left
 
 # bind monitor layouts
 bindsym $mod+Mod1+h exec --no-startup-id ~/.dotfiles/screen_layouts/home-desk.sh
