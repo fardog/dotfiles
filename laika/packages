@@ -37,6 +37,7 @@ e2fsprogs
 emacs
 enchant
 ethtool
+exfat-utils
 fakeroot
 file
 filesystem
@@ -64,6 +65,7 @@ gvfs-smb
 gzip
 highlight
 htop
+hugo
 i3-wm
 i3lock
 i3status
@@ -166,6 +168,7 @@ the_silver_searcher
 tiled
 tmux
 tpacpi-bat
+traceroute
 truecrypt
 ttf-dejavu
 ttf-droid
@@ -191,6 +194,7 @@ wpa_actiond
 wpa_supplicant
 xautolock
 xclip
+xdotool
 xf86-input-libinput
 xf86-video-intel
 xfsprogs

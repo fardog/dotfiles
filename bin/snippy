@@ -71,7 +71,7 @@ run(){
   FILE=`find -L .  -type f | grep -v '^\.$' | sed 's!\.\/!!' | /usr/bin/dmenu ${DMENU_ARGS}`
   if [ -f ${DIR}/${FILE} ]; then
     # Put the contents of the selected file into the paste buffer.
-    content="$(cat ${DIR}/${FILE} | bashdown)"
+    content="$(cat ${DIR}/${FILE})"
     [[ "${#content}" == 0 ]] && printf "${FILE}" > $TMPFILE || printf "%s" "$content" > $TMPFILE
   else
     ${FILE} &> $TMPFILE # execute as bashcommand
