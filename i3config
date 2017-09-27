@@ -61,7 +61,7 @@ bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
 
 # take screenshots
 bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
-bindsym $mod+shift+p exec scrot -s -e 'mv $f ~/Screenshots/'
+bindsym --release $mod+shift+p exec scrot -s -e 'mv $f ~/Screenshots/'
 
 # set window marks
 bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '

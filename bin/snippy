@@ -35,21 +35,6 @@ TMPFILE="/tmp/.snippy.tmp"; :>$TMPFILE
 GUIPASTE="xdotool key ctrl+v" 
 CLIPASTE="xdotool key ctrl+shift+v"
 
-# smarty like template engine which executes inline bash in (bashdown) strings (replaces variables with values e.g.)
-# @link http://github.com/coderofsalvation/bashdown
-# @dependancies: sed cat
-# @example: echo 'hi $NAME it is $(date)' | bashdown
-# fetches a document and interprets bashsyntax in string (bashdown) templates 
-# @param string - string with bash(down) syntax (usually surrounded by ' quotes instead of ")
-bashdown(){
-  txt="$(cat - )"; lines="$(cat ${DIR}/${FILE} | wc -l )"
-  (( lines > 1 )) && enter="\n" || enter=""
-  IFS=''; echo "$txt" | while read line; do 
-    [[ "$line" =~ '$' ]] && line="$(eval "printf \"$( printf "%s" "$line" | sed 's/"/\\"/g')\"")"; 
-    printf "$line""$enter"
-  done
-}
-
 init(){
   for APP in $APPS; do 
     which $APP &>/dev/null || {

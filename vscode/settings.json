@@ -10,6 +10,9 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
 
     "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.ract": "handlebars"
+    },
 
     "window.menuBarVisibility": "toggle",
     "workbench.activityBar.visible": false,
@@ -34,9 +37,21 @@
             ]
         },
         {
+            "before": ["<leader>", "k", "a"],
+            "commands": [
+                {"command": "workbench.action.toggleActivityBarVisibility"}
+            ]
+        },
+        {
             "before": ["<leader>", "k", "r"],
             "commands": [
                 {"command": "workbench.action.openRecent"}
+            ]
+        },
+        {
+            "before": ["<leader>", "w", "k"],
+            "commands": [
+                {"command": "workbench.action.closeActiveEditor"}
             ]
         },
         {
@@ -79,5 +94,6 @@
     "gitlens.codeLens.enabled": false,
     "[javascript]": {
         "editor.tabSize": 2
-    }
+    },
+    "window.zoomLevel": 0
 }
