@@ -7,6 +7,7 @@ arandr
 aspell-en
 at
 atool
+audacity
 autoconf
 autocutsel
 autojump
@@ -81,6 +82,7 @@ jdk7-openjdk
 jfsutils
 jhead
 keybase
+kotlin
 less
 lib32-ncurses
 libtool
@@ -113,6 +115,7 @@ networkmanager-openvpn
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
 openal
 openssh
 p7zip
@@ -126,7 +129,9 @@ pcmanfm
 pcmciautils
 perl
 perl-file-mimeinfo
+perl-image-exiftool
 phantomjs
+pinta
 pkg-config
 pkgfile
 polkit-gnome
@@ -138,6 +143,7 @@ pulseaudio
 pulseaudio-alsa
 python-neovim
 python-pip
+python-virtualenv
 python2-colorama
 python2-jmespath
 python2-neovim
@@ -149,11 +155,12 @@ reiserfsprogs
 rlwrap
 rofi
 rsync
-rxvt-unicode
+rustup
 s-nail
 scrot
 sed
 shadow
+simplescreenrecorder
 smbclient
 sox
 steam
@@ -166,6 +173,7 @@ termite
 texinfo
 the_silver_searcher
 tiled
+tk
 tmux
 tpacpi-bat
 traceroute
@@ -180,7 +188,6 @@ unibilium
 units
 unzip
 upower
-urxvt-perls
 usbutils
 util-linux
 vi
