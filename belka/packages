@@ -15,6 +15,7 @@ bluez
 bzip2
 chromium
 coreutils
+cronie
 cryptsetup
 ctags
 cups
@@ -33,6 +34,7 @@ fakeroot
 file
 filesystem
 findutils
+firefox
 flake8
 flex
 foomatic-db-gutenprint-ppds
@@ -52,8 +54,10 @@ grep
 groovy
 groovy-docs
 gsfonts
+gtk3-print-backends
 gutenprint
 gzip
+hplip
 htop
 i3-wm
 i3blocks
@@ -67,6 +71,7 @@ iw
 jdk8-openjdk
 jfsutils
 less
+libmemcached
 licenses
 lightdm
 lightdm-gtk-greeter
@@ -80,6 +85,7 @@ make
 man-db
 man-pages
 mdadm
+mirage
 mupdf
 nano
 neovim
@@ -90,6 +96,7 @@ networkmanager
 networkmanager-openvpn
 noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
 openssh
 pacman
 paprefs
@@ -98,8 +105,10 @@ pavucontrol
 pciutils
 pcmciautils
 perl
+pinta
 pkg-config
 ponymix
+postgresql-libs
 procps-ng
 psmisc
 pulseaudio
@@ -128,10 +137,12 @@ termite
 texinfo
 the_silver_searcher
 tmux
+traceroute
 ttf-droid
 ttf-hack
 ttf-symbola
 ttf-ubuntu-font-family
+unzip
 usbutils
 util-linux
 vi
@@ -142,6 +153,7 @@ which
 wpa_supplicant
 xautolock
 xclip
+xdotool
 xf86-video-intel
 xf86-video-vesa
 xfsprogs
