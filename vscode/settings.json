@@ -92,9 +92,12 @@
     "python.venvPath": "/home/nwittstock/workon",
     "editor.minimap.enabled": false,
     "gitlens.codeLens.enabled": false,
+    "window.zoomLevel": 0,
+    "extensions.ignoreRecommendations": false,
     "[javascript]": {
         "editor.tabSize": 2
     },
-    "window.zoomLevel": 0,
-    "extensions.ignoreRecommendations": false
+    "[rust]": {
+        "editor.formatOnSave": true
+    }
 }
