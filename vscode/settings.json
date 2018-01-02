@@ -13,6 +13,10 @@
     "files.associations": {
         "*.ract": "handlebars"
     },
+    "files.exclude": {
+        ".vscode/": true,
+        "mypy_cache/": true
+    },
 
     "window.menuBarVisibility": "toggle",
     "workbench.activityBar.visible": false,
@@ -85,16 +89,30 @@
             ]
         }
     ],
-    "vim.enableNeovim": true,
+    "vim.enableNeovim": false,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.leader": "<space>",
+
     "search.useIgnoreFilesByDefault": true,
+
     "python.venvPath": "/home/nwittstock/workon",
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.rulers": [
+            79
+        ]
+    },
+
     "editor.minimap.enabled": false,
     "gitlens.codeLens.enabled": false,
+
     "[javascript]": {
         "editor.tabSize": 2
     },
+
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": false
 }
