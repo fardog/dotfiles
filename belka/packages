@@ -54,7 +54,6 @@ grep
 groovy
 groovy-docs
 gsfonts
-gtk3-print-backends
 gutenprint
 gzip
 hplip
@@ -72,6 +71,7 @@ jdk8-openjdk
 jfsutils
 less
 libmemcached
+libva-intel-driver
 licenses
 lightdm
 lightdm-gtk-greeter
@@ -85,7 +85,7 @@ make
 man-db
 man-pages
 mdadm
-mirage
+mesa-demos
 mupdf
 nano
 neovim
@@ -116,6 +116,7 @@ pulseaudio-alsa
 python-neovim
 python-pip
 python-pylint
+python-sqlparse
 python-virtualenvwrapper
 python2-autopep8
 python2-flake8
@@ -155,7 +156,6 @@ xautolock
 xclip
 xdotool
 xf86-video-intel
-xf86-video-vesa
 xfsprogs
 xorg-bdftopcf
 xorg-docs
