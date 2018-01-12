@@ -36,6 +36,7 @@ bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --cla
 
 
 for_window [class="termite" instance="floating"] floating enable
+for_window [class="Firefox"] border none
 
 # kill focused window
 bindsym $mod+Shift+q kill
