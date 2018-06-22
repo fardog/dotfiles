@@ -27,7 +27,7 @@
             "after": ["<Esc>"]
         }
     ],
-    "vim.otherModesKeyBindingsNonRecursive": [
+    "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": ["<leader>", "b", "p"],
             "commands": [
@@ -65,12 +65,6 @@
             ]
         },
         {
-            "before": ["g", "q"],
-            "commands": [
-                {"command": "rewrap.rewrapComment"}
-            ]
-        },
-        {
             "before": ["<leader>", "e", "n"],
             "commands": [
                 {"command": "editor.action.marker.next"}
@@ -89,9 +83,20 @@
             ]
         }
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["g", "q"],
+            "commands": [
+                {"command": "rewrap.rewrapComment"}
+            ]
+        }
+    ],
     "vim.enableNeovim": false,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-l>": false,
+    },
 
     "search.useIgnoreFilesByDefault": true,
 
@@ -109,12 +114,13 @@
     "editor.minimap.enabled": false,
     "gitlens.codeLens.enabled": false,
     "window.zoomLevel": 0,
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "[javascript]": {
         "editor.tabSize": 2
     },
     "[rust]": {
         "editor.formatOnSave": true
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "telemetry.enableTelemetry": false
 }
