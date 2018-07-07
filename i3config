@@ -36,7 +36,7 @@ bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --cla
 
 
 for_window [class="termite" instance="floating"] floating enable
-for_window [class="Firefox"] border none
+# for_window [class="Firefox"] border none
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -247,6 +247,7 @@ exec --no-startup-id xss-lock -- xautolock -locknow
 exec --no-startup-id dropbox start
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 # Kill system beep
