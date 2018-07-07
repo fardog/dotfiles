@@ -6,3 +6,5 @@ xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 xinput set-prop "TPPS/2 IBM TrackPoint" "Device Accel Constant Deceleration" 0.95
 xinput disable "SynPS/2 Synaptics TouchPad"
+xinput disable "ETPS/2 Elantech Touchpad"
+xinput set-prop "ETPS/2 Elantech TrackPoint" "libinput Accel Speed" -0.75

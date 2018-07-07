@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+import argparse
+import os
+
+DEFAULT_REPOSITORY_TEMPLATE = "git@github.com:urbanairship/{repo}.git"
+WORKON_HOME = os.environ['WORKON_HOME']
+
+
+def to_repo(repo_stub: str) -> str:
+    # assume a complete git url
+    if repo_stub.endswith('.git') and '@' in repo_stub:
+        return repo_stub
+
+    return DEFAULT_REPOSITORY_TEMPLATE.format(repo=repo_stub)
+
+
+def clone(repo: str) -> None:
+    cmd = "git clone {}".format(repo)
+    if os.system(cmd) != 0:
+        raise RuntimeError('failed to clone repo')
+
+
+def create_virtualenv(repo: str, python=3) -> None:
+    d = repo.split('/')[-1].replace('.git', '')
+    name = "{}.py{}".format(d, python)
+    workon = os.path.join(WORKON_HOME, name)
+    ret = os.system('virtualenv{python} {workon}'.format(
+        python=python,
+        workon=workon,
+    ))
+    if ret != 0:
+        raise RuntimeError('failed to create virtualenv')
+
+
+def main(args: argparse.Namespace) -> None:
+    repos = [to_repo(arg) for arg in args.repository]
+    for repo in repos:
+        clone(repo)
+        create_virtualenv(repo)
+        create_virtualenv(repo, python=2)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('repository', nargs='+')
+
+    main(parser.parse_args())
