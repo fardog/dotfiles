@@ -193,7 +193,7 @@ bindsym XF86AudioLowerVolume exec ponymix decrease 5
 bindsym XF86AudioRaiseVolume exec ponymix increase 5
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86AudioMute exec $(ponymix | grep Muted > /dev/null && ponymix unmute > /dev/null) || ponymix mute > /dev/null
+bindsym XF86AudioMute exec ponymix toggle > /dev/null
 bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 
 # bind monitor layouts
