@@ -189,10 +189,10 @@ bindsym $mod+End mode "$mode_system"
 bindsym $mod+Delete exec --no-startup-id $Locker
 
 # bind volume keys
-bindsym XF86AudioLowerVolume exec ponymix decrease 5
-bindsym XF86AudioRaiseVolume exec ponymix increase 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86AudioLowerVolume exec ponymix decrease 1
+bindsym XF86AudioRaiseVolume exec ponymix increase 1
+bindsym XF86MonBrightnessDown exec xbacklight -dec 1
+bindsym XF86MonBrightnessUp exec xbacklight -inc 1
 bindsym XF86AudioMute exec ponymix toggle > /dev/null
 bindsym XF86TouchpadToggle exec --no-startup-id ~/.dotfiles/bin/toggle-touchpad
 
@@ -228,7 +228,7 @@ bar {
 # Run some commands at startup
 
 # Make Super_L (caps on my keyboard) act as escape on short press
-exec --no-startup-id xcape -e '#66=Escape'
+exec --no-startup-id xcape -e '#66=Escape;#133=Escape'
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/left-handed-mouse
 exec --no-startup-id xmodmap ~/.dotfiles/xmodmap/caps-as-mod4
 # blank out background
@@ -248,6 +248,7 @@ exec --no-startup-id dropbox start
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
+exec --no-startup-id redshift-gtk
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 # Kill system beep

@@ -122,5 +122,10 @@
         "editor.formatOnSave": true
     },
     "workbench.startupEditor": "newUntitledFile",
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "prettier.proseWrap": "always",
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false
+    }
 }
