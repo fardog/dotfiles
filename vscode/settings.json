@@ -135,5 +135,10 @@
         "templatized",
         "unicast",
         "wittstock"
-    ]
+    ],
+    "prettier.proseWrap": "always",
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": false
+    }
 }
