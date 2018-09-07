@@ -122,5 +122,18 @@
         "editor.formatOnSave": true
     },
     "workbench.startupEditor": "newUntitledFile",
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "cSpell.userWords": [
+        "Templating",
+        "changeset",
+        "deserialize",
+        "proto",
+        "protobuf",
+        "protobufs",
+        "rtype",
+        "talby",
+        "templatized",
+        "unicast",
+        "wittstock"
+    ]
 }
