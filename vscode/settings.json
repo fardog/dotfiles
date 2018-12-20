@@ -143,11 +143,5 @@
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
     },
-    "githubPullRequests.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ]
+    "window.titleBarStyle": "native"
 }
