@@ -96,6 +96,7 @@
     "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-l>": false,
+        "<C-shift-e>": false
     },
 
     "search.useIgnoreFilesByDefault": true,
@@ -123,9 +124,24 @@
     },
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableTelemetry": false,
+    "cSpell.userWords": [
+        "Templating",
+        "changeset",
+        "deserialize",
+        "proto",
+        "protobuf",
+        "protobufs",
+        "rtype",
+        "talby",
+        "templated",
+        "templatized",
+        "unicast",
+        "wittstock"
+    ],
     "prettier.proseWrap": "always",
     "[markdown]": {
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
-    }
+    },
+    "window.titleBarStyle": "native"
 }

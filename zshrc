@@ -129,6 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 bindkey '^r' history-incremental-search-backward
+bindkey '^s' history-incremental-search-forward
 
 # update path to put node_modules first, this must be done *after* nvm
 export PATH="./node_modules/.bin:$PATH"
