@@ -32,10 +32,11 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite --geometry=1082x602 --name=floating --class=termite
+bindsym $mod+Shift+Return exec termite --name=floating --class=termite
 
 
 for_window [class="termite" instance="floating"] floating enable
+for_window [class="termite" instance="floating"] resize set 1082 602
 # for_window [class="Firefox"] border none
 
 # kill focused window
@@ -211,7 +212,7 @@ bar {
 	status_command i3status
 	wheel_up_cmd nop
 	wheel_down_cmd nop
-
+	
 	colors {
 		background #000000
 		statusline #bbbbbb
