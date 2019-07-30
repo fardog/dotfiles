@@ -117,6 +117,10 @@
     "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
     "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
         "editor.tabSize": 2
     },
     "[rust]": {
@@ -125,9 +129,11 @@
     "workbench.startupEditor": "newUntitledFile",
     "telemetry.enableTelemetry": false,
     "cSpell.userWords": [
+        "DOTPATHS",
         "Templating",
         "changeset",
         "deserialize",
+        "dotpath",
         "proto",
         "protobuf",
         "protobufs",
@@ -143,5 +149,9 @@
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
     },
-    "window.titleBarStyle": "native"
+    "window.titleBarStyle": "native",
+    "[typescriptreact]": {
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

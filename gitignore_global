@@ -12,3 +12,4 @@ node_modules
 compiled-test
 pip-selfcheck.json
 .dir-locals.el
+.noseids

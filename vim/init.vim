@@ -121,7 +121,7 @@ autocmd Filetype json setlocal ts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sw=4 expandtab
 autocmd Filetype jade setlocal ts=2 sw=2 expandtab
-autocmd Filetype mkd,mkd.markdown setlocal ts=2 sw=2 textwidth=80 expandtab
+autocmd Filetype mkd,mkd.markdown,markdown setlocal ts=2 sw=2 textwidth=80 expandtab
 autocmd Filetype rst setlocal ts=2 sw=2 expandtab
 autocmd Filetype less setlocal ts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=4 sw=4 expandtab
