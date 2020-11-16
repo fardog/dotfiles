@@ -41,6 +41,24 @@
             ]
         },
         {
+            "before": ["<leader>", "v", "g"],
+            "commands": [
+                {"command": "workbench.view.scm"}
+            ]
+        },
+        {
+            "before": ["<leader>", "v", "s"],
+            "commands": [
+                {"command": "workbench.view.search"}
+            ]
+        },
+        {
+            "before": ["<leader>", "v", "e"],
+            "commands": [
+                {"command": "workbench.view.explorer"}
+            ]
+        },
+        {
             "before": ["<leader>", "k", "a"],
             "commands": [
                 {"command": "workbench.action.toggleActivityBarVisibility"}
@@ -81,6 +99,12 @@
             "commands": [
                 {"command": "workbench.action.splitEditor"}
             ]
+        },
+        {
+            "before": ["g", "D"],
+            "commands": [
+                "editor.action.revealDefinitionAside"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -96,7 +120,9 @@
     "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-l>": false,
-        "<C-shift-e>": false
+        "<C-shift-e>": false,
+        "<C-shift-g>": false,
+        "<C-`>": false
     },
 
     "search.useIgnoreFilesByDefault": true,
@@ -121,7 +147,8 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescript]": {
-        "editor.tabSize": 2
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[rust]": {
         "editor.formatOnSave": true
@@ -130,6 +157,7 @@
     "telemetry.enableTelemetry": false,
     "cSpell.userWords": [
         "DOTPATHS",
+        "Serde",
         "Templating",
         "changeset",
         "deserialize",
@@ -144,7 +172,6 @@
         "unicast",
         "wittstock"
     ],
-    "prettier.proseWrap": "always",
     "[markdown]": {
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
@@ -153,5 +180,23 @@
     "[typescriptreact]": {
         "editor.tabSize": 2,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "editor.gotoLocation.multiple": "goto",
+    "terminal.integrated.shellArgs.linux": [
+        "-i"
+    ],
+    "remote.containers.defaultExtensions": [
+        "eamodio.gitlens",
+        "kaiwood.center-editor-window",
+        "skattyadz.vscode-quick-scope",
+        "stkb.rewrap",
+        "streetsidesoftware.code-spell-checker",
+        "sysoev.vscode-open-in-github"
+    ],
+    "task.slowProviderWarning": [
+        "typescript"
+    ],
+    "python.showStartPage": false,
+    "python.languageServer": "Pylance",
+    "git.autofetch": true
 }

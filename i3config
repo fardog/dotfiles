@@ -62,8 +62,8 @@ bindsym $mod+o exec networkmanager_dmenu
 bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
 
 # take screenshots
-bindsym $mod+p exec scrot -u -d 3 -e 'mv $f ~/Screenshots/'
-bindsym --release $mod+shift+p exec scrot -s -d 1 -e 'mv $f ~/Screenshots/'
+bindsym $mod+p exec flameshot screen
+bindsym --release $mod+shift+p exec flameshot gui
 
 # set window marks
 bindsym $mod+m exec i3-input -F 'mark %s' -P 'Mark name: '
@@ -251,9 +251,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id blueberry-tray
 exec --no-startup-id redshift-gtk
+exec --no-startup-id flameshot
 # Set touchpoint prefs and disable trackpad
 exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 # Kill system beep
 exec --no-startup-id xset -b
 # Gnome Auth Agent
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

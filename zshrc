@@ -134,4 +134,11 @@ bindkey '^s' history-incremental-search-forward
 # update path to put node_modules first, this must be done *after* nvm
 export PATH="./node_modules/.bin:$PATH"
 
-source $HOME/.boxrc
+[ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
+
+eval $(thefuck --alias)
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start)
+    export SSH_AUTH_SOCK
+fi

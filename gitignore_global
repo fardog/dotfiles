@@ -13,3 +13,5 @@ compiled-test
 pip-selfcheck.json
 .dir-locals.el
 .noseids
+.env
+.envrc
