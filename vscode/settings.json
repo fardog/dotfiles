@@ -59,6 +59,12 @@
             ]
         },
         {
+            "before": ["<leader>", "v", "d"],
+            "commands": [
+                {"command": "workbench.view.debug"}
+            ]
+        },
+        {
             "before": ["<leader>", "k", "a"],
             "commands": [
                 {"command": "workbench.action.toggleActivityBarVisibility"}
@@ -140,7 +146,6 @@
 
     "editor.minimap.enabled": false,
     "gitlens.codeLens.enabled": false,
-    "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": true,
     "[javascript]": {
         "editor.tabSize": 2,
@@ -198,5 +203,12 @@
     ],
     "python.showStartPage": false,
     "python.languageServer": "Pylance",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.colorTheme": "Witch Hazel Hypercolor"
 }

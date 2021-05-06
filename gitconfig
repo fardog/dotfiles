@@ -26,3 +26,5 @@
 	pretty = oneline
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
