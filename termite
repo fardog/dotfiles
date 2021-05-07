@@ -36,7 +36,7 @@ cursor_shape = block
 highlight = #2f2f2f
 
 foreground = #ffffff
-background = #000000
+background = #282634
 color0 = #000000
 color1 = #bf7276
 color2 = #86af80
