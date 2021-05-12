@@ -11,6 +11,28 @@
 
 set $mod Mod4
 
+# colors
+set $color_primary_bg   #8864cb
+set $color_primary_fg   #e6e1ea
+set $color_primary_ac   #8864cb
+set $color_prim_mt_bg   #c7a3fd
+set $color_prim_mt_fg   #9c78c2
+set $color_prim_mt_ac   #c7a3fd
+set $color_secondary_bg #5a5575
+set $color_secondary_fg #c0bbdb
+set $color_secondary_ac #333333
+set $color_second_mt_bg #293740
+set $color_second_mt_fg #eeeeee
+set $color_second_mt_ac #333333
+set $color_tertiary_bg  #1e1d22
+set $color_tertiary_fg  #888888
+set $color_tertiary_ac  #333333
+set $color_urgent_bg    #ffa3c3
+set $color_urgent_fg    #ffffff
+set $color_urgent_ac    #ffa3c3
+set $color_divider      #666666
+set $color_flood        #282634
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -20,11 +42,11 @@ set $mod Mod4
 # chose a FreeType font, such as:
 font pango:DejaVu Sans Mono 10
 
-# class                 border  backgr. text    indicator
-client.focused          #8864cb #8864cb #e6e1ea #94c4e5
-client.focused_inactive #333333 #5a5575 #c0bbdb #94c4e5
-client.unfocused        #333333 #1e1d22 #888888 #292d2e
-client.urgent           #ff5e46 #ffa3c3 #eeeeee #e5543f
+# class                 border              backgr.             text                indicator
+client.focused          $color_primary_ac   $color_primary_bg   $color_primary_fg   #94c4e5
+client.focused_inactive $color_secondary_ac $color_secondary_bg $color_secondary_fg #94c4e5
+client.unfocused        $color_tertiary_ac  $color_tertiary_bg  $color_tertiary_fg  #292d2e
+client.urgent           $color_urgent_ac    $color_urgent_bg    $color_urgent_fg    #e5543f
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -58,7 +80,7 @@ workspace_auto_back_and_forth yes
 focus_follows_mouse no
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb '$color_secondary_bg' -nf '$color_secondary_fg' -sb '$color_primary_bg' -sf '$color_primary_fg'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -228,15 +250,15 @@ bar {
 	wheel_down_cmd nop
 	
 	colors {
-		background #5a5575
-		statusline #c0bbdb
-		separator #666666
+		background $color_secondary_bg
+		statusline $color_secondary_fg
+		separator  $color_divider
 
 		# class            border  backgr. text
-		focused_workspace  #c7a3fd #c7a3fd #9c78c2
-		active_workspace   #333333 #293740 #eeeeee
-		inactive_workspace #5a5575 #5a5575 #c0bbdb
-		urgent_workspace   #ff5e46 #ffa3c3 #eeeeee
+		focused_workspace  $color_prim_mt_bg   $color_prim_mt_bg   $color_prim_mt_fg
+		active_workspace   $color_second_mt_bg $color_second_mt_bg $color_second_mt_fg
+		inactive_workspace $color_secondary_bg $color_secondary_bg $color_secondary_fg
+		urgent_workspace   $color_urgent_bg    $color_urgent_bg    $color_urgent_fg
 	}
 }
 
