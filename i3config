@@ -277,8 +277,8 @@ exec --no-startup-id srandrd ~/.dotfiles/bin/xrandr-activate-display
 exec --no-startup-id syndaemon -i 0.1 -d -k
 # unclutter to hide the mouse cursor when not in use
 exec --no-startup-id unclutter -b
-# caffeine if installed
-exec --no-startup-id caffeine
+# caffeine if installed (now run via dex)
+# exec --no-startup-id caffeine
 
 exec --no-startup-id xautolock -time 10 -detectsleep -locker /home/nwittstock/.dotfiles/bin/lock.sh
 exec --no-startup-id xss-lock -- xautolock -locknow
@@ -295,3 +295,4 @@ exec --no-startup-id ~/.dotfiles/bin/set-touchpoint-preferences
 exec --no-startup-id xset -b
 # Gnome Auth Agent
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id dex -ae i3

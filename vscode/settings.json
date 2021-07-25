@@ -62,6 +62,10 @@
       "commands": [{ "command": "workbench.view.debug" }]
     },
     {
+      "before": ["<leader>", "v", "x"],
+      "commands": [{ "command": "workbench.view.extensions" }]
+    },
+    {
       "before": ["<leader>", "k", "a"],
       "commands": [
         { "command": "workbench.action.toggleActivityBarVisibility" }
@@ -108,7 +112,8 @@
     "<C-l>": false,
     "<C-shift-e>": false,
     "<C-shift-g>": false,
-    "<C-`>": false
+    "<C-`>": false,
+    "<Shift-Escape>": false
   },
 
   "editor.minimap.enabled": false,
@@ -147,7 +152,7 @@
   "task.slowProviderWarning": ["typescript"],
   "git.autofetch": true,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "workbench.colorTheme": "Witch Hazel Hypercolor",
   "workbench.editor.untitled.hint": "hidden",
@@ -210,5 +215,12 @@
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
   }
 }

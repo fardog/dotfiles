@@ -114,6 +114,7 @@ alias p='xclip -o -sel clip'
 alias vssh='TERM=xterm vagrant ssh'
 alias vim=nvim
 alias jfmt='p|python -m json.tool|c'
+alias ssha='p|head -c7|c'
 
 alias glsb='git log --graph --decorate --oneline --all --simplify-by-decoration'
 
