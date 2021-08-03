@@ -7,6 +7,7 @@
   "workbench.editor.showTabs": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "emmet.excludeLanguages": ["markdown", "typescriptreact"],
 
   "workbench.colorCustomizations": {
     // "list.focusHighlightForeground": "#ffb8d1",

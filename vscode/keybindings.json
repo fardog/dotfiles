@@ -43,7 +43,7 @@
     "when": "!editorIsOpen && !multipleEditorGroups"
   },
   {
-    "key": "shift+escape",
+    "key": "ctrl+shift+escape",
     "command": "notifications.clearAll"
   },
   {
