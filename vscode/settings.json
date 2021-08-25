@@ -158,7 +158,7 @@
   "workbench.colorTheme": "Witch Hazel Hypercolor",
   "workbench.editor.untitled.hint": "hidden",
   "editor.cursorStyle": "line",
-  "editor.insertSpaces": false,
+  "editor.insertSpaces": true,
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",

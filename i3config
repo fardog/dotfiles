@@ -53,13 +53,13 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
-bindsym $mod+Shift+Return exec termite --name=floating --class=termite
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty --class="floating"
 
 
 
-for_window [class="termite" instance="floating"] floating enable
-for_window [class="termite" instance="floating"] resize set 1082 602
+for_window [class="Alacritty" instance="floating"] floating enable
+for_window [class="Alacritty" instance="floating"] resize set 1082 602
 # for_window [class="Firefox"] border none
 
 bindsym $mod+Shift+u exec gpick --name=floating --class=gpick

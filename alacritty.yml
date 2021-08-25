@@ -1,0 +1,11 @@
+env:
+  WINIT_HIDPI_FACTOR: "1"
+  WINIT_X11_SCALE_FACTOR: "1"
+font:
+  normal:
+    family: DejaVu Sans Mono
+  size: 10
+colors:
+  primary:
+    background: '#282634'
+    foreground: '#c5c8c6'
