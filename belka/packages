@@ -1,4 +1,5 @@
 acpi
+alacritty
 alsa-utils
 apparmor
 arandr
@@ -26,6 +27,7 @@ cryptsetup
 ctags
 cups
 device-mapper
+dex
 dfu-programmer
 dhcpcd
 dialog
@@ -42,6 +44,7 @@ fakeroot
 file
 filesystem
 findutils
+firefox
 flake8
 flameshot
 flex
@@ -52,6 +55,7 @@ gcc-libs
 gdb
 gettext
 git
+github-cli
 glibc
 gnome-keyring
 gnome-terminal
@@ -59,6 +63,7 @@ gnome-themes-extra
 gnu-netcat
 go
 go-tools
+gpick
 grep
 gufw
 gzip
@@ -116,6 +121,7 @@ noto-fonts-extra
 npm
 obs-studio
 pacman-contrib
+pamixer
 paprefs
 patch
 pavucontrol
@@ -127,7 +133,6 @@ pinta
 pkgconf
 plantuml
 polkit-gnome
-ponymix
 postgresql-libs
 powertop
 prettier
@@ -161,7 +166,6 @@ sysfsutils
 system-config-printer
 systemd-sysvcompat
 tar
-termite
 texinfo
 the_silver_searcher
 thefuck
@@ -195,6 +199,7 @@ xf86-input-libinput
 xfsprogs
 xmlsec
 xorg-server
+xorg-server-xvfb
 xorg-xauth
 xorg-xbacklight
 xorg-xev
