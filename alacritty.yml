@@ -9,3 +9,9 @@ colors:
   primary:
     background: '#282634'
     foreground: '#c5c8c6'
+
+key_bindings:
+  # this allows $ to move to end of line; there is a default keybinding that
+  # appears it _should_ perform this action, but on my machine it does not
+  # see https://github.com/alacritty/alacritty/issues/4111
+  - { key: 5, mods: Shift, mode: Vi|~Search, action: Last }
