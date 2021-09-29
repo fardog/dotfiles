@@ -4,6 +4,7 @@
   "editor.fontFamily": "'DejaVu Sans Mono'",
   "editor.rulers": [80, 120],
   "editor.tabSize": 2,
+  "editor.bracketPairColorization.enabled": true,
   "workbench.editor.showTabs": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
