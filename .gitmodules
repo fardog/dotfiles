@@ -75,3 +75,6 @@
 [submodule "vim/bundle/deoplete.nvim"]
 	path = vim/bundle/deoplete.nvim
 	url = git@github.com:Shougo/deoplete.nvim.git
+[submodule "external/emojipick"]
+	path = external/emojipick
+	url = git@github.com:thingsiplay/emojipick.git

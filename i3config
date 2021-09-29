@@ -92,6 +92,9 @@ bindsym $mod+o exec networkmanager_dmenu
 # dmenu snippet manager
 bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
 
+# dmenu emoji picker
+bindsym $mod+a exec /home/nwittstock/.dotfiles/bin/emojipick
+
 # take screenshots
 bindsym $mod+p exec flameshot screen
 bindsym --release $mod+shift+p exec flameshot gui
