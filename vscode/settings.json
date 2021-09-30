@@ -225,5 +225,6 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
-  }
+  },
+  "cmake.configureOnOpen": true
 }
