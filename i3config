@@ -178,7 +178,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym Control+space exec dunstctl close
 bindsym Control+Shift+space exec dunstctl close-all
 bindsym Control+Shift+grave exec dunstctl history-pop
-bindsym Control+Shift+period exec dustctl context
+bindsym Control+Shift+period exec dunstctl context
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
