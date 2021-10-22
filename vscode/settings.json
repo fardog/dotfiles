@@ -222,6 +222,10 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[postcss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
