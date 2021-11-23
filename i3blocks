@@ -1,0 +1,39 @@
+[pomodoro]
+command=~/.bin/pomodoro-status $button
+interval=1
+
+[wifi]
+command=$SCRIPT_DIR/wifi/wifi
+label=W: 
+interface=wlp61s0
+interval=60
+
+[iface]
+command=$SCRIPT_DIR/iface/iface
+label=E: 
+iface=enp11s0u1
+#color=#00FF00
+interval=10
+
+[battery]
+command=$SCRIPT_DIR/battery/battery
+interval=30
+
+[load_average]
+command=$SCRIPT_DIR/load_average/load_average
+interval=10
+
+[local_time]
+command=date +"%Y-%m-%d %H:%M:%S %Z"
+interval=1
+
+[utc_time]
+command=TZ=Etc/UTC date +"%H:%M %Z"
+interval=1
+
+[volume]
+command=$SCRIPT_DIR/volume/volume
+label=♪ 
+interval=once
+signal=10
+mixer=pulse

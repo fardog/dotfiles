@@ -130,6 +130,7 @@ bindsym $mod+Shift+l move right
 
 # move workspace to a new output
 bindsym $mod+slash move workspace to output right
+bindsym $mod+Shift+slash move workspace to output down
 
 # split in horizontal orientation
 bindsym $mod+backslash split h
