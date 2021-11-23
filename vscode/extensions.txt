@@ -1,3 +1,4 @@
+csstools.postcss
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
@@ -5,14 +6,19 @@ foam.foam-vscode
 GitHub.vscode-pull-request-github
 golang.go
 jebbs.plantuml
+joaompinto.vscode-graphviz
 kaiwood.center-editor-window
 kortina.vscode-markdown-notes
 ms-azuretools.vscode-docker
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
 ms-vscode.cpptools
+Orta.vscode-jest
+platformio.platformio-ide
 skattyadz.vscode-quick-scope
 stkb.rewrap
 streetsidesoftware.code-spell-checker

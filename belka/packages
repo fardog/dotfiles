@@ -1,6 +1,7 @@
 acpi
 alacritty
 alsa-utils
+android-file-transfer
 apparmor
 arandr
 aspell-en
@@ -22,6 +23,7 @@ bluez
 bolt
 bzip2
 chromium
+cloc
 coreutils
 cryptsetup
 ctags
@@ -44,7 +46,6 @@ fakeroot
 file
 filesystem
 findutils
-firefox
 flake8
 flameshot
 flex
@@ -64,6 +65,7 @@ gnu-netcat
 go
 go-tools
 gpick
+graphviz
 grep
 gufw
 gzip
@@ -162,6 +164,7 @@ shadow
 signal-desktop
 simplescreenrecorder
 sudo
+sway
 sysfsutils
 system-config-printer
 systemd-sysvcompat
@@ -202,10 +205,13 @@ xorg-server
 xorg-server-xvfb
 xorg-xauth
 xorg-xbacklight
+xorg-xdpyinfo
 xorg-xev
 xorg-xinput
 xorg-xmodmap
+xorg-xrdb
 xorg-xsetroot
+xorg-xwayland
 xsel
 xsettingsd
 xss-lock
