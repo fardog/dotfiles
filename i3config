@@ -2,6 +2,8 @@ set $mod Mod4
 
 # set all mouse inputs to be left handed
 input * left_handed enabled
+# enable compose key on right alt
+input * xkb_options compose:ralt
 
 # hide mouse at sensible times
 seat * hide_cursor 4000
