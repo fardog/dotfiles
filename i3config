@@ -9,6 +9,12 @@ input * xkb_options compose:ralt
 seat * hide_cursor 4000
 seat * hide_cursor when-typing enable
 
+# inhibit idle for specific window types
+# _any_ fullscreen window, since i almost never do this except for video
+for_window [class=.*] inhibit_idle fullscreen
+# zoom
+for_window [app_id="zoom"] inhibit_idle visible
+
 ##################
 # screen layouts #
 ##################
