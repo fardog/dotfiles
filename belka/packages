@@ -8,6 +8,7 @@ automake
 avr-gcc
 avr-libc
 base
+bemenu
 binutils
 bison
 chromium
@@ -18,7 +19,6 @@ discord
 dmenu
 docker
 docker-compose
-dunst
 fakeroot
 flex
 fwupd
@@ -27,9 +27,13 @@ gnome-keyring
 grim
 groff
 gufw
+htop
 i3blocks
 interception-dual-function-keys
 iwd
+jdk8-openjdk
+jq
+jre8-openjdk
 keychain
 libtool
 light
@@ -38,13 +42,16 @@ linux-firmware
 lvm2
 m4
 make
+mako
 man-db
+maven
 neovim
 network-manager-applet
 networkmanager
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
+otf-font-awesome
 pamixer
 patch
 pipewire
@@ -57,7 +64,9 @@ qt5-wayland
 reflector
 rsync
 signal-desktop
+slurp
 sudo
+swappy
 sway
 swayidle
 swaylock

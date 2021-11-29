@@ -78,11 +78,6 @@ bindsym $mod+Shift+Return exec alacritty --class="termfloat"
 for_window [app_id="termfloat"] floating enable
 for_window [app_id="termfloat"] resize set 1082 602
 
-# TODO: this doesn't work right in sway
-bindsym $mod+Shift+u exec gpick --name=floating --class=gpick
-for_window [class="gpick" instance="floating"] floating enable
-for_window [class="gpick" instance="floating"] resize set 700 400
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -111,9 +106,13 @@ bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
 # TODO: doesn't work without dmenu
 bindsym $mod+a exec /home/nwittstock/.dotfiles/bin/emojipick
 
-# TODO: no flameshot in sway
-bindsym $mod+p exec flameshot screen
-bindsym --release $mod+shift+p exec flameshot gui
+# pick color at point, copy to clipboard
+bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
+# capture current window, put it on the clipboard
+# TODO: not working right
+# bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | wl-copy
+# capture rectangle, edit it in swappy
+bindsym --release $mod+Shift+p exec grim -g "$(slurp)" -t png - | swappy -f -
 
 # window marks
 # TODO: not working in sway for obvious reasons
@@ -239,11 +238,6 @@ bindsym XF86AudioMute exec pamixer --toggle-mute && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-
-# bind monitor layouts
-# bindsym $mod+Mod1+h exec --no-startup-id ~/.dotfiles/screen_layouts/home-desk.sh
-# bindsym $mod+Mod1+w exec --no-startup-id ~/.dotfiles/screen_layouts/work-desk.sh
-# bindsym $mod+Mod1+l exec --no-startup-id ~/.dotfiles/screen_layouts/laptop.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
