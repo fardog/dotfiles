@@ -66,12 +66,11 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+Return exec alacritty --class="floating"
+bindsym $mod+Shift+Return exec alacritty --class="termfloat"
 
 # TODO: this doesn't work right in sway
-for_window [class="Alacritty" instance="floating"] floating enable
-for_window [class="Alacritty" instance="floating"] resize set 1082 602
-# for_window [class="Firefox"] border none
+for_window [app_id="termfloat"] floating enable
+for_window [app_id="termfloat"] resize set 1082 602
 
 # TODO: this doesn't work right in sway
 bindsym $mod+Shift+u exec gpick --name=floating --class=gpick
