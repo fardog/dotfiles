@@ -99,7 +99,7 @@ focus_follows_mouse no
 #############
 # launchers #
 #############
-bindsym $mod+d exec dmenu_run -nb '$color_secondary_bg' -nf '$color_secondary_fg' -sb '$color_primary_bg' -sf '$color_primary_fg'
+bindsym $mod+d exec bemenu-run -p 'exec' --tf '$color_prim_mt_fg' --hf '$color_prim_mt_fg' --nb '$color_secondary_bg' --nf '$color_secondary_fg' --sb '$color_primary_bg' --sf '$color_primary_fg'
 
 # dmenu network manager
 bindsym $mod+o exec networkmanager_dmenu 
@@ -108,6 +108,7 @@ bindsym $mod+o exec networkmanager_dmenu
 bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
 
 # dmenu emoji picker
+# TODO: doesn't work without dmenu
 bindsym $mod+a exec /home/nwittstock/.dotfiles/bin/emojipick
 
 # TODO: no flameshot in sway
@@ -193,12 +194,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# dunst
-bindsym Control+space exec dunstctl close
+# mako
+bindsym Control+space exec makoctl dismiss
 # TODO: conflicts with alacritty
-# bindsym Control+Shift+space exec dunstctl close-all
-bindsym Control+Shift+grave exec dunstctl history-pop
-bindsym Control+Shift+period exec dunstctl context
+# bindsym Control+Shift+space exec makoctl dismiss -a
+bindsym Control+Shift+grave exec makoctl restore
+bindsym Control+Shift+period exec makoctl invoke
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -272,7 +273,7 @@ exec --no-startup-id swayidle -w \
   before-sleep 'swaylock -f -c 000000'
 exec --no-startup-id xsettingsd
 exec --no-startup-id dropbox start
-exec --no-startup-id dunst
+exec --no-startup-id mako
 exec --no-startup-id nm-applet --indicator
 exec --no-startup-id blueman-applet
 exec --no-startup-id blueberry-tray

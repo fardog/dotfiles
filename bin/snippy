@@ -28,7 +28,7 @@
 #      ((mod4Mask, xK_s), spawn "/path/to/snippy")
 #
 DIR=${HOME}/.snippets
-APPS="xdotool xclip dmenu"
+APPS="wl-copy bemenu"
 DMENU_ARGS="-b"
 TMPFILE="/tmp/.snippy.tmp"; :>$TMPFILE
 # if nothing happens, try "xdotool click 2", "xdotool key ctrl+v" or "xdotool key ctrl+shift+v"
@@ -53,7 +53,8 @@ run(){
   cd ${DIR}
   # Use the filenames in the snippy directory as menu entries.
   # Get the menu selection from the user.
-  FILE=`find -L .  -type f | grep -v '^\.$' | sed 's!\.\/!!' | /usr/bin/dmenu ${DMENU_ARGS}`
+  MENU=`which bemenu`
+  FILE=`find -L .  -type f | grep -v '^\.$' | sed 's!\.\/!!' | ${MENU} ${DMENU_ARGS}`
   if [ -f ${DIR}/${FILE} ]; then
     # Put the contents of the selected file into the paste buffer.
     content="$(cat ${DIR}/${FILE})"
@@ -61,16 +62,7 @@ run(){
   else
     ${FILE} &> $TMPFILE # execute as bashcommand
   fi
-  xclip -sel clip < $TMPFILE
-  # Paste into the current application.
-  [[ is_window ]] && ${GUIPASTE} || ${CLIPASTE} # cli or gui paste
-}
-
-
-is_window(){
-  name="$(xdotool getwindowname $(xdotool getwindowfocus) | tr '[:upper:]' '[:lower:]')"
-  [[ ! "$name" =~ term|tilda ]] && return 1
-  return 0
+  wl-copy < $TMPFILE
 }
 
 init && run
