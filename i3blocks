@@ -7,6 +7,7 @@ command=$SCRIPT_DIR/wifi/wifi
 label=W: 
 interface=wlan0
 interval=5
+COLOR_DOWN=#ffa3c3
 
 [iface]
 command=$SCRIPT_DIR/iface/iface

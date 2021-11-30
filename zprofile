@@ -1,7 +1,9 @@
 if [ "$(tty)" = "/dev/tty1" ]; then
   #export GDK_BACKEND=wayland
+  export GTK_THEME=Adwaita-dark
   export CLUTTER_BACKEND=wayland
   export XDG_SESSION_TYPE=wayland
+  export XDG_CURRENT_DESKTOP=sway
   export QT_QPA_PLATFORM=wayland-egl
   export QT_WAYLAND_FORCE_DPI=physical
   export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
