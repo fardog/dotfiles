@@ -22,6 +22,7 @@ docker-compose
 fakeroot
 flex
 fwupd
+gammastep
 gcc
 gnome-keyring
 grim
@@ -71,6 +72,7 @@ sway
 swayidle
 swaylock
 texinfo
+the_silver_searcher
 thefuck
 ttf-dejavu
 udisks2
@@ -80,6 +82,7 @@ vim
 wget
 which
 wl-clipboard
+xdg-desktop-portal
 xf86-video-ati
 xorg-xrdb
 xorg-xwayland
