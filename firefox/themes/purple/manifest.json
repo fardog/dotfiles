@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Purple",
+  "theme": {
+    "images": {},
+    "properties": {},
+    "update_url": "https://raw.githubusercontent.com/fardog/dotfiles/master/firefox/themes/purple.xpi",
+    "colors": {
+      "toolbar": "rgb(93, 75, 137)",
+      "toolbar_text": "rgb(255, 255, 255)",
+      "frame": "rgb(75, 60, 110)",
+      "tab_background_text": "rgb(230, 230, 230)",
+      "toolbar_field": "rgb(75, 60, 110)",
+      "toolbar_field_text": "rgb(255, 255, 255)",
+      "tab_line": "rgb(93, 75, 137)",
+      "popup": "rgb(86, 64, 119)",
+      "popup_text": "rgb(255, 255, 255)",
+      "frame_inactive": "rgb(104, 91, 137)",
+      "popup_highlight": "rgb(144, 116, 213)",
+      "toolbar_field_border_focus": "rgb(114, 116, 213)",
+      "toolbar_field_highlight": "rgb(115, 115, 115)",
+      "toolbar_top_separator": "rgb(93, 75, 137)",
+      "tab_loading": "rgb(93, 75, 137)"
+    }
+  }
+}
