@@ -3,6 +3,7 @@ alacritty
 alsa-utils
 amd-ucode
 apparmor
+archlinux-contrib
 autoconf
 automake
 avr-gcc
@@ -25,10 +26,13 @@ fwupd
 gammastep
 gcc
 gnome-keyring
+go
+go-tools
 grim
 groff
 gufw
 htop
+hunspell-en_us
 i3blocks
 interception-dual-function-keys
 iwd
@@ -53,6 +57,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 otf-font-awesome
+pacman-contrib
 pamixer
 patch
 pipewire
@@ -60,6 +65,7 @@ pipewire-alsa
 pipewire-pulse
 pkgconf
 polkit-gnome
+pyenv
 python-virtualenvwrapper
 qt5-wayland
 reflector
@@ -79,6 +85,7 @@ udisks2
 ufw
 usbutils
 vim
+wf-recorder
 wget
 which
 wl-clipboard

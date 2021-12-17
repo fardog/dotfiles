@@ -1,7 +1,3 @@
-[pomodoro]
-command=~/.bin/pomodoro-status $button
-interval=1
-
 [wifi]
 command=$SCRIPT_DIR/wifi/wifi
 label=W: 

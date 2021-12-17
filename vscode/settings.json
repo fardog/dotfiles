@@ -230,5 +230,6 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "cmake.configureOnOpen": true
+  "cmake.configureOnOpen": true,
+  "go.toolsManagement.autoUpdate": true
 }

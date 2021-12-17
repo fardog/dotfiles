@@ -21,9 +21,9 @@ for_window [app_id="zoom"] inhibit_idle visible
 # by default, ensure laptop monitor is enabled
 output eDP-1 enable
 # home office layout
-bindsym $mod+Mod1+h output * enable; output eDP-1 pos 2560 170; output DP-3 pos 0 0; output DP-2 pos 340 1440;
+bindsym $mod+Mod1+h output * enable; output eDP-1 scale 1 pos 2560 170; output DP-3 scale 1 pos 0 0; output DP-2 scale 1 pos 340 1440;
 # laptop layout
-bindsym $mod+Mod1+l output * disable; output eDP-1 enable; output eDP-1 pos 0 0;
+bindsym $mod+Mod1+l output * disable; output eDP-1 enable; output eDP-1 scale 1 pos 0 0;
 
 ##########
 # colors #
@@ -113,6 +113,9 @@ bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[
 # bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | wl-copy
 # capture rectangle, edit it in swappy
 bindsym --release $mod+Shift+p exec grim -g "$(slurp)" -t png - | swappy -f -
+# record a portion of the screen
+bindsym $mod+Control+r exec wf-recorder -g "$(slurp)" --file=$HOME/Screenshots/recording-"$(date --iso-8601=seconds).mp4"
+bindsym $mod+Control+e exec killall -s SIGINT wf-recorder
 
 # window marks
 # TODO: not working in sway for obvious reasons
@@ -261,10 +264,10 @@ bar {
 
 # Run some commands at startup
 exec --no-startup-id swayidle -w \
-  timeout 300 'swaylock -f -c 000000' \
+  timeout 300 '$Locker' \
   timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
-  before-sleep 'swaylock -f -c 000000'
+  before-sleep '$Locker'
 exec --no-startup-id xsettingsd
 exec --no-startup-id dropbox start
 exec --no-startup-id mako
