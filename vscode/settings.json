@@ -100,6 +100,22 @@
     {
       "before": ["g", "D"],
       "commands": ["editor.action.revealDefinitionAside"]
+    },
+    {
+      "before": ["<C-w>", "L"],
+      "commands": ["workbench.action.moveActiveEditorGroupRight"]
+    },
+    {
+      "before": ["<C-w>", "H"],
+      "commands": ["workbench.action.moveActiveEditorGroupLeft"]
+    },
+    {
+      "before": ["<C-w>", "K"],
+      "commands": ["workbench.action.moveActiveEditorGroupUp"]
+    },
+    {
+      "before": ["<C-w>", "J"],
+      "commands": ["workbench.action.moveActiveEditorGroupDown"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
