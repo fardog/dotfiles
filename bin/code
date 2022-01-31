@@ -1,3 +1,0 @@
-#!/bin/sh
-
-/usr/bin/code --enable-features=UseOzonePlatform --ozone-platform=wayland $@

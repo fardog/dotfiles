@@ -1,9 +1,11 @@
 set $mod Mod4
 
-# set all mouse inputs to be left handed
-input * left_handed enabled
-# enable compose key on right alt
-input * xkb_options compose:ralt
+input * {
+  # set all mouse inputs to be left handed
+  left_handed enabled
+  # enable compose key on right alt
+  xkb_options compose:ralt
+}
 
 # hide mouse at sensible times
 seat * hide_cursor 4000
@@ -244,11 +246,6 @@ bindsym XF86MonBrightnessDown exec light -U 5
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86AudioMute exec pamixer --toggle-mute && pkill -RTMIN+10 i3blocks
 
-# media key fixes for spotify
-bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -282,6 +279,7 @@ exec --no-startup-id nm-applet --indicator
 exec --no-startup-id blueman-applet
 exec --no-startup-id blueberry-tray
 exec --no-startup-id xrdb -load ~/.Xresources
+exec --no-startup-id systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # Kill system beep
 exec --no-startup-id xset -b
