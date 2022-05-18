@@ -1,12 +1,9 @@
-[pomodoro]
-command=~/.bin/pomodoro-status $button
-interval=1
-
 [wifi]
 command=$SCRIPT_DIR/wifi/wifi
 label=W: 
-interface=wlp61s0
-interval=60
+interface=wlan0
+interval=5
+COLOR_DOWN=#ffa3c3
 
 [iface]
 command=$SCRIPT_DIR/iface/iface

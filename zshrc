@@ -109,22 +109,14 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias open=xdg-open
-alias c='xclip -sel clip'
-alias p='xclip -o -sel clip'
+alias c='wl-copy'
+alias p='wl-paste'
 alias vssh='TERM=xterm vagrant ssh'
 alias vim=nvim
 alias jfmt='p|python -m json.tool|c'
 alias ssha='p|head -c7|c'
 
 alias glsb='git log --graph --decorate --oneline --all --simplify-by-decoration'
-
-# Host specific configuration
-HOST_NAME=$(/usr/bin/env hostname)
-if [ $HOST_NAME = "belka" ]; then
-	export CHEF_PATH="$HOME/Projects/UA/chef_configs"
-	export AIRSHIP_PATH="$HOME/Projects/UA/airship"
-	export PATH=$HOME/.gem/ruby/2.2.0/bin:$PATH
-fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -140,7 +132,7 @@ export PATH="./node_modules/.bin:$PATH"
 
 eval $(thefuck --alias)
 
-if [ -n "$DESKTOP_SESSION" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
+# if [ -n "$DESKTOP_SESSION" ];then
+#     eval $(gnome-keyring-daemon --start)
+#     export SSH_AUTH_SOCK
+# fi

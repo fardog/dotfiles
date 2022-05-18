@@ -12,6 +12,6 @@ export PATH=$HOME/.dotfiles/bin:$HOME/.bin:$PATH
 # pyvenv
 export WORKON_HOME=$HOME/workon
 
-export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+#export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 
 source $HOME/.boxrc

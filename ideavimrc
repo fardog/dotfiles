@@ -1,46 +1,22 @@
-source ~/.config/nvim/init.vim
+" make search better
+set ignorecase
+set smartcase
 
-" github
-noremap <leader>gu :action Github.Open.In.Browser<cr>
-noremap <leader>gg :action Github.Create.Gist<cr>
+" remap leader to spc
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+let g:mapleader=" "
 
-" git commands
-noremap <leader>ga :action Vcs.QuickListPopupAction<cr>
-noremap <leader>gf :action Git.Fetch<cr>
-noremap <leader>gp :action Vcs.Push<cr>
-noremap <leader>gd :action Git.CompareWithBranch<cr>
-noremap <leader>gm :action Git.Merge<cr>
-noremap <leader>gs :action Git.Stash<cr>
-noremap <leader>gl :action Git.Pull<cr>
-noremap <leader>gb :action Git.Branches<cr>
-noremap <leader>gc :action CheckinProject<cr>
-
-" files
-noremap <leader>fn :action NewFile<cr>
-
-" cursive
-noremap <leader>cbk :action :cursive.actions.paredit/barf-backwards<cr>
-noremap <leader>cbj :action :cursive.actions.paredit/barf-forwards<cr>
-noremap <leader>csj :action :cursive.actions.paredit/slurp-backwards<cr>
-noremap <leader>csk :action :cursive.actions.paredit/slurp-forwards<cr>
-noremap <leader>cr :action :cursive.actions.paredit/raise<cr>
-noremap <leader>cj :action :cursive.actions.paredit/join<cr>
-noremap <leader>co :action :cursive.actions.paredit/split<cr>
-noremap <leader>cO :action :cursive.actions.paredit/splice<cr>
-noremap <leader>ck :action :cursive.actions.paredit/kill-sexp<cr>
-
-" npm test commands
-noremap <leader>t :action QuickList.Tests<cr>
-
-" window commands
-noremap <leader>s :action Switcher<cr>
-noremap <leader>z :action ActivateTerminalToolWindow<cr>
-noremap <leader><< :action MoveTabRight<cr>
-noremap <leader>>> :action MoveTabRight<cr>
-noremap <leader>/ :action MoveEditorToOppositeTabGroup<cr>
-
-" clipboard
-noremap <leader>p :action PasteMultiple<cr>
+" split mappings
+nnoremap <leader>_ :split<cr>
+nnoremap <leader>/ :vsplit<cr>
 
 " reload .ideavimrc
 nnoremap <leader>vs :source ~/.ideavimrc<cr>
+
+:map <c-w>L <Action>(TabShiftActions.ShiftRight)
+:map <c-w>H <Action>(TabShiftActions.ShiftLeft)
+:map <c-w>K <Action>(TabShiftActions.ShiftUp)
+:map <c-w>J <Action>(TabShiftActions.ShiftDown)
+:map gh <Action>(QuickJavaDoc)
+:map gH <Action>(ShowErrorDescription)
