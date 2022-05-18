@@ -247,5 +247,6 @@
     "jupyter-notebook": "left"
   },
   "cmake.configureOnOpen": true,
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "redhat.telemetry.enabled": false
 }
