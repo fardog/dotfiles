@@ -1,11 +1,15 @@
 set $mod Mod4
 
-input * {
-  # set all mouse inputs to be left handed
-  left_handed enabled
+input "type:keyboard" {
   # enable compose key on right alt
   xkb_options compose:ralt
 }
+
+input "type:pointer" {
+  # set all mouse inputs to be left handed
+  left_handed enabled
+}
+
 
 # hide mouse at sensible times
 seat * hide_cursor 4000
@@ -23,6 +27,8 @@ for_window [app_id="zoom" title="^zoom$"] border none, floating enable
 # For specific Zoom windows
 for_window [app_id="zoom" title="^(Zoom|About)$"] border pixel, floating enable
 for_window [app_id="zoom" title="Settings"] floating enable, floating_minimum_size 960 x 700
+# Firefox sharing indicator
+for_window [title="\ -\ Sharing\ Indicator$"] floating enable, sticky enable
 
 ##################
 # screen layouts #
@@ -271,6 +277,7 @@ exec --no-startup-id swayidle -w \
   timeout 300 '$Locker' \
   timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
+  timeout 720 'systemctl suspend' \
   before-sleep '$Locker'
 exec --no-startup-id xsettingsd
 exec --no-startup-id dropbox start
