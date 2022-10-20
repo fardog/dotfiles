@@ -21,6 +21,7 @@
     "spacing": 5
   },
   "clock": {
+    "interval": 5,
     "format": "{:%Y-%m-%d %H:%M:%S %Z}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"

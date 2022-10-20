@@ -43,9 +43,11 @@ for_window [title="\ —\ Sharing\ Indicator$"] floating enable, sticky enable
 # by default, ensure laptop monitor is enabled
 output eDP-1 enable
 # home office layout
-bindsym $mod+Mod1+h output * enable; output eDP-1 scale 1 pos 2560 170; output "Dell Inc. DELL U2515HX GMDK479G0XYL" scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 340 1440;
+bindsym $mod+Mod1+h output eDP-1 scale 1 pos 2560 170; output "Dell Inc. DELL U2515HX GMDK479G0XYL" scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 340 1440;
 # laptop layout
-bindsym $mod+Mod1+l output * disable; output eDP-1 enable; output eDP-1 scale 1 pos 0 0;
+bindsym $mod+Mod1+l output eDP-1 scale 1 pos 0 0;
+# portable monitor layout
+bindsym $mod+Mod1+j output eDP-1 scale 1 pos 1920 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 0;
 
 ##########
 # colors #
