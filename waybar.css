@@ -6,7 +6,6 @@
 
 window#waybar {
   background-color: #5a5575;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   color: #c0bbdb;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -73,13 +72,17 @@ window#waybar.chromium {
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
+#custom-separator,
 #tray,
 #mode,
 #idle_inhibitor,
 #mpd {
   padding: 0 4px;
   color: #c0bbdb;
+}
+
+#custom-separator {
+  opacity: 0.4;
 }
 
 #window,

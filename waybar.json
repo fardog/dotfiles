@@ -6,11 +6,17 @@
   "modules-center": [],
   "modules-right": [
     "network",
+    "custom/separator",
     "memory",
+    "custom/separator",
     "battery",
+    "custom/separator",
     "clock",
+    "custom/separator",
     "clock#utc",
+    "custom/separator",
     "pulseaudio",
+    "custom/separator",
     "tray"
   ],
   "sway/mode": {
@@ -76,5 +82,10 @@
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
+  },
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
   }
 }
