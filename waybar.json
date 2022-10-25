@@ -13,6 +13,8 @@
     "custom/separator",
     "clock",
     "custom/separator",
+    "clock#pst",
+    "custom/separator",
     "clock#utc",
     "custom/separator",
     "pulseaudio",
@@ -29,13 +31,18 @@
   "clock": {
     "interval": 5,
     "format": "{:%Y-%m-%d %H:%M:%S %Z}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "clock#pst": {
+    "format": "{:%H:%M %Z}",
+    "timezone": "America/Los_Angeles",
+    "tooltip": false,
     "format-alt": "{:%Y-%m-%d}"
   },
   "clock#utc": {
     "format": "{:%H:%M %Z}",
     "timezone": "Etc/UTC",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip": false,
     "format-alt": "{:%Y-%m-%d}"
   },
   "memory": {
