@@ -221,11 +221,11 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # mako
-bindsym Control+space exec makoctl dismiss
+bindsym --release Control+space exec makoctl dismiss
 # TODO: conflicts with alacritty
-# bindsym Control+Shift+space exec makoctl dismiss -a
-bindsym Control+Shift+grave exec makoctl restore
-bindsym Control+Shift+period exec makoctl invoke
+bindsym --release Control+Shift+space exec makoctl dismiss -a
+bindsym --release Control+Shift+grave exec makoctl restore
+bindsym --release Control+Shift+period exec makoctl invoke
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

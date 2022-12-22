@@ -16,5 +16,5 @@ if [ "$(tty)" = "/dev/tty1" ]; then
   echo "initializing keychain, which should prompt for ssh key passwords on first login..."
   eval $(keychain --eval --dir $HOME/.config/keychain --quiet --agents gpg,ssh id_rsa)
   echo "keychain initialized."
-  exec sway > log/sway.log 2>&1
+  exec sway -d 2> ~/log/sway.log
 fi 

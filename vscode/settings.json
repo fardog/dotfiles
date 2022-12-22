@@ -128,6 +128,7 @@
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-l>": false,
+    "<C-space>": false,
     "<C-shift-e>": false,
     "<C-shift-g>": false,
     "<C-`>": false,
