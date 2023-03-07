@@ -17,6 +17,8 @@
     "custom/separator",
     "clock#utc",
     "custom/separator",
+    "idle_inhibitor",
+    "custom/separator",
     "pulseaudio",
     "custom/separator",
     "tray"
@@ -94,5 +96,12 @@
     "format": "|",
     "interval": "once",
     "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
   }
 }

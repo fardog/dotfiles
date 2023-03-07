@@ -24,8 +24,11 @@ seat * hide_cursor when-typing enable
 # _any_ fullscreen window, since i almost never do this except for video
 for_window [class=.*] inhibit_idle fullscreen
 
-# zoom
-for_window [app_id="zoom"] inhibit_idle visible
+# meetings
+for_window [title="^Zoom\ "] inhibit_idle visible
+for_window [app_id="firefox" title="^Meet\ -"] inhibit_idle visible
+
+# zoom, wayland
 assign [app_id="zoom"] workspace number 6
 # additional fixes to make zoom less miserable
 # For pop up notification windows that don't use notifications api
@@ -47,7 +50,7 @@ bindsym $mod+Mod1+h output eDP-1 scale 1 pos 2560 170; output "Dell Inc. DELL U2
 # laptop layout
 bindsym $mod+Mod1+l output eDP-1 scale 1 pos 0 0;
 # portable monitor layout
-bindsym $mod+Mod1+j output eDP-1 scale 1 pos 1920 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 0;
+bindsym $mod+Mod1+j output eDP-1 scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 1080;
 
 ##########
 # colors #
@@ -177,6 +180,9 @@ bindsym Control+$mod+j move workspace to output down
 bindsym Control+$mod+k move workspace to output up
 bindsym Control+$mod+l move workspace to output right
 
+# swap workspaces
+bindsym $mod+Shift+s exec /home/nwittstock/.dotfiles/bin/swap-workspaces.sh
+
 # split in horizontal orientation
 bindsym $mod+backslash split h
 # split in vertical orientation
@@ -219,6 +225,19 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# move focused container to workspace, and immediately change to workspace
+bindsym $mod+Mod1+Shift+1 move container to workspace 1; workspace 1
+bindsym $mod+Mod1+Shift+2 move container to workspace 2; workspace 2
+bindsym $mod+Mod1+Shift+3 move container to workspace 3; workspace 3
+bindsym $mod+Mod1+Shift+4 move container to workspace 4; workspace 4
+bindsym $mod+Mod1+Shift+5 move container to workspace 5; workspace 5
+bindsym $mod+Mod1+Shift+6 move container to workspace 6; workspace 6
+bindsym $mod+Mod1+Shift+7 move container to workspace 7; workspace 7
+bindsym $mod+Mod1+Shift+8 move container to workspace 8; workspace 8
+bindsym $mod+Mod1+Shift+9 move container to workspace 9; workspace 9
+bindsym $mod+Mod1+Shift+0 move container to workspace 10; workspace 10
+
 
 # mako
 bindsym --release Control+space exec makoctl dismiss
