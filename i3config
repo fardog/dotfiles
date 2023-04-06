@@ -25,20 +25,10 @@ seat * hide_cursor when-typing enable
 for_window [class=.*] inhibit_idle fullscreen
 
 # meetings
-for_window [title="^Zoom\ "] inhibit_idle visible
 for_window [app_id="firefox" title="^Meet\ -"] inhibit_idle visible
 
-# zoom, wayland
-assign [app_id="zoom"] workspace number 6
-# additional fixes to make zoom less miserable
-# For pop up notification windows that don't use notifications api
-for_window [app_id="zoom" title="^zoom$"] border none, floating enable
-# For specific Zoom windows
-for_window [app_id="zoom" title="^(Zoom|About)$"] border pixel, floating enable
-for_window [app_id="zoom" title="Settings"] floating enable, floating_minimum_size 960 x 700
-
 # Firefox sharing indicator
-for_window [title="\ —\ Sharing\ Indicator$"] floating enable, sticky enable
+for_window [title="\ —\ Sharing\ Indicator$"] border none, sticky enable, floating enable, move position 50 ppt 0 px
 
 ##################
 # screen layouts #
@@ -272,6 +262,7 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym $mod+End mode "$mode_system"
 
 bindsym $mod+Delete exec --no-startup-id $Locker
+bindsym $mod+Shift+Delete exec --no-startup-id systemctl suspend
 
 # bind volume keys
 bindsym XF86AudioLowerVolume exec pamixer --decrease 1 && pkill -RTMIN+10 i3blocks
