@@ -253,5 +253,6 @@
   },
   "cmake.configureOnOpen": true,
   "go.toolsManagement.autoUpdate": true,
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "git.openRepositoryInParentFolders": "never"
 }

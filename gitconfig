@@ -5,7 +5,6 @@
 [core]
 	excludesfile = ~/.dotfiles/gitignore_global
 	filemode = false
-	editor = nvim
 	autocrlf = input
 [github]
 	user = fardog

@@ -88,10 +88,10 @@ fi
 # export LANG=en_US.UTF-8
 
 # Preferred editor
-if [[ -n $SSH_CONNECTION ]]; then
-	export EDITOR='vim'
-else
+if [[ -s /usr/bin/nvim ]]; then
 	export EDITOR='nvim'
+else
+	export EDITOR='vim'
 fi
 
 # Compilation flags
@@ -112,7 +112,7 @@ alias open=xdg-open
 alias c='wl-copy'
 alias p='wl-paste'
 alias vssh='TERM=xterm vagrant ssh'
-alias vim=nvim
+[ -s /usr/bin/nvim ] && alias vim=nvim
 alias jfmt='p|python -m json.tool|c'
 alias ssha='p|head -c7|c'
 alias noeol='xargs echo -n'
