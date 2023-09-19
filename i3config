@@ -15,6 +15,9 @@ input "2:10:TPPS\/2_Elan_TrackPoint" {
   pointer_accel -0.5
 }
 
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+  events disabled
+}
 
 # hide mouse at sensible times
 seat * hide_cursor 4000

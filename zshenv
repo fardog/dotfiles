@@ -1,6 +1,3 @@
-# fix vscode git
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 # fix things for webstorm
 export PATH=./node_modules/.bin:/home/nwittstock/.nvm/current/bin:$PATH
 export GOPATH=/home/nwittstock/gocode
