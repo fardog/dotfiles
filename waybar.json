@@ -48,6 +48,9 @@
     "format-alt": "{:%Y-%m-%d}"
   },
   "memory": {
+    "states": {
+      "warning": 95
+    },
     "format": "{}% "
   },
   "battery": {

@@ -122,6 +122,11 @@ window#waybar.chromium {
   animation-direction: alternate;
 }
 
+#memory.warning {
+  background-color: #ffa3c3;
+  color: #ffffff;
+}
+
 label:focus {
   background-color: #000000;
 }
