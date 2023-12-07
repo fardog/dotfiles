@@ -68,7 +68,6 @@ maven
 neovim
 network-manager-applet
 networkmanager
-nodejs-lts-gallium
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
@@ -76,7 +75,9 @@ npm
 obs-studio
 otf-font-awesome
 pacman-contrib
+pacutils
 pamixer
+pass
 patch
 pavucontrol
 pipewire
@@ -88,11 +89,13 @@ plantuml
 polkit-gnome
 postgresql-libs
 powertop
+pre-commit
 pyenv
 python-virtualenvwrapper
 qt5-wayland
 qt6-wayland
 reflector
+rocm-opencl-runtime
 rsync
 slurp
 sshfs
@@ -116,6 +119,7 @@ unzip
 usbutils
 v4l2loopback-dkms
 vim
+visidata
 vlc
 waybar
 wf-recorder
@@ -129,5 +133,6 @@ xorg-server-xvfb
 xorg-xrdb
 xorg-xwayland
 xsettingsd
+ydotool
 zip
 zsh

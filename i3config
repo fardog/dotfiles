@@ -66,6 +66,8 @@ set $color_urgent_ac    #ffa3c3
 set $color_divider      #666666
 set $color_flood        #282634
 
+set $bemenu_colors --tf '$color_prim_mt_fg' --hf '$color_prim_mt_fg' --nb '$color_secondary_bg' --nf '$color_secondary_fg' --sb '$color_primary_bg' --sf '$color_primary_fg'
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -111,17 +113,20 @@ focus_follows_mouse no
 #############
 # launchers #
 #############
-bindsym $mod+d exec bemenu-run -p 'exec' --tf '$color_prim_mt_fg' --hf '$color_prim_mt_fg' --nb '$color_secondary_bg' --nf '$color_secondary_fg' --sb '$color_primary_bg' --sf '$color_primary_fg'
+bindsym $mod+d exec bemenu-run -p 'exec' $bemenu_colors
+
+# passmenu
+bindsym $mod+Shift+d exec BEMENU_OPTS="$bemenu_colors" passmenu --type
 
 # dmenu network manager
-bindsym $mod+o exec networkmanager_dmenu 
+bindsym $mod+o exec BEMENU_OPTS="$bemenu_colors" networkmanager_dmenu
 
 # dmenu snippet manager
-bindsym $mod+q exec /home/nwittstock/.dotfiles/bin/snippy
+bindsym $mod+q exec BEMENU_OPTS="$bemenu_colors" ~/.dotfiles/bin/snippy
 
 # dmenu emoji picker
 # TODO: doesn't work without dmenu
-bindsym $mod+a exec /home/nwittstock/.dotfiles/bin/emojipick
+bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" ~/.dotfiles/bin/emojipick
 
 # pick color at point, copy to clipboard
 bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy

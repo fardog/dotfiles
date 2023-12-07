@@ -5,7 +5,7 @@
   "editor.rulers": [80, 120],
   "editor.tabSize": 2,
   "editor.bracketPairColorization.enabled": true,
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "emmet.excludeLanguages": ["markdown", "typescriptreact"],
@@ -28,7 +28,6 @@
 
   "window.menuBarVisibility": "toggle",
   "window.restoreWindows": "none",
-  "workbench.activityBar.visible": false,
 
   "vim.insertModeKeyBindings": [
     {
@@ -174,7 +173,6 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.colorTheme": "Witch Hazel Hypercolor",
-  "workbench.editor.untitled.hint": "hidden",
   "editor.cursorStyle": "line",
   "editor.insertSpaces": true,
   "editor.lineNumbers": "on",
@@ -185,10 +183,6 @@
    * language settings
    */
 
-  "python.venvPath": "/home/nwittstock/workon",
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.pylintEnabled": false,
   "python.showStartPage": false,
   "python.languageServer": "Pylance",
   "[python]": {
@@ -254,5 +248,7 @@
   "cmake.configureOnOpen": true,
   "go.toolsManagement.autoUpdate": true,
   "redhat.telemetry.enabled": false,
-  "git.openRepositoryInParentFolders": "never"
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.location": "hidden"
 }

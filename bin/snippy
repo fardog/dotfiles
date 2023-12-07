@@ -1,39 +1,15 @@
-#!/bin/bash
+#!/bin/bash -e
 # (nwittstock) modified from https://gist.github.com/coderofsalvation/46549e3788ade2f3a938
 
 # written by "mhwombat": https://bbs.archlinux.org/viewtopic.php?id=71938&p=2
 # Based on "snippy" by "sessy" 
 # (https://bbs.archlinux.org/viewtopic.php?id=71938)
 #
-# You will also need "dmenu", "xsel" and "xdotool". Get them from your linux
-# distro in the usual way.
-#
-# To use:
-# 1. Create the directory ~/.snippy
-#
-# 2. Create a file in that directory for each snippet that you want.
-#    The filename will be used as a menu item, so you might want to
-#    omit the file extension when you name the file. 
-#
-#    TIP: If you have a lot of snippets, you can organise them into 
-#    subdirectories under ~/.snippy.
-#
-#    TIP: The contents of the file will be pasted asis, so if you 
-#    don't want a newline at the end when the text is pasted, don't
-#    put one in the file.
-#
-# 3. Bind a convenient key combination to this script.
-#
-#    TIP: If you're using XMonad, add something like this to xmonad.hs
-#      ((mod4Mask, xK_s), spawn "/path/to/snippy")
-#
-DIR=${HOME}/.snippets
+SOURCE_DIRS=(.snippets .dotfiles/snippets) # assumes to be under ~/
 APPS="wl-copy bemenu"
 DMENU_ARGS="-b"
-TMPFILE="/tmp/.snippy.tmp"; :>$TMPFILE
-# if nothing happens, try "xdotool click 2", "xdotool key ctrl+v" or "xdotool key ctrl+shift+v"
-GUIPASTE="xdotool key ctrl+v" 
-CLIPASTE="xdotool key ctrl+shift+v"
+
+DIRS=()
 
 init(){
   for APP in $APPS; do 
@@ -42,27 +18,28 @@ init(){
       exit 1
     }
   done
-  [[ ! -d "$DIR" ]] && { 
-    echo -e "directory ${DIR} not found; no snips to load"
+
+  for i in ${!SOURCE_DIRS[@]}; do
+    [[ -d "${SOURCE_DIRS[$i]}" ]] && { 
+      DIRS+=(${SOURCE_DIRS[$i]})
+    }
+  done
+
+  if [[ "${#DIRS[@]}" == 0 ]]; then
+    echo -e "no snippet directories found"
     exit 1
-  }
+  fi
+
   return 0
 }
 
 run(){
-  cd ${DIR}
+  cd ${HOME}
   # Use the filenames in the snippy directory as menu entries.
   # Get the menu selection from the user.
   MENU=`which bemenu`
-  FILE=`find -L .  -type f | grep -v '^\.$' | sed 's!\.\/!!' | ${MENU} ${DMENU_ARGS}`
-  if [ -f ${DIR}/${FILE} ]; then
-    # Put the contents of the selected file into the paste buffer.
-    content="$(cat ${DIR}/${FILE})"
-    [[ "${#content}" == 0 ]] && printf "${FILE}" > $TMPFILE || printf "%s" "$content" > $TMPFILE
-  else
-    ${FILE} &> $TMPFILE # execute as bashcommand
-  fi
-  wl-copy < $TMPFILE
+  FILE=`find -L ${DIRS[@]}  -type f | grep -v '^\.$' | sed 's!\.\/!!' | ${MENU} ${DMENU_ARGS}`
+  wl-copy < $FILE
 }
 
 init && run

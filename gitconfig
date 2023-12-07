@@ -1,6 +1,6 @@
 [user]
 	name = fardog 
-	email = nate@milkandtang.com
+	email = nate@fardog.io
 	signingkey = 8863ABA4
 [core]
 	excludesfile = ~/.dotfiles/gitignore_global
