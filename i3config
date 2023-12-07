@@ -125,8 +125,7 @@ bindsym $mod+o exec BEMENU_OPTS="$bemenu_colors" networkmanager_dmenu
 bindsym $mod+q exec BEMENU_OPTS="$bemenu_colors" ~/.dotfiles/bin/snippy
 
 # dmenu emoji picker
-# TODO: doesn't work without dmenu
-bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" ~/.dotfiles/bin/emojipick
+bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" EMOJIPICK_CMD="bemenu -l 15 -fn" ~/.dotfiles/external/emojipick/emojipick
 
 # pick color at point, copy to clipboard
 bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
