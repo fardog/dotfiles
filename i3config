@@ -116,7 +116,7 @@ focus_follows_mouse no
 bindsym $mod+d exec bemenu-run -p 'exec' $bemenu_colors
 
 # passmenu
-bindsym $mod+Shift+d exec BEMENU_OPTS="$bemenu_colors" passmenu --type
+bindsym $mod+Shift+d exec BEMENU_OPTS="$bemenu_colors" PASSWORD_STORE_CLIP_TIME=15 passmenu
 
 # dmenu network manager
 bindsym $mod+o exec BEMENU_OPTS="$bemenu_colors" networkmanager_dmenu
