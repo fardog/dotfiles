@@ -250,5 +250,7 @@
   "redhat.telemetry.enabled": false,
   "git.openRepositoryInParentFolders": "never",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+
+  "jest.autoRun": {}
 }
