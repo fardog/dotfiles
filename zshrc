@@ -126,9 +126,6 @@ export NVM_DIR="$HOME/.nvm"
 bindkey '^r' history-incremental-search-backward
 bindkey '^s' history-incremental-search-forward
 
-# update path to put node_modules first, this must be done *after* nvm
-export PATH="./node_modules/.bin:$PATH"
-
 [ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
 
 eval $(thefuck --alias)
