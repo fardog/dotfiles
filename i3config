@@ -5,14 +5,10 @@ input "type:keyboard" {
   xkb_options compose:ralt
 }
 
-input "type:pointer" {
-  # set all mouse inputs to be left handed
-  left_handed enabled
-}
-
-input "2:10:TPPS\/2_Elan_TrackPoint" {
+input "2:10:TPPS/2_Elan_TrackPoint" {
   accel_profile "adaptive"
   pointer_accel -0.5
+  left_handed enabled
 }
 
 input "2:7:SynPS/2_Synaptics_TouchPad" {
@@ -33,14 +29,21 @@ for_window [title="\ —\ Sharing\ Indicator$"] border none, sticky enable, floa
 ##################
 # screen layouts #
 ##################
+set $laptop eDP-1
 # by default, ensure laptop monitor is enabled
-output eDP-1 enable
+output $laptop enable
 # home office layout
-bindsym $mod+Mod1+h output eDP-1 scale 1 pos 2560 170; output "Dell Inc. DELL U2515HX GMDK479G0XYL" scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 340 1440;
+bindsym $mod+Mod1+h output $laptop disable; output "Dell Inc. DELL G2724D 3X5C4V3" scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 320 1440;
 # laptop layout
-bindsym $mod+Mod1+l output eDP-1 scale 1 pos 0 0;
+bindsym $mod+Mod1+l output $laptop enable scale 1 pos 0 0;
 # portable monitor layout
-bindsym $mod+Mod1+j output eDP-1 scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 1080;
+bindsym $mod+Mod1+j output $laptop enable scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 1080;
+
+# clamshell mode switch
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+# reset display on reload
+exec_always ~/.dotfiles/bin/reset-displays.sh
 
 ##########
 # colors #
@@ -274,8 +277,8 @@ bindsym XF86AudioRaiseVolume exec pamixer --increase 1
 bindsym XF86AudioMute exec pamixer --toggle-mute
 bindsym XF86AudioMicMute exec pamixer --default-source --toggle-mute
 # bind brightness keys
-bindsym XF86MonBrightnessDown exec light -U 1
-bindsym XF86MonBrightnessUp exec light -A 1
+bindsym XF86MonBrightnessDown exec brightnessctl s 1%-
+bindsym XF86MonBrightnessUp exec  brightnessctl s +1%
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
