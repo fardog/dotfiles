@@ -30,14 +30,18 @@ for_window [title="\ —\ Sharing\ Indicator$"] border none, sticky enable, floa
 # screen layouts #
 ##################
 set $laptop eDP-1
+set $dell25 "Dell Inc. DELL U2515HX GMDK479G0XYL"
+set $dell27 "Dell Inc. DELL G2724D 3X5C4V3"
+set $lenovom14 "Lenovo Group Limited M14 V907PAGG"
+
 # by default, ensure laptop monitor is enabled
 output $laptop enable
 # home office layout
-bindsym $mod+Mod1+h output $laptop disable; output "Dell Inc. DELL G2724D 3X5C4V3" scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 320 1440;
+bindsym $mod+Mod1+h output $laptop disable; output $dell27 enable scale 1 pos 1440 400; output $dell25 enable scale 1 pos 0 0 transform 270;
 # laptop layout
 bindsym $mod+Mod1+l output $laptop enable scale 1 pos 0 0;
 # portable monitor layout
-bindsym $mod+Mod1+j output $laptop enable scale 1 pos 0 0; output "Lenovo Group Limited M14 V907PAGG" scale 1 pos 0 1080;
+bindsym $mod+Mod1+j output $laptop enable scale 1 pos 0 0; output $lenovom14 scale 1 pos 0 1080;
 
 # clamshell mode switch
 bindswitch --reload --locked lid:on output $laptop disable

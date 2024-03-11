@@ -9,12 +9,14 @@ automake
 avr-gcc
 avr-libc
 base
+base-devel
 bemenu
 bind
 binutils
 bison
 blueman
 brightnessctl
+cameractrls
 chromium
 clamav
 colord
@@ -55,7 +57,6 @@ keychain
 libmemcached-awesome
 libtool
 libva-mesa-driver
-light
 linux
 linux-firmware
 lvm2
@@ -68,6 +69,7 @@ maven
 neovim
 network-manager-applet
 networkmanager
+nodejs
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
