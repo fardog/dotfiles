@@ -4,6 +4,7 @@
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": [],
   "modules-right": [
+    "privacy",
     "network",
     "custom/separator",
     "memory",
@@ -104,5 +105,19 @@
   },
   "backlight": {
     "format": "{percent}% "
+  },
+  "privacy": {
+    "icon-spacing": 0,
+    "modules": [
+      {
+        "type": "screenshare"
+      },
+      {
+        "type": "audio-out"
+      },
+      {
+        "type": "audio-in"
+      }
+    ]
   }
 }

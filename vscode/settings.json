@@ -140,18 +140,19 @@
   "workbench.startupEditor": "newUntitledFile",
   "telemetry.enableTelemetry": false,
   "cSpell.userWords": [
-    "DOTPATHS",
-    "Serde",
-    "Templating",
     "changeset",
     "deserialize",
     "dotpath",
+    "DOTPATHS",
     "proto",
     "protobuf",
     "protobufs",
     "rtype",
+    "Serde",
+    "Storer",
     "talby",
     "templated",
+    "Templating",
     "templatized",
     "unicast",
     "wittstock"
@@ -220,7 +221,8 @@
       "comments": "off",
       "strings": "off",
       "other": "off"
-    }
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[json]": {

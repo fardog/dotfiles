@@ -143,3 +143,17 @@ label:focus {
   -gtk-icon-effect: highlight;
   background-color: #eb4d4b;
 }
+
+#privacy-item {
+  color: #ffffff;
+  padding: 0 2px 0 2px;
+}
+#privacy-item.screenshare {
+  background-color: #fa7725;
+}
+#privacy-item.audio-in {
+  background-color: #f7c220;
+}
+#privacy-item.audio-out {
+  background-color: #2dcc2d;
+}
