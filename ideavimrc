@@ -14,6 +14,12 @@ nnoremap <leader>/ :vsplit<cr>
 " reload .ideavimrc
 nnoremap <leader>vs :source ~/.ideavimrc<cr>
 
+:map <leader>kw <Action>(CloseAllEditors)
+:map <leader>kr <Action>(ManageRecentProjects)
+:map gI <Action>(GotoImplementation)
+:map gS <Action>(ShowUsages)
+:map gF <Action>(FindUsages)
+
 :map <c-w>L <Action>(TabShiftActions.ShiftRight)
 :map <c-w>H <Action>(TabShiftActions.ShiftLeft)
 :map <c-w>K <Action>(TabShiftActions.ShiftUp)
