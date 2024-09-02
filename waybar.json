@@ -21,6 +21,8 @@
     "custom/separator",
     "idle_inhibitor",
     "custom/separator",
+    "custom/dnd",
+    "custom/separator",
     "pulseaudio",
     "custom/separator",
     "tray"
@@ -95,6 +97,14 @@
     "format": "|",
     "interval": "once",
     "tooltip": false
+  },
+  "custom/dnd": {
+    "format": "{}",
+    "interval": "once",
+    "exec": "$HOME/.dotfiles/bin/do-not-disturb status",
+    "on-click": "$HOME/.dotfiles/bin/do-not-disturb toggle; pkill -SIGRTMIN+10 waybar",
+    "signal": 10,
+    "exec-on-event": false
   },
   "idle_inhibitor": {
     "format": "{icon}",

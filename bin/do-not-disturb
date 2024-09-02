@@ -1,0 +1,41 @@
+#!/bin/bash
+
+MODE_NAME='do-not-disturb'
+
+status() {
+  makoctl mode | grep $MODE_NAME 2>&1 > /dev/null
+  if [ $? -eq 0 ]
+  then
+    echo "❌"
+    echo "Notifications: Off"
+  else
+    echo "⭕"
+    echo "Notifications: On"
+  fi
+}
+
+toggle() {
+  makoctl mode -t $MODE_NAME 2>&1 > /dev/null
+}
+
+# Check if at least 1 positional parameters are provided
+if [ $# -lt 1 ]
+then
+  echo "Usage: $0 (status|toggle)"
+  exit 1
+fi
+
+case $1 in
+  "status")
+    status
+    exit 0
+    ;;
+  "toggle")
+    toggle
+    status
+    exit 0
+    ;;
+esac
+
+echo "invalid operation $1"
+exit 1

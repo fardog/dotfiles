@@ -14,3 +14,6 @@ text-color=#888888
 background-color=#ffa3c3
 text-color=#ffffff
 default-timeout=0
+
+[mode=do-not-disturb]
+invisible=1
