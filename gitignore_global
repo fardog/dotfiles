@@ -7,7 +7,6 @@
 .jspr
 node_modules
 .idea
-.vscode
 *.iml
 compiled-test
 pip-selfcheck.json
@@ -18,3 +17,5 @@ pip-selfcheck.json
 .local
 *.hot-update.json
 /.python-version
+/.venv
+/.vscode/settings.json

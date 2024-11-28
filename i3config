@@ -137,10 +137,11 @@ bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" EMOJIPICK_CMD="bemenu -l 15 -fn
 # pick color at point, copy to clipboard
 bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 # capture current window, put it on the clipboard
-# TODO: not working right
-# bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | wl-copy
+bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
 # capture rectangle, edit it in swappy
 bindsym $mod+Shift+p exec grim -g "$(slurp)" -t png - | swappy -f -
+# capture the current output
+bindsym $mod+Control+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 # record a portion of the screen
 bindsym $mod+Control+r exec wf-recorder -g "$(slurp)" --file=$HOME/Screenshots/recording-"$(date --iso-8601=seconds).mp4"
 bindsym $mod+Control+e exec killall -s SIGINT wf-recorder

@@ -120,7 +120,6 @@
   "vim.enableNeovim": false,
   "vim.leader": "<space>",
   "vim.handleKeys": {
-    "<C-l>": false,
     "<C-space>": false,
     "<C-shift-e>": false,
     "<C-shift-g>": false,
@@ -132,7 +131,7 @@
   "gitlens.codeLens.enabled": false,
   "extensions.ignoreRecommendations": true,
   "workbench.startupEditor": "newUntitledFile",
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "cSpell.userWords": [
     "changeset",
     "deserialize",
@@ -152,15 +151,12 @@
     "wittstock"
   ],
   "window.titleBarStyle": "native",
-  "editor.gotoLocation.multiple": "goto",
-  "terminal.integrated.shellArgs.linux": ["-i"],
-  "remote.containers.defaultExtensions": [
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "dev.containers.defaultExtensions": [
     "eamodio.gitlens",
-    "kaiwood.center-editor-window",
     "skattyadz.vscode-quick-scope",
     "stkb.rewrap",
-    "streetsidesoftware.code-spell-checker",
-    "sysoev.vscode-open-in-github"
+    "streetsidesoftware.code-spell-checker"
   ],
   "task.slowProviderWarning": ["typescript"],
   "git.autofetch": true,
@@ -247,6 +243,5 @@
   "git.openRepositoryInParentFolders": "never",
   "workbench.editor.empty.hint": "hidden",
   "workbench.activityBar.location": "hidden",
-
-  "jest.autoRun": {}
+  "jest.runMode": "on-demand"
 }
