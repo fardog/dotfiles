@@ -130,11 +130,6 @@ bindkey '^s' history-incremental-search-forward
 
 eval $(thefuck --alias)
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # if [ -n "$DESKTOP_SESSION" ];then
 #     eval $(gnome-keyring-daemon --start)
 #     export SSH_AUTH_SOCK

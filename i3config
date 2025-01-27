@@ -313,4 +313,4 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex -ae sway
 
 # include box local file
-include /home/.i3config
+include /home/nwittstock/.i3config
