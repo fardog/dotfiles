@@ -120,7 +120,7 @@ focus_follows_mouse no
 #############
 # launchers #
 #############
-bindsym $mod+d exec bemenu-run -p 'exec' $bemenu_colors
+bindsym $mod+d exec bemenu-run -i -p 'exec' $bemenu_colors
 
 # passmenu
 bindsym $mod+Shift+d exec BEMENU_OPTS="$bemenu_colors" PASSWORD_STORE_CLIP_TIME=15 passmenu
@@ -138,8 +138,8 @@ bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" EMOJIPICK_CMD="bemenu -l 15 -fn
 bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 # capture current window, put it on the clipboard
 bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
-# capture rectangle, edit it in swappy
-bindsym $mod+Shift+p exec grim -g "$(slurp)" -t png - | swappy -f -
+# capture rectangle, edit it in satty
+bindsym $mod+Shift+p exec grim -g "$(slurp)" -t png - | satty --copy-command wl-copy -f -
 # capture the current output
 bindsym $mod+Control+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 # record a portion of the screen
@@ -242,11 +242,11 @@ bindsym $mod+Mod1+Shift+0 move container to workspace 10; workspace 10
 
 
 # mako
-bindsym --release Control+space exec makoctl dismiss
-# TODO: conflicts with alacritty
-bindsym --release Control+Shift+space exec makoctl dismiss -a
-bindsym --release Control+Shift+grave exec makoctl restore
-bindsym --release Control+Shift+period exec makoctl invoke
+bindsym Control+Shift+slash exec makoctl dismiss
+bindsym Control+grave exec makoctl dismiss -a
+bindsym Control+Shift+grave exec makoctl restore
+bindsym Control+Shift+comma exec makoctl menu bemenu -p 'Select Action: '
+bindsym Control+Shift+period exec makoctl invoke
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

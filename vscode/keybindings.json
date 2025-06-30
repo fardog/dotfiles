@@ -53,5 +53,9 @@
   {
     "key": "ctrl ctrl",
     "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "composerMode.agent"
   }
 ]

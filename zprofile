@@ -14,7 +14,7 @@ if [ "$(tty)" = "/dev/tty1" ]; then
   export MOZ_ENABLE_WAYLAND=1
   export MOZ_WEBRENDER=1
   echo "initializing keychain, which should prompt for ssh key passwords on first login..."
-  eval $(keychain --eval --dir $HOME/.config/keychain --quiet --agents gpg,ssh id_rsa id_ed25519)
+  eval $(keychain --eval --dir $HOME/.config/keychain --quiet id_rsa id_ed25519)
   echo "keychain initialized."
   exec sway -d
 fi 

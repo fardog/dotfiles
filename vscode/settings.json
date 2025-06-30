@@ -147,6 +147,7 @@
     "templated",
     "Templating",
     "templatized",
+    "transactionally",
     "unicast",
     "wittstock"
   ],
@@ -243,5 +244,6 @@
   "git.openRepositoryInParentFolders": "never",
   "workbench.editor.empty.hint": "hidden",
   "workbench.activityBar.location": "hidden",
-  "jest.runMode": "on-demand"
+  "jest.runMode": "on-demand",
+  "window.customTitleBarVisibility": "never"
 }

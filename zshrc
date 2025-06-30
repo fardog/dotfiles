@@ -53,13 +53,10 @@ plugins=(git npm vi-mode autojump history-substring-search aws kubectl)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-UNAME=$(/usr/bin/env uname)
-if [ $UNAME = "Darwin" ]; then
-	export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-else # Everyone else (Linux)
-	export PATH="$PATH:$HOME/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-	export TERM=xterm-256color
+export PATH="$PATH:$HOME/npm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export TERM=xterm-256color
 
+if [[ -s /etc/arch-release ]]; then
 	# set up aliases for pacman
 	alias pacupg='sudo pacman -Syu'		# Synchronize with repositories and then upgrade packages that are out of date on the local system.
 	alias pacdl='pacman -Sw'		# Download specified package(s) as .tar.xz ball
@@ -82,10 +79,6 @@ else # Everyone else (Linux)
 	alias pacbac="pacman -Qqen"		# List all explicity installed packages
 	alias pacback="pacman -Qqem"		# List explicitly installed non-repo packages
 fi
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor
 if [[ -s /usr/bin/nvim ]]; then
@@ -94,20 +87,6 @@ else
 	export EDITOR='vim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias open=xdg-open
 alias c='wl-copy'
 alias p='wl-paste'
@@ -118,6 +97,7 @@ alias ssha='p|head -c7|c'
 alias noeol='xargs echo -n'
 
 alias glsb='git log --graph --decorate --oneline --all --simplify-by-decoration'
+alias glb="git for-each-ref --sort=committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -129,8 +109,3 @@ bindkey '^s' history-incremental-search-forward
 [ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
 
 eval $(thefuck --alias)
-
-# if [ -n "$DESKTOP_SESSION" ];then
-#     eval $(gnome-keyring-daemon --start)
-#     export SSH_AUTH_SOCK
-# fi

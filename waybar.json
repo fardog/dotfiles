@@ -9,8 +9,8 @@
     "custom/separator",
     "memory",
     "custom/separator",
+    "power-profiles-daemon",
     "backlight",
-    "custom/separator",
     "battery",
     "custom/separator",
     "clock#pst",
@@ -20,7 +20,6 @@
     "clock",
     "custom/separator",
     "idle_inhibitor",
-    "custom/separator",
     "custom/dnd",
     "custom/separator",
     "pulseaudio",
@@ -129,5 +128,16 @@
         "type": "audio-in"
       }
     ]
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
   }
 }
