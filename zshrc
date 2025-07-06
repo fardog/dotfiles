@@ -109,3 +109,9 @@ bindkey '^s' history-incremental-search-forward
 [ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
 
 eval $(thefuck --alias)
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/nwittstock/.dart-cli-completion/zsh-config.zsh ]] && . /home/nwittstock/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

@@ -9,7 +9,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "emmet.excludeLanguages": ["markdown", "typescriptreact"],
-
+  "keyboard.dispatch": "keyCode",
   "workbench.colorCustomizations": {
     // "list.focusHighlightForeground": "#ffb8d1",
     // "quickInputList.focusForeground": "#ffb8d1",
