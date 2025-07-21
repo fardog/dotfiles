@@ -1,0 +1,27 @@
+#! /bin/bash
+# /etc/NetworkManager/dispatcher.d/00-wireguard
+# Script to auto-connect to WireGuard when connected to networks that are not 
+# the specified home network.  
+
+# Configuration: Get network UUIDs via 'nmcli connection show' & put them here.
+home_uuid="78590e73-3e39-4e98-8b77-294260788e48" # home network UUID
+wg_uuid="40aebc2f-0b41-493a-8765-15accc6f0413"      # wireguard network UUID
+
+##############
+wg_state="$(nmcli -g GENERAL.STATE connection show uuid "${wg_uuid}")"
+home_state="$(nmcli -g GENERAL.STATE connection show uuid "${home_uuid}")"
+
+if [ "${NM_DISPATCHER_ACTION}" = "connectivity-change" ] \
+        && [ "${CONNECTIVITY_STATE}" = "FULL" ] \
+        && [ "${wg_state}" != "activated" ] \
+        && [ "${home_state}" != "activated" ]
+then
+         nmcli connection up uuid "${wg_uuid}"
+fi
+
+if [ "${NM_DISPATCHER_ACTION}" = "down" ] \
+        && [ "${CONNECTIVITY_STATE}" != "FULL" ] \
+        && [ "${wg_state}" = "activated" ]
+then
+         nmcli connection down uuid "${wg_uuid}"
+fi

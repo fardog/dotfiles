@@ -110,3 +110,8 @@ bindkey '^s' history-incremental-search-forward
 
 eval $(thefuck --alias)
 eval "$(zoxide init --cmd j zsh)"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/nwittstock/.dart-cli-completion/zsh-config.zsh ]] && . /home/nwittstock/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
