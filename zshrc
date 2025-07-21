@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup
-plugins=(git npm vi-mode autojump history-substring-search aws kubectl)
+plugins=(git npm vi-mode history-substring-search aws kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,3 +109,4 @@ bindkey '^s' history-incremental-search-forward
 [ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
 
 eval $(thefuck --alias)
+eval "$(zoxide init --cmd j zsh)"
