@@ -5,6 +5,7 @@ alsa-utils
 ark
 aspell
 aspell-en
+audacity
 base
 base-devel
 bind
@@ -14,6 +15,7 @@ boost
 btrfs-progs
 check
 cmake
+code
 corrosion
 cups
 darktable
@@ -27,8 +29,11 @@ efibootmgr
 efitools
 egl-wayland
 eigen
+entr
+f3d
 firefox
 flatpak
+framework-system
 fuse-overlayfs
 fwupd
 fzf
@@ -66,11 +71,13 @@ libical
 libolm
 libpulse
 libpwquality
+librecad
 libreoffice-fresh
 libva-intel-driver
 linux
 linux-firmware
 lsof
+lvm2
 maliit-keyboard
 man-db
 meson
@@ -84,11 +91,11 @@ networkmanager
 nextcloud-client
 noto-fonts-cjk
 noto-fonts-extra
-nvm
 okular
 openresolv
 packagekit
 pacman-contrib
+partitionmanager
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -105,6 +112,7 @@ python-html5lib
 python-setproctitle
 python-setuptools
 python-sphinx
+python-yaml
 qrtool
 qt5-script
 qt5-tools
@@ -176,3 +184,4 @@ zed
 zoxide
 zram-generator
 zsh
+zsh-completions

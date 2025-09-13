@@ -30,5 +30,11 @@
   "show_wrap_guides": true,
   "indent_guides": {
     "coloring": "indent_aware"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "agent": {
+    "enabled": false
   }
 }
