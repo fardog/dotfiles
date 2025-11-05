@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# adapted from https://git.zx2c4.com/password-store/tree/contrib/dmenu/passmenu,
+# plus support for totp, bemenu; for that reason, this file is licensed GPLv2 to
+# be compatible with the `password-store` license.
+
+shopt -s nullglob globstar
+
+# Parse --totp option
+totp_mode=false
+dmenu_args=()
+for arg in "$@"; do
+	if [[ "$arg" == "--totp" ]]; then
+		totp_mode=true
+	else
+		dmenu_args+=("$arg")
+	fi
+done
+
+if [[ -n $WAYLAND_DISPLAY ]]; then
+	dmenu=bemenu
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
+
+prefix=${PASSWORD_STORE_DIR-~/.password-store}
+password_files=( "$prefix"/**/*.gpg )
+password_files=( "${password_files[@]#"$prefix"/}" )
+password_files=( "${password_files[@]%.gpg}" )
+
+if [[ "$totp_mode" == true ]]; then
+	# filter to only totp files
+	password_files=( $(printf '%s\n' "${password_files[@]}" | grep '^totp/') )
+	pass_command="otp"
+else
+	# filter out totp
+	password_files=( $(printf '%s\n' "${password_files[@]}" | grep -v '^totp/') )
+	pass_command="show"
+fi
+
+password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "${dmenu_args[@]}")
+
+[[ -n $password ]] || exit
+
+pass $pass_command -c "$password" 2>/dev/null

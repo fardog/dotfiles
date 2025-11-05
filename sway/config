@@ -1,8 +1,8 @@
 set $mod Mod4
 
 input "type:keyboard" {
-  # enable compose key on right alt
-  xkb_options compose:ralt
+  # enable compose key on right alt, and map caps to escape
+  xkb_options compose:ralt,caps:escape
 }
 
 input "2:10:TPPS/2_Elan_TrackPoint" {
@@ -124,6 +124,7 @@ bindsym $mod+d exec bemenu-run -i -p 'exec' $bemenu_colors
 
 # passmenu
 bindsym $mod+Shift+d exec BEMENU_OPTS="$bemenu_colors" PASSWORD_STORE_CLIP_TIME=15 passmenu
+bindsym $mod+Shift+f exec BEMENU_OPTS="$bemenu_colors" PASSWORD_STORE_CLIP_TIME=15 passmenu --totp
 
 # dmenu network manager
 bindsym $mod+o exec BEMENU_OPTS="$bemenu_colors" networkmanager_dmenu
@@ -138,13 +139,13 @@ bindsym $mod+a exec BEMENU_OPTS="$bemenu_colors" EMOJIPICK_CMD="bemenu -l 15 -fn
 bindsym $mod+Shift+u exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 # capture current window, put it on the clipboard
 bindsym $mod+p exec grim -g "$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')" - | wl-copy
-# capture rectangle, edit it in satty
-bindsym $mod+Shift+p exec grim -g "$(slurp)" -t png - | satty --copy-command wl-copy -f -
+# capture rectangle, edit it in ksnip
+bindsym $mod+Shift+p exec grim -g "$(slurp)" -t png - | ksnip -e -
 # capture the current output
 bindsym $mod+Control+p exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 # record a portion of the screen
-bindsym $mod+Control+r exec wf-recorder -g "$(slurp)" --file=$HOME/Screenshots/recording-"$(date --iso-8601=seconds).mp4"
-bindsym $mod+Control+e exec killall -s SIGINT wf-recorder
+bindsym $mod+Control+r exec wf-recorder -p preset=slower --codec libx264rgb -p color_range=full -g "$(slurp)" --file=$HOME/Screenshots/recording-"$(date --iso-8601=seconds).mp4"
+bindsym $mod+Control+e exec killall -s SIGINT wf-recorder; exec notify-send "recording stopped"
 
 # window marks
 # TODO: not working in sway for obvious reasons
@@ -183,7 +184,7 @@ bindsym Control+$mod+k move workspace to output up
 bindsym Control+$mod+l move workspace to output right
 
 # swap workspaces
-bindsym $mod+Shift+s exec /home/nwittstock/.dotfiles/bin/swap-workspaces.sh
+bindsym $mod+Shift+s exec ~/.dotfiles/bin/swap-workspaces.sh
 
 # split in horizontal orientation
 bindsym $mod+backslash split h
@@ -247,6 +248,8 @@ bindsym Control+grave exec makoctl dismiss -a
 bindsym Control+Shift+grave exec makoctl restore
 bindsym Control+Shift+comma exec makoctl menu bemenu -p 'Select Action: '
 bindsym Control+Shift+period exec makoctl invoke
+# dnd
+bindsym Control+Shift+apostrophe exec ~/.dotfiles/bin/do-not-disturb toggle; exec pkill -SIGRTMIN+10 waybar
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -313,4 +316,4 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id dex -ae sway
 
 # include box local file
-include /home/nwittstock/.i3config
+include ~/.i3config

@@ -108,7 +108,7 @@ bindkey '^s' history-incremental-search-forward
 
 [ -s /usr/bin/direnv ] && eval "$(direnv hook zsh)"
 
-eval $(thefuck --alias)
+[ -s /usr/bin/thefuck ] && eval $(thefuck --alias)
 eval "$(zoxide init --cmd j zsh)"
 
 ## [Completion]

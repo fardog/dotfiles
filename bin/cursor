@@ -1,0 +1,4 @@
+#!/bin/bash
+WAYLAND_ARGS="--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-wayland-ime"
+
+/usr/bin/cursor "$@" $WAYLAND_ARGS

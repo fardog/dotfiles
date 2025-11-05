@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [[ "$1" == "-d" ]]; then
+    # Decode mode
+    if [[ -n "$2" ]]; then
+        # File provided
+        sed 's/-/+/g; s/_/\//g' "$2" | base64 -d
+    else
+        # Use stdin
+        sed 's/-/+/g; s/_/\//g' | base64 -d
+    fi
+else
+    # Encode mode (default)
+    if [[ -n "$1" ]]; then
+        # File provided
+        base64 "$1" | sed 's/+/-/g; s/\//_/g; s/=//g'
+    else
+        # Use stdin
+        base64 | sed 's/+/-/g; s/\//_/g; s/=//g'
+    fi
+fi

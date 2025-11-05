@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Check if a URL is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <image_url>"
+    exit 1
+fi
+
+# Get the image URL and determine the MIME type
+IMAGE_URL="$1"
+MIME_TYPE=$(curl -s --head -L "$IMAGE_URL" | grep -i "Content-Type:" | awk '{print $2}' | tr -d '\r')
+
+# Check if MIME type was found
+if [ -z "$MIME_TYPE" ]; then
+    echo "Could not determine MIME type for the URL."
+    exit 1
+fi
+
+# Curl the image, convert to base64, and prepend the data URI prefix
+DATA_URI="data:$MIME_TYPE;base64,$(curl -s "$IMAGE_URL" | base64 | tr -d '\n')"
+
+# Output the result
+echo "$DATA_URI"

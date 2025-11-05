@@ -1,9 +1,10 @@
 #!/bin/bash
 
-MODE_NAME='do-not-disturb'
+DEFAULT_MODE_NAME='default'
+DND_MODE_NAME='do-not-disturb'
 
 status() {
-  makoctl mode | grep $MODE_NAME 2>&1 > /dev/null
+  makoctl mode | grep $DND_MODE_NAME 2>&1 > /dev/null
   if [ $? -eq 0 ]
   then
     echo "❌"
@@ -15,7 +16,13 @@ status() {
 }
 
 toggle() {
-  makoctl mode -t $MODE_NAME 2>&1 > /dev/null
+  current_mode=$(makoctl mode)
+  if [ "$current_mode" = "$DEFAULT_MODE_NAME" ]
+  then
+    makoctl mode -s $DND_MODE_NAME 2>&1 > /dev/null
+  else
+    makoctl mode -s $DEFAULT_MODE_NAME 2>&1 > /dev/null
+  fi
 }
 
 # Check if at least 1 positional parameters are provided
